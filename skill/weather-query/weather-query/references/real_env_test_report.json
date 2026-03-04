@@ -1,0 +1,194 @@
+{
+  "total": 16,
+  "passed": 16,
+  "failed": 0,
+  "results": [
+    {
+      "id": "TC-01",
+      "desc": "仅地点-北京",
+      "args": [
+        "北京"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"雨夹雪\",\"code\":\"20\",\"temperature\":\"1\",\"feels_like\":\"3\",\"pressure\":\"1024\",\"humidity\":\"86\",\"visibility\":\"30.0\",\"win..."
+    },
+    {
+      "id": "TC-02",
+      "desc": "地点+今天",
+      "args": [
+        "北京",
+        "今天"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"雨夹雪\",\"code\":\"20\",\"temperature\":\"1\",\"feels_like\":\"3\",\"pressure\":\"1024\",\"humidity\":\"86\",\"visibility\":\"30.0\",\"win..."
+    },
+    {
+      "id": "TC-03",
+      "desc": "地点+明天",
+      "args": [
+        "上海",
+        "明天"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"上海\",\"id\":\"WTW3SJ5ZBJUY\"},\"current\":{\"text\":\"阴\",\"code\":\"9\",\"temperature\":\"10\",\"feels_like\":\"12\",\"pressure\":\"1025\",\"humidity\":\"64\",\"visibility\":\"20.9\",\"wind..."
+    },
+    {
+      "id": "TC-04",
+      "desc": "地点+后天",
+      "args": [
+        "北京",
+        "后天"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"雨夹雪\",\"code\":\"20\",\"temperature\":\"1\",\"feels_like\":\"3\",\"pressure\":\"1024\",\"humidity\":\"88\",\"visibility\":\"30.0\",\"win..."
+    },
+    {
+      "id": "TC-05",
+      "desc": "地点+昨天",
+      "args": [
+        "北京",
+        "昨天"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"雨夹雪\",\"code\":\"20\",\"temperature\":\"1\",\"feels_like\":\"3\",\"pressure\":\"1024\",\"humidity\":\"88\",\"visibility\":\"30.0\",\"win..."
+    },
+    {
+      "id": "TC-06",
+      "desc": "地点+具体日期",
+      "args": [
+        "北京",
+        "2026-03-10"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"雨夹雪\",\"code\":\"20\",\"temperature\":\"1\",\"feels_like\":\"3\",\"pressure\":\"1024\",\"humidity\":\"88\",\"visibility\":\"30.0\",\"win..."
+    },
+    {
+      "id": "TC-07",
+      "desc": "地点+--days 5",
+      "args": [
+        "北京",
+        "--days",
+        "5"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"雨夹雪\",\"code\":\"20\",\"temperature\":\"1\",\"feels_like\":\"3\",\"pressure\":\"1024\",\"humidity\":\"88\",\"visibility\":\"30.0\",\"win..."
+    },
+    {
+      "id": "TC-08",
+      "desc": "中文城市-上海",
+      "args": [
+        "上海"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"上海\",\"id\":\"WTW3SJ5ZBJUY\"},\"current\":{\"text\":\"阴\",\"code\":\"9\",\"temperature\":\"10\",\"feels_like\":\"12\",\"pressure\":\"1025\",\"humidity\":\"64\",\"visibility\":\"20.9\",\"wind..."
+    },
+    {
+      "id": "TC-09",
+      "desc": "拼音地点-beijing",
+      "args": [
+        "beijing"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"雨夹雪\",\"code\":\"20\",\"temperature\":\"1\",\"feels_like\":\"3\",\"pressure\":\"1024\",\"humidity\":\"88\",\"visibility\":\"30.0\",\"win..."
+    },
+    {
+      "id": "TC-10",
+      "desc": "区级地点-北京朝阳区",
+      "args": [
+        "北京朝阳区"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"朝阳\",\"id\":\"WX4G17JWZEK7\"},\"current\":{\"text\":\"雾\",\"code\":\"30\",\"temperature\":\"0\",\"feels_like\":\"3\",\"pressure\":\"1024\",\"humidity\":\"80\",\"visibility\":\"30.0\",\"wind_..."
+    },
+    {
+      "id": "TC-11",
+      "desc": "生活指数--with-suggestion",
+      "args": [
+        "北京",
+        "--with-suggestion"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"雨夹雪\",\"code\":\"20\",\"temperature\":\"1\",\"feels_like\":\"3\",\"pressure\":\"1024\",\"humidity\":\"88\",\"visibility\":\"30.0\",\"win..."
+    },
+    {
+      "id": "TC-12",
+      "desc": "空气质量--with-air",
+      "args": [
+        "北京",
+        "--with-air"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"雨夹雪\",\"code\":\"20\",\"temperature\":\"1\",\"feels_like\":\"3\",\"pressure\":\"1024\",\"humidity\":\"88\",\"visibility\":\"30.0\",\"win..."
+    },
+    {
+      "id": "TC-13",
+      "desc": "生活指数+空气质量",
+      "args": [
+        "北京",
+        "--with-suggestion",
+        "--with-air"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"雨夹雪\",\"code\":\"20\",\"temperature\":\"1\",\"feels_like\":\"3\",\"pressure\":\"1024\",\"humidity\":\"88\",\"visibility\":\"30.0\",\"win..."
+    },
+    {
+      "id": "TC-14",
+      "desc": "天数--days 1",
+      "args": [
+        "北京",
+        "--days",
+        "1"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"雨夹雪\",\"code\":\"20\",\"temperature\":\"1\",\"feels_like\":\"3\",\"pressure\":\"1024\",\"humidity\":\"88\",\"visibility\":\"30.0\",\"win..."
+    },
+    {
+      "id": "TC-15",
+      "desc": "无参数-应失败",
+      "args": [],
+      "status": "PASS",
+      "exit_code": 1,
+      "detail": "exit_code=1",
+      "output_preview": "{\"success\":false,\"error\":\"缺少参数：需要至少一个位置参数（地点），例如：run_weather_search.py 北京\"}"
+    },
+    {
+      "id": "TC-16",
+      "desc": "经纬度地点",
+      "args": [
+        "39.9:116.4"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"雨夹雪\",\"code\":\"20\",\"temperature\":\"1\",\"feels_like\":\"3\",\"pressure\":\"1024\",\"humidity\":\"86\",\"visibility\":\"30.0\",\"win..."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "skill_name": "multi-engine-search",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我搜一下 Python 3.12 有哪些新特性，要多个来源的结果整合在一起给我看。",
+      "expected_output": "运行聚合搜索脚本，将脚本返回的 JSON 中的 results 用于回答，并给出与 Python 3.12 新特性相关的总结。",
+      "files": [],
+      "expectations": [
+        "执行了 aggregate_search.py 脚本并传入了与 Python 3.12 新特性相关的 query",
+        "回复中呈现了结构化搜索结果（标题、链接或摘要中的至少两项）",
+        "回复内容与「Python 3.12」或「新特性」相关"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "TypeScript 最新版本是多少？用聚合搜索查一下，把不同来源的结果合并去重后给我。",
+      "expected_output": "运行聚合搜索脚本查询 TypeScript 最新版本，根据脚本返回的 results 给出答案与来源说明。",
+      "files": [],
+      "expectations": [
+        "执行了 aggregate_search.py 脚本并传入了与 TypeScript 版本相关的 query",
+        "回复中包含与「TypeScript」或「版本」相关的信息",
+        "输出为整合后的结果（来自脚本），而非单一来源的原始 dump"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Rust 和 Go 在 2024 年的性能对比和适用场景，我想看多源整合的搜索结果，不要只来自一个搜索引擎。",
+      "expected_output": "运行聚合搜索脚本，根据返回的 results 总结 Rust 与 Go 的性能对比及适用场景，并保证多源整合。",
+      "files": [],
+      "expectations": [
+        "执行了 aggregate_search.py 脚本并传入了与 Rust、Go 对比相关的 query",
+        "回复或结果中同时涉及 Rust 和 Go（或性能/对比/适用场景中的至少两个主题）",
+        "输出为脚本返回的整合结果（多条或带来源标识）"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "想了解一下 Vue 3 和 React 18 的差异，用多源搜索整合一下结果再回答我。",
+      "expected_output": "运行聚合搜索脚本查询 Vue 3 与 React 18 的差异，根据脚本输出总结并呈现给用户。",
+      "files": [],
+      "expectations": [
+        "执行了 aggregate_search.py 脚本并传入了与 Vue、React 差异相关的 query",
+        "回复中同时涉及 Vue 与 React（或差异、对比）",
+        "结果来自脚本的整合输出（含 title/url/content/source 等）"
+      ]
+    }
+  ]
+}

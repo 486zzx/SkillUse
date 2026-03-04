@@ -1,0 +1,703 @@
+{
+  "source": "天气查询自定义测试用例.md",
+  "total_cases": 53,
+  "executed": 44,
+  "passed": 42,
+  "failed": 2,
+  "skipped": 9,
+  "pass_rate_run": "95.5%",
+  "results": [
+    {
+      "id": "W-001",
+      "module": "基础查询",
+      "point": "查询当前实时天气-北京",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "北京"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"大雪\",\"code\":\"24\",\"temperature\":\"0\",\"feels_like\":\"2\",\"pressure\":\"1023\",\"humidity\":\"87\",\"visibility\":\"30.0\",\"wind_direction\":\"东南\",\"wind_direction_degree\":\"153\",\"wi..."
+    },
+    {
+      "id": "W-002",
+      "module": "基础查询",
+      "point": "查询今日天气-上海",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "上海",
+        "今天"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"上海\",\"id\":\"WTW3SJ5ZBJUY\"},\"current\":{\"text\":\"阴\",\"code\":\"9\",\"temperature\":\"9\",\"feels_like\":\"11\",\"pressure\":\"1023\",\"humidity\":\"72\",\"visibility\":\"20.9\",\"wind_direction\":\"东北\",\"wind_direction_degree\":\"35\",\"wind..."
+    },
+    {
+      "id": "W-003",
+      "module": "基础查询",
+      "point": "无城市无定位-今天天气",
+      "status": "PASS",
+      "reason": null,
+      "args": [],
+      "exit_code": 1,
+      "detail": "unexpected success",
+      "output_preview": "{\"success\":false,\"error\":\"缺少参数：需要至少一个位置参数（地点），例如：run_weather_search.py 北京\"}"
+    },
+    {
+      "id": "W-004",
+      "module": "基础查询",
+      "point": "口语化-广州天气怎么样",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "广州"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"广州\",\"id\":\"WS0E9D8WN298\"},\"current\":{\"text\":\"阴\",\"code\":\"9\",\"temperature\":\"15\",\"feels_like\":\"18\",\"pressure\":\"1008\",\"humidity\":\"87\",\"visibility\":\"30.0\",\"wind_direction\":\"北\",\"wind_direction_degree\":\"21\",\"wind..."
+    },
+    {
+      "id": "W-005",
+      "module": "多日预报",
+      "point": "深圳明天天气",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "深圳",
+        "明天"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"深圳\",\"id\":\"WS10730EM8EV\"},\"current\":{\"text\":\"阴\",\"code\":\"9\",\"temperature\":\"15\",\"feels_like\":\"18\",\"pressure\":\"1008\",\"humidity\":\"84\",\"visibility\":\"30.0\",\"wind_direction\":\"东\",\"wind_direction_degree\":\"89\",\"wind..."
+    },
+    {
+      "id": "W-006",
+      "module": "多日预报",
+      "point": "杭州后天天气",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "杭州",
+        "后天"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"杭州\",\"id\":\"WTMKQ069CCJ7\"},\"current\":{\"text\":\"阴\",\"code\":\"9\",\"temperature\":\"9\",\"feels_like\":\"10\",\"pressure\":\"1017\",\"humidity\":\"77\",\"visibility\":\"28.1\",\"wind_direction\":\"东北\",\"wind_direction_degree\":\"29\",\"wind..."
+    },
+    {
+      "id": "W-007",
+      "module": "多日预报",
+      "point": "成都未来3天",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "成都",
+        "--days",
+        "3"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"成都\",\"id\":\"WM6N2PM3WY2K\"},\"current\":{\"text\":\"多云\",\"code\":\"4\",\"temperature\":\"17\",\"feels_like\":\"19\",\"pressure\":\"953\",\"humidity\":\"65\",\"visibility\":\"14.9\",\"wind_direction\":\"东\",\"wind_direction_degree\":\"111\",\"win..."
+    },
+    {
+      "id": "W-008",
+      "module": "多日预报",
+      "point": "武汉一周天气",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "武汉",
+        "--days",
+        "7"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"武汉\",\"id\":\"WT3Q0FW9ZJ3Q\"},\"current\":{\"text\":\"雾\",\"code\":\"30\",\"temperature\":\"12\",\"feels_like\":\"14\",\"pressure\":\"1017\",\"humidity\":\"71\",\"visibility\":\"30.0\",\"wind_direction\":\"东北\",\"wind_direction_degree\":\"40\",\"wi..."
+    },
+    {
+      "id": "W-009",
+      "module": "多日预报",
+      "point": "西安未来30天(脚本上限15天)",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "西安",
+        "--days",
+        "30"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"西安\",\"id\":\"WQJ6YY8MHZP0\"},\"current\":{\"text\":\"多云\",\"code\":\"4\",\"temperature\":\"10\",\"feels_like\":\"15\",\"pressure\":\"970\",\"humidity\":\"65\",\"visibility\":\"15.6\",\"wind_direction\":\"东北\",\"wind_direction_degree\":\"37\",\"win..."
+    },
+    {
+      "id": "W-010",
+      "module": "多日预报",
+      "point": "南京本周天气",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "南京",
+        "--days",
+        "7"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"南京\",\"id\":\"WTSQQYHVQ973\"},\"current\":{\"text\":\"雾\",\"code\":\"30\",\"temperature\":\"7\",\"feels_like\":\"11\",\"pressure\":\"1018\",\"humidity\":\"79\",\"visibility\":\"27.7\",\"wind_direction\":\"东\",\"wind_direction_degree\":\"73\",\"wind..."
+    },
+    {
+      "id": "W-011",
+      "module": "气象要素",
+      "point": "重庆今天多少度",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "重庆",
+        "今天"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"重庆\",\"id\":\"WM7B0X53DZW2\"},\"current\":{\"text\":\"多云\",\"code\":\"4\",\"temperature\":\"20\",\"feels_like\":\"23\",\"pressure\":\"979\",\"humidity\":\"52\",\"visibility\":\"30.0\",\"wind_direction\":\"东\",\"wind_direction_degree\":\"105\",\"win..."
+    },
+    {
+      "id": "W-012",
+      "module": "气象要素",
+      "point": "长沙今天湿度",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "长沙",
+        "今天"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"长沙\",\"id\":\"WT029G15ETRJ\"},\"current\":{\"text\":\"雾\",\"code\":\"30\",\"temperature\":\"10\",\"feels_like\":\"15\",\"pressure\":\"1014\",\"humidity\":\"81\",\"visibility\":\"27.0\",\"wind_direction\":\"西北\",\"wind_direction_degree\":\"323\",\"w..."
+    },
+    {
+      "id": "W-013",
+      "module": "气象要素",
+      "point": "北京今天风力",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "北京",
+        "今天"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"雨夹雪\",\"code\":\"20\",\"temperature\":\"0\",\"feels_like\":\"2\",\"pressure\":\"1023\",\"humidity\":\"89\",\"visibility\":\"30.0\",\"wind_direction\":\"东南\",\"wind_direction_degree\":\"152\",\"w..."
+    },
+    {
+      "id": "W-014",
+      "module": "气象要素",
+      "point": "上海明天下雨概率",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "上海",
+        "明天"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"上海\",\"id\":\"WTW3SJ5ZBJUY\"},\"current\":{\"text\":\"阴\",\"code\":\"9\",\"temperature\":\"9\",\"feels_like\":\"11\",\"pressure\":\"1023\",\"humidity\":\"72\",\"visibility\":\"20.9\",\"wind_direction\":\"东北\",\"wind_direction_degree\":\"35\",\"wind..."
+    },
+    {
+      "id": "W-015",
+      "module": "气象要素",
+      "point": "广州空气质量",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "广州",
+        "--with-air"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"广州\",\"id\":\"WS0E9D8WN298\"},\"current\":{\"text\":\"阴\",\"code\":\"9\",\"temperature\":\"15\",\"feels_like\":\"18\",\"pressure\":\"1008\",\"humidity\":\"87\",\"visibility\":\"30.0\",\"wind_direction\":\"北\",\"wind_direction_degree\":\"21\",\"wind..."
+    },
+    {
+      "id": "W-016",
+      "module": "气象要素",
+      "point": "三亚紫外线",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "三亚",
+        "--with-suggestion"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"三亚\",\"id\":\"W7JZGDR3YYTF\"},\"current\":{\"text\":\"阴\",\"code\":\"9\",\"temperature\":\"26\",\"feels_like\":\"27\",\"pressure\":\"1013\",\"humidity\":\"71\",\"visibility\":\"30.0\",\"wind_direction\":\"东北\",\"wind_direction_degree\":\"63\",\"win..."
+    },
+    {
+      "id": "W-017",
+      "module": "气象要素",
+      "point": "北京今天能见度",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "北京",
+        "今天"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"大雪\",\"code\":\"24\",\"temperature\":\"0\",\"feels_like\":\"2\",\"pressure\":\"1023\",\"humidity\":\"87\",\"visibility\":\"30.0\",\"wind_direction\":\"东南\",\"wind_direction_degree\":\"153\",\"wi..."
+    },
+    {
+      "id": "W-018",
+      "module": "气象要素",
+      "point": "北京今天穿什么",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "北京",
+        "今天",
+        "--with-suggestion"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"大雪\",\"code\":\"24\",\"temperature\":\"0\",\"feels_like\":\"2\",\"pressure\":\"1023\",\"humidity\":\"87\",\"visibility\":\"30.0\",\"wind_direction\":\"东南\",\"wind_direction_degree\":\"153\",\"wi..."
+    },
+    {
+      "id": "W-019",
+      "module": "城市识别",
+      "point": "郑州天气",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "郑州"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"郑州\",\"id\":\"WW0V9QP93VS8\"},\"current\":{\"text\":\"霾\",\"code\":\"31\",\"temperature\":\"5\",\"feels_like\":\"9\",\"pressure\":\"1009\",\"humidity\":\"91\",\"visibility\":\"7.6\",\"wind_direction\":\"东北\",\"wind_direction_degree\":\"34\",\"wind_..."
+    },
+    {
+      "id": "W-020",
+      "module": "城市识别",
+      "point": "桂林天气",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "桂林"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"桂林\",\"id\":\"WKQRV6P6WM81\"},\"current\":{\"text\":\"晴\",\"code\":\"1\",\"temperature\":\"14\",\"feels_like\":\"18\",\"pressure\":\"997\",\"humidity\":\"65\",\"visibility\":\"30.0\",\"wind_direction\":\"东北\",\"wind_direction_degree\":\"31\",\"wind..."
+    },
+    {
+      "id": "W-021a",
+      "module": "城市识别",
+      "point": "浦东天气",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "浦东"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"浦东\",\"id\":\"WTW3T7RMWMB4\"},\"current\":{\"text\":\"多云\",\"code\":\"4\",\"temperature\":\"9\",\"feels_like\":\"6\",\"pressure\":\"1026\",\"humidity\":\"73\",\"visibility\":\"20.1\",\"wind_direction\":\"东南\",\"wind_direction_degree\":\"113\",\"win..."
+    },
+    {
+      "id": "W-021b",
+      "module": "城市识别",
+      "point": "昆山天气",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "昆山"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"昆山\",\"id\":\"WTW48BWCWRFR\"},\"current\":{\"text\":\"多云\",\"code\":\"4\",\"temperature\":\"8\",\"feels_like\":\"4\",\"pressure\":\"1026\",\"humidity\":\"77\",\"visibility\":\"21.9\",\"wind_direction\":\"东\",\"wind_direction_degree\":\"90\",\"wind_..."
+    },
+    {
+      "id": "W-022",
+      "module": "城市识别",
+      "point": "城市别名-上海",
+      "status": "PASS",
+      "reason": "仅测上海;羊城需Agent映射",
+      "args": [
+        "上海"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"上海\",\"id\":\"WTW3SJ5ZBJUY\"},\"current\":{\"text\":\"阴\",\"code\":\"9\",\"temperature\":\"9\",\"feels_like\":\"11\",\"pressure\":\"1023\",\"humidity\":\"72\",\"visibility\":\"20.9\",\"wind_direction\":\"东北\",\"wind_direction_degree\":\"35\",\"wind..."
+    },
+    {
+      "id": "W-023",
+      "module": "城市识别",
+      "point": "拼音beijing",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "beijing"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"大雪\",\"code\":\"24\",\"temperature\":\"0\",\"feels_like\":\"2\",\"pressure\":\"1023\",\"humidity\":\"87\",\"visibility\":\"30.0\",\"wind_direction\":\"东南\",\"wind_direction_degree\":\"153\",\"wi..."
+    },
+    {
+      "id": "W-024a",
+      "module": "城市识别",
+      "point": "东京天气",
+      "status": "FAIL",
+      "reason": null,
+      "args": [
+        "东京"
+      ],
+      "exit_code": 1,
+      "detail": "无法获取地点或实况: 东京",
+      "output_preview": "{\"success\":false,\"error\":\"无法获取地点或实况: 东京\"}"
+    },
+    {
+      "id": "W-024b",
+      "module": "城市识别",
+      "point": "纽约天气",
+      "status": "FAIL",
+      "reason": null,
+      "args": [
+        "纽约"
+      ],
+      "exit_code": 1,
+      "detail": "无法获取地点或实况: 纽约",
+      "output_preview": "{\"success\":false,\"error\":\"无法获取地点或实况: 纽约\"}"
+    },
+    {
+      "id": "W-025",
+      "module": "城市识别",
+      "point": "中山天气",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "中山"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"中山\",\"id\":\"WS08H58U92R8\"},\"current\":{\"text\":\"小雨\",\"code\":\"13\",\"temperature\":\"13\",\"feels_like\":\"18\",\"pressure\":\"1000\",\"humidity\":\"96\",\"visibility\":\"30.0\",\"wind_direction\":\"东北\",\"wind_direction_degree\":\"28\",\"w..."
+    },
+    {
+      "id": "W-026",
+      "module": "城市识别",
+      "point": "省+城市-苏州",
+      "status": "PASS",
+      "reason": "脚本仅传苏州",
+      "args": [
+        "苏州"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"苏州\",\"id\":\"WTTDPCGXTWUS\"},\"current\":{\"text\":\"多云\",\"code\":\"4\",\"temperature\":\"9\",\"feels_like\":\"10\",\"pressure\":\"1022\",\"humidity\":\"77\",\"visibility\":\"27.5\",\"wind_direction\":\"东北\",\"wind_direction_degree\":\"51\",\"win..."
+    },
+    {
+      "id": "W-027",
+      "module": "时间理解",
+      "point": "今天(时段脚本不支持)",
+      "status": "PASS",
+      "reason": "下午时段需Agent",
+      "args": [
+        "北京",
+        "今天"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"大雪\",\"code\":\"24\",\"temperature\":\"0\",\"feels_like\":\"2\",\"pressure\":\"1023\",\"humidity\":\"87\",\"visibility\":\"30.0\",\"wind_direction\":\"东南\",\"wind_direction_degree\":\"153\",\"wi..."
+    },
+    {
+      "id": "W-028",
+      "module": "时间理解",
+      "point": "杭州早上冷吗",
+      "status": "PASS",
+      "reason": "时段需Agent",
+      "args": [
+        "杭州",
+        "今天"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"杭州\",\"id\":\"WTMKQ069CCJ7\"},\"current\":{\"text\":\"阴\",\"code\":\"9\",\"temperature\":\"9\",\"feels_like\":\"10\",\"pressure\":\"1017\",\"humidity\":\"77\",\"visibility\":\"28.1\",\"wind_direction\":\"东北\",\"wind_direction_degree\":\"29\",\"wind..."
+    },
+    {
+      "id": "W-029",
+      "module": "时间理解",
+      "point": "指定日期2026-03-10成都",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "成都",
+        "2026-03-10"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"成都\",\"id\":\"WM6N2PM3WY2K\"},\"current\":{\"text\":\"多云\",\"code\":\"4\",\"temperature\":\"17\",\"feels_like\":\"19\",\"pressure\":\"953\",\"humidity\":\"65\",\"visibility\":\"14.9\",\"wind_direction\":\"东\",\"wind_direction_degree\":\"111\",\"win..."
+    },
+    {
+      "id": "W-030",
+      "module": "时间理解",
+      "point": "昨天北京天气",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "北京",
+        "昨天"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"雨夹雪\",\"code\":\"20\",\"temperature\":\"0\",\"feels_like\":\"2\",\"pressure\":\"1023\",\"humidity\":\"89\",\"visibility\":\"30.0\",\"wind_direction\":\"东南\",\"wind_direction_degree\":\"152\",\"w..."
+    },
+    {
+      "id": "W-031",
+      "module": "时间理解",
+      "point": "后天",
+      "status": "PASS",
+      "reason": "大后天/下周一需Agent",
+      "args": [
+        "北京",
+        "后天"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"大雪\",\"code\":\"24\",\"temperature\":\"0\",\"feels_like\":\"2\",\"pressure\":\"1023\",\"humidity\":\"87\",\"visibility\":\"30.0\",\"wind_direction\":\"东南\",\"wind_direction_degree\":\"153\",\"wi..."
+    },
+    {
+      "id": "W-032",
+      "module": "多轮对话",
+      "point": "上下文继承城市",
+      "status": "SKIP",
+      "reason": "脚本无多轮状态",
+      "args": null,
+      "exit_code": null,
+      "detail": null,
+      "output_preview": null
+    },
+    {
+      "id": "W-033",
+      "module": "多轮对话",
+      "point": "上下文继承时间",
+      "status": "SKIP",
+      "reason": "脚本无多轮状态",
+      "args": null,
+      "exit_code": null,
+      "detail": null,
+      "output_preview": null
+    },
+    {
+      "id": "W-034",
+      "module": "多轮对话",
+      "point": "主动切换城市",
+      "status": "SKIP",
+      "reason": "脚本无多轮状态",
+      "args": null,
+      "exit_code": null,
+      "detail": null,
+      "output_preview": null
+    },
+    {
+      "id": "W-035",
+      "module": "多轮对话",
+      "point": "多要素连续追问",
+      "status": "SKIP",
+      "reason": "脚本无多轮状态",
+      "args": null,
+      "exit_code": null,
+      "detail": null,
+      "output_preview": null
+    },
+    {
+      "id": "W-036",
+      "module": "多轮对话",
+      "point": "上下文中断重置",
+      "status": "SKIP",
+      "reason": "脚本无多轮状态",
+      "args": null,
+      "exit_code": null,
+      "detail": null,
+      "output_preview": null
+    },
+    {
+      "id": "W-037",
+      "module": "异常容错",
+      "point": "无意义文本啊啊啊",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "啊啊啊"
+      ],
+      "exit_code": 1,
+      "detail": "unexpected success",
+      "output_preview": "{\"success\":false,\"error\":\"无法获取地点或实况: 啊啊啊\"}"
+    },
+    {
+      "id": "W-038",
+      "module": "异常容错",
+      "point": "只有时间无城市",
+      "status": "PASS",
+      "reason": null,
+      "args": [],
+      "exit_code": 1,
+      "detail": "unexpected success",
+      "output_preview": "{\"success\":false,\"error\":\"缺少参数：需要至少一个位置参数（地点），例如：run_weather_search.py 北京\"}"
+    },
+    {
+      "id": "W-039",
+      "module": "异常容错",
+      "point": "无效城市火星市",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "火星市"
+      ],
+      "exit_code": 1,
+      "detail": "unexpected success",
+      "output_preview": "{\"success\":false,\"error\":\"无法获取地点或实况: 火星市\"}"
+    },
+    {
+      "id": "W-040",
+      "module": "异常容错",
+      "point": "特殊字符",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "!@#$%^&*~"
+      ],
+      "exit_code": 1,
+      "detail": "unexpected success",
+      "output_preview": "{\"success\":false,\"error\":\"无法获取地点或实况: !@#$%^&*~\"}"
+    },
+    {
+      "id": "W-041",
+      "module": "异常容错",
+      "point": "长文本+北京",
+      "status": "PASS",
+      "reason": "仅测城市提取",
+      "args": [
+        "北京"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"大雪\",\"code\":\"24\",\"temperature\":\"0\",\"feels_like\":\"2\",\"pressure\":\"1023\",\"humidity\":\"87\",\"visibility\":\"30.0\",\"wind_direction\":\"东南\",\"wind_direction_degree\":\"153\",\"wi..."
+    },
+    {
+      "id": "W-042",
+      "module": "异常容错",
+      "point": "这里热吗无城市",
+      "status": "SKIP",
+      "reason": "需定位或上下文",
+      "args": null,
+      "exit_code": null,
+      "detail": null,
+      "output_preview": null
+    },
+    {
+      "id": "W-043",
+      "module": "边界场景",
+      "point": "跨天时间判断",
+      "status": "PASS",
+      "reason": "时间归属依赖运行时刻",
+      "args": [
+        "北京",
+        "今天"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"大雪\",\"code\":\"24\",\"temperature\":\"0\",\"feels_like\":\"2\",\"pressure\":\"1023\",\"humidity\":\"87\",\"visibility\":\"30.0\",\"wind_direction\":\"东南\",\"wind_direction_degree\":\"153\",\"wi..."
+    },
+    {
+      "id": "W-044",
+      "module": "边界场景",
+      "point": "极端天气展示",
+      "status": "PASS",
+      "reason": "同普通查询",
+      "args": [
+        "北京",
+        "今天"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"大雪\",\"code\":\"24\",\"temperature\":\"0\",\"feels_like\":\"2\",\"pressure\":\"1023\",\"humidity\":\"87\",\"visibility\":\"30.0\",\"wind_direction\":\"东南\",\"wind_direction_degree\":\"153\",\"wi..."
+    },
+    {
+      "id": "W-045",
+      "module": "边界场景",
+      "point": "空消息输入",
+      "status": "PASS",
+      "reason": null,
+      "args": [],
+      "exit_code": 1,
+      "detail": "unexpected success",
+      "output_preview": "{\"success\":false,\"error\":\"缺少参数：需要至少一个位置参数（地点），例如：run_weather_search.py 北京\"}"
+    },
+    {
+      "id": "W-046",
+      "module": "输出规范",
+      "point": "输出结构统一",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "北京"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"雨夹雪\",\"code\":\"20\",\"temperature\":\"0\",\"feels_like\":\"2\",\"pressure\":\"1023\",\"humidity\":\"89\",\"visibility\":\"30.0\",\"wind_direction\":\"东南\",\"wind_direction_degree\":\"152\",\"w..."
+    },
+    {
+      "id": "W-047",
+      "module": "输出规范",
+      "point": "数值合理性",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "上海"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"上海\",\"id\":\"WTW3SJ5ZBJUY\"},\"current\":{\"text\":\"阴\",\"code\":\"9\",\"temperature\":\"9\",\"feels_like\":\"11\",\"pressure\":\"1023\",\"humidity\":\"72\",\"visibility\":\"20.9\",\"wind_direction\":\"东北\",\"wind_direction_degree\":\"35\",\"wind..."
+    },
+    {
+      "id": "W-048",
+      "module": "输出规范",
+      "point": "单位统一",
+      "status": "PASS",
+      "reason": null,
+      "args": [
+        "北京"
+      ],
+      "exit_code": 0,
+      "detail": "exit=0",
+      "output_preview": "{\"success\":true,\"result\":{\"location\":{\"name\":\"北京\",\"id\":\"WX4FBXXFKE4F\"},\"current\":{\"text\":\"大雪\",\"code\":\"24\",\"temperature\":\"0\",\"feels_like\":\"2\",\"pressure\":\"1023\",\"humidity\":\"87\",\"visibility\":\"30.0\",\"wind_direction\":\"东南\",\"wind_direction_degree\":\"153\",\"wi..."
+    },
+    {
+      "id": "W-049",
+      "module": "定位功能",
+      "point": "允许定位权限",
+      "status": "SKIP",
+      "reason": "脚本无定位能力",
+      "args": null,
+      "exit_code": null,
+      "detail": null,
+      "output_preview": null
+    },
+    {
+      "id": "W-050",
+      "module": "定位功能",
+      "point": "拒绝定位权限",
+      "status": "SKIP",
+      "reason": "脚本无定位能力",
+      "args": null,
+      "exit_code": null,
+      "detail": null,
+      "output_preview": null
+    },
+    {
+      "id": "W-051",
+      "module": "定位功能",
+      "point": "定位失败无网络",
+      "status": "SKIP",
+      "reason": "脚本无定位能力",
+      "args": null,
+      "exit_code": null,
+      "detail": null,
+      "output_preview": null
+    }
+  ]
+}
