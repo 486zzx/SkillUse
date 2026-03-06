@@ -1,6 +1,6 @@
 """
-Pipeline：去重(含多源合并) → 重排序(Reranker + early boost + domain_weight) → 垃圾过滤 → 过滤与保底。
-与 Cortex Scout 对齐：Reranker、关键词前置加分、域优先级、来源类型与 domain_weight、垃圾来源过滤。
+Pipeline：去重(含多源合并) → 重排序(Reranker + domain_weight) → 垃圾过滤 → 过滤与保底。
+与 Cortex Scout 对齐：Reranker、域优先级、来源类型与 domain_weight、垃圾来源过滤。
 """
 
 from __future__ import annotations
@@ -14,9 +14,6 @@ from dedupe import dedupe_by_url
 # 与 Cortex Scout rerank 一致：标题匹配权重 / 正文匹配权重
 TITLE_WEIGHT = 0.4
 CONTENT_WEIGHT = 0.2
-# 关键词前置加分：摘要前 N 字内命中查询词时的乘数系数（Cortex: 0.2）
-EARLY_BOOST_FACTOR = 0.2
-EARLY_CONTENT_CHARS = 200
 
 # 垃圾来源标记：英文（Cortex Scout）+ 中文场景
 SPAM_MARKERS = [
@@ -217,35 +214,81 @@ def _recency_bonus(date_str: str | None) -> float:
 
 
 def _tokenize(text: str) -> list[str]:
-    """分词：小写、按非字母数字/CJK 分割，过滤长度 ≤2 的 token（与 Cortex Scout rerank 一致）。"""
+    """分词：小写、按非字母数字/CJK 分割。
+
+    过滤规则：中文长度 > 1（至少 2 个汉字）；英文/数字长度 >= 2（保留如 m7、3.12 这类常见 token）。
+    """
     if not text or not text.strip():
         return []
     s = (text or "").strip().lower()
     # 提取字母数字与 CJK 连续段
     tokens = re.findall(r"[a-zA-Z0-9]+|[\u4e00-\u9fff]+", s)
-    return [t for t in tokens if len(t) > 2]
 
+    # 核心修改：区分中英文/数字，应用不同的长度过滤规则
+    filtered_tokens = []
+    for token in tokens:
+        # 判断是否为中文（CJK汉字）
+        if re.match(r"^[\u4e00-\u9fff]+$", token):
+            # 中文：长度 > 1 保留（即至少2个汉字）
+            if len(token) > 1:
+                filtered_tokens.append(token)
+        else:
+            # 英文/数字：长度 >= 2 保留（如 m7、go、ai）
+            if len(token) >= 2:
+                filtered_tokens.append(token)
+
+    return filtered_tokens
+
+
+def _keyword_tokens_from_group(keywords: list[str] | None) -> list[str]:
+    """对“关键词组”做分词并取并集（set），再以稳定顺序输出 token 列表。
+
+    说明：sort_by_relevance 不再直接对用户原始 query 分词；相关度 token 来自关键词组。
+    """
+    if not keywords:
+        return []
+    seen: set[str] = set()
+    out: list[str] = []
+    for kw in keywords:
+        s = (str(kw) if kw is not None else "").strip()
+        if not s:
+            continue
+        for t in _tokenize(s):
+            if t not in seen:
+                seen.add(t)
+                out.append(t)
+    return out
+
+
+def _has_loose_chinese_boundary_match(text: str, term: str) -> bool:
+    """
+    宽松中文边界匹配：
+    - 仅对「字母数字」做边界限制（避免Python匹配Pythonic、go匹配Google）
+    - 中文之间不限制（避免JSON格式化工具里的JSON/格式化/工具漏匹配）
+    """
+    # 核心变化：只排除「字母数字」的前后缀，不排除中文
+    pattern = rf'(?<![a-zA-Z0-9]){re.escape(term)}(?![a-zA-Z0-9])'
+    return bool(re.search(pattern, text))
 
 def _score_result(item: dict, query_tokens: list[str]) -> float:
     """
-    计算单条结果与查询的词汇相关分 0.0~1.0。
-    标题匹配 0.4/词，正文匹配 0.2/词，归一化后与匹配率结合（与 Cortex Scout rerank 一致）。
+    中文场景：宽松边界匹配（推荐，平衡误匹配和漏匹配）
     """
     if not query_tokens:
         return 0.5
-    title = (item.get("title") or "").strip()
-    content = (item.get("content") or "").strip()
-    title_tokens = set(_tokenize(title))
-    content_tokens = set(_tokenize(content))
+    title = (item.get("title") or "").strip().lower()
+    content = (item.get("content") or "").strip().lower()
+    
     score = 0.0
     matches = 0
     for qt in query_tokens:
-        if qt in title_tokens:
+        if _has_loose_chinese_boundary_match(title, qt):
             score += TITLE_WEIGHT
             matches += 1
-        elif qt in content_tokens:
+        elif _has_loose_chinese_boundary_match(content, qt):
             score += CONTENT_WEIGHT
             matches += 1
+    
     max_score = len(query_tokens) * TITLE_WEIGHT
     normalized = min(score / max_score, 1.0) if max_score > 0 else 0.5
     match_ratio = matches / len(query_tokens)
@@ -254,18 +297,22 @@ def _score_result(item: dict, query_tokens: list[str]) -> float:
 
 
 def sort_by_relevance(
-    items: list[dict], query: str, *, threshold: float | None = None
+    items: list[dict], keywords: list[str] | None, *, threshold: float | None = None
 ) -> list[dict]:
     """
-    重排序：Reranker 分 → 关键词前置加分 → domain_weight → 垃圾过滤 → 按最终分+域优先级排序。
+    重排序：Reranker 分 → domain_weight → 垃圾过滤 → 按最终分+域优先级排序。
     与 Cortex Scout 一致。
+
+    注意：不对用户原始问题 query 分词；相关度 token 来自“关键词组”（多关键词并发搜索时的每个关键词）。
     """
-    q = (query or "").strip()
-    if not q:
+    query_tokens = _keyword_tokens_from_group(keywords)
+    if not query_tokens:
         return items
 
-    query_tokens = _tokenize(q)
-    early_tokens = [w for w in q.lower().split() if len(w) > 2] if q else []
+    # 仍需一个“上下文 query”给 domain_weight / topic 分类使用：用关键词组拼接即可
+    q = " ".join([str(x).strip() for x in (keywords or []) if str(x).strip()])
+    if not q.strip():
+        q = ""
 
     scored: list[tuple[dict, float]] = []
     for item in items:
@@ -274,10 +321,6 @@ def sort_by_relevance(
         s = _score_result(item, query_tokens)
         if threshold is not None and s < threshold:
             continue
-        content_preview = ((item.get("content") or "")[:EARLY_CONTENT_CHARS]).lower()
-        early_matches = sum(1 for t in early_tokens if t in content_preview)
-        if early_matches > 0:
-            s *= 1.0 + EARLY_BOOST_FACTOR * early_matches
         domain, source_type = _classify_source_type(item.get("url") or "")
         dw = _domain_weight(q, domain, source_type)
         final_score = s * dw
@@ -295,42 +338,49 @@ def sort_by_relevance(
     return out
 
 
-def _keyword_coverage(query: str) -> list[str]:
-    """从 query 中提取可用于保底的关键词（简单按空格/标点分）。"""
-    s = re.sub(r"[^\w\s\u4e00-\u9fff]", " ", query)
-    return [w.strip() for w in s.split() if len(w.strip()) >= 2]
+def _pairs_from_item(item: dict) -> set[tuple[str, str]]:
+    """从单条结果提取 (search_keyword, source) 对。"""
+    kws = item.get("search_keywords") or []
+    srcs = item.get("sources") or []
+    out: set[tuple[str, str]] = set()
+    for kw in kws:
+        if not (kw and str(kw).strip()):
+            continue
+        for src in srcs:
+            if not (src and str(src).strip()):
+                continue
+            out.add((str(kw).strip(), str(src).strip()))
+    return out
 
 
-def filter_and_keep_per_keyword(
-    items: list[dict], query: str, *, max_items: int = 20
-) -> list[dict]:
-    """过滤低质量项，保证每个关键词至少保留一条，总条数不超过 max_items。"""
-    keywords = _keyword_coverage(query)
+def filter_and_keep_per_keyword(items: list[dict], *, max_items: int = 20) -> list[dict]:
+    """
+    保证每个 (关键词, 搜索引擎) 至少保留一条结果，总条数不超过 max_items。
+    关键词来自 item['search_keywords']，引擎来自 item['sources']；不再使用 query。
+    """
+    pairs_to_cover: set[tuple[str, str]] = set()
+    for item in items:
+        pairs_to_cover |= _pairs_from_item(item)
+
     kept: list[dict] = []
     used_urls: set[str] = set()
-    keyword_covered = {k: False for k in keywords}
+    covered_pairs: set[tuple[str, str]] = set()
 
-    def has_keyword(text: str) -> str | None:
-        text = (text or "").lower()
-        for k in keywords:
-            if k.lower() in text:
-                return k
-        return None
-
+    # 第一轮：按当前顺序，若某条能覆盖尚未覆盖的 (kw, source)，则保留
     for item in items:
         url = (item.get("url") or "").strip()
         if not url or url in used_urls:
             continue
-        title = (item.get("title") or "").strip()
-        content = (item.get("content") or "").strip()
-        text = title + " " + content
-        k = has_keyword(text)
-        if k and not keyword_covered.get(k):
-            keyword_covered[k] = True
+        item_pairs = _pairs_from_item(item)
+        if item_pairs and (item_pairs - covered_pairs):
+            covered_pairs |= item_pairs
             used_urls.add(url)
             kept.append(item)
 
+    # 第二轮：用剩余结果填满至 max_items
     for item in items:
+        if len(kept) >= max_items:
+            break
         url = (item.get("url") or "").strip()
         if not url or url in used_urls:
             continue
@@ -346,11 +396,13 @@ def run_pipeline(
     items: list[dict],
     query: str,
     *,
+    keywords: list[str] | None = None,
     max_items: int = 20,
     relevance_threshold: float | None = None,
 ) -> list[dict]:
     """去重 → 重排序(Reranker) → 过滤与保底，返回处理后的列表。"""
     items = dedupe_by_url(items)
-    items = sort_by_relevance(items, query, threshold=relevance_threshold)
-    items = filter_and_keep_per_keyword(items, query, max_items=max_items)
+    # 排序阶段使用关键词组做分词相关度；未提供 keywords 时退化为使用 [query]
+    items = sort_by_relevance(items, keywords or ([query] if query else []), threshold=relevance_threshold)
+    items = filter_and_keep_per_keyword(items, max_items=max_items)
     return items

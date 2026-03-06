@@ -110,7 +110,7 @@ def aggregate(
             },
         }
 
-    # 并行：每个 (关键词 × 引擎) 一个任务，线程数严格等于任务数，保证全并发且不超额占用（同机多调用时不拥塞）
+    # 并行：每个 (关键词 × 引擎) 一个任务；各引擎用自身默认的 max_results、timeout
     def do_fetch(f: Any, q: str) -> tuple[str, str, list[dict], str]:
         t_start = time.perf_counter()
         source_id, items, err = f.fetch(q)
@@ -170,7 +170,8 @@ def aggregate(
 
     total_original = len(all_items)
     t_pipeline_start = time.perf_counter()
-    all_items = run_pipeline(all_items, query, max_items=max_items)
+    # 排序阶段使用“关键词组”做分词相关度（而非用户原始问句 query）
+    all_items = run_pipeline(all_items, query, keywords=search_queries, max_items=max_items)
     t_pipeline_end = time.perf_counter()
     _log_timing(f"run_pipeline: {round((t_pipeline_end - t_pipeline_start) * 1000)} ms, in={total_original} out={len(all_items)}")
 

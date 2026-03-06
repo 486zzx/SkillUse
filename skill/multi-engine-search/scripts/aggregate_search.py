@@ -68,7 +68,9 @@ def main() -> int:
         return 1
 
     out = aggregate.aggregate(query, keywords=keywords)
-    print(json.dumps(out, ensure_ascii=False, indent=2))
+    json_str = json.dumps(out, ensure_ascii=False, separators=(",", ":"))
+    sys.stdout.buffer.write(json_str.encode('utf-8'))
+    sys.stdout.buffer.write(b'\n')  # 加个换行符，保持格式整洁
     return 0 if out.get("success") else 1
 
 

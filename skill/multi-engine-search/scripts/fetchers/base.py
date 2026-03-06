@@ -1,5 +1,6 @@
 """
 Fetcher 协议与注册表。支持几十～上百个搜索源：通过注册 + 配置启用列表，aggregate 只遍历当前启用的引擎。
+每个 fetcher 自行定义默认的 max_results、timeout，便于按引擎设置不同参数。
 """
 
 from __future__ import annotations
@@ -12,9 +13,17 @@ from typing import Protocol, runtime_checkable
 class Fetcher(Protocol):
     """搜索引擎抽象：输入 query，返回 (source_id, items, error)。"""
 
-    def fetch(self, query: str) -> tuple[str, list[dict], str]:
+    def fetch(
+        self,
+        query: str,
+        *,
+        max_results: int = 5,
+        timeout: float = 10,
+    ) -> tuple[str, list[dict], str]:
         """
         执行搜索。
+        max_results: 单次最多返回条数，默认由各实现指定（如 5）。
+        timeout: 请求超时秒数，默认由各实现指定（如 0.5 表示 500ms）。
         返回 (source_id, items, error)。
         item 至少含 title, url, content, source；可选 score, date。
         """
@@ -44,7 +53,7 @@ class Registry:
             ids = self._enabled_ids
         else:
             env = os.environ.get("AGGREGATE_ENGINES", "").strip()
-            ids = [x.strip() for x in env.split(",") if x.strip()] if env else ["baidu", "tavily"]
+            ids = [x.strip() for x in env.split(",") if x.strip()] if env else ["baidu", "tavily", "zhipu"]
         return [self._fetchers[id] for id in ids if id in self._fetchers]
 
 

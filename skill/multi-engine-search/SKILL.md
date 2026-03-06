@@ -1,6 +1,6 @@
 ---
 name: multi-engine-search
-description: 多引擎聚合搜索。用户需要「搜一下」「查一下」「找资料」「多源搜索」「聚合搜索」或问需要查网上信息才能回答的问题时，用本 skill 运行聚合搜索脚本，从百度与 Tavily 并行检索并得到整合后的结果。
+description: 多引擎聚合搜索。用户需要「搜一下」「查一下」「找资料」「多源搜索」「聚合搜索」或问需要查网上信息才能回答的问题时，用本 skill 运行聚合搜索脚本，从百度、Tavily、智谱等引擎并行检索并得到整合后的结果。
 license: Apache-2.0
 ---
 
@@ -56,14 +56,14 @@ license: Apache-2.0
 success: true/false
 results: [ { title, url, content, sources, search_keywords?, score?, date?, breadcrumbs?, aggregate_index? }, ... ]   # sources=引擎列表(如 ["baidu","tavily"])，search_keywords=命中该条时使用的关键词列表
 total_count: number
-sources_used: [ "baidu", "tavily" ]
+sources_used: [ "baidu", "tavily", "zhipu" ]  # 视启用的引擎而定
 error: "" 或错误说明
 query_rewrite: { original, best_query, keywords?, suggestions, is_developer_query }   # suggestions 供你展示给用户作「可尝试的其它搜索词」（如 query+文档、query+site:xxx）
 stats:                                        # 统计信息
   total_original: number                     # 去重前条数
   total_after_dedup: number                  # 去重与过滤后条数
   dedup_rate: number                         # 去重率 %
-  engine_counts: { "baidu": n, "tavily": m } # 各引擎原始条数
+  engine_counts: { "baidu": n, "tavily": m, "zhipu": k } # 各引擎原始条数（视启用引擎而定）
   duration_ms: number                        # 本次请求耗时（毫秒）
 ```
 
@@ -73,9 +73,9 @@ stats:                                        # 统计信息
 
 | 说明         | 方式 |
 |--------------|------|
-| 参与聚合的引擎 | 环境变量 `AGGREGATE_ENGINES`，逗号分隔，如 `baidu,tavily`；不设则默认启用已注册的引擎。 |
+| 参与聚合的引擎 | 环境变量 `AGGREGATE_ENGINES`，逗号分隔，如 `baidu,tavily,zhipu`；不设则默认 `baidu,tavily,zhipu`。智谱需配置 `ZHIPU_API_KEY` 才会返回结果，未配置时该引擎会报错但不影响其他引擎。 |
 | 是否查询改写   | 默认开启。设 `AGGREGATE_QUERY_REWRITE=0` 或 `false` 关闭。 |
-| 百度 / Tavily | 需配置 `BAIDU_APPBUILDER_API_KEY`、`TAVILY_API_KEY`（或项目约定方式）。 |
+| 百度 / Tavily / 智谱 | 各引擎在 MCP 或运行环境中配置对应 API Key（如 `BAIDU_APPBUILDER_API_KEY`、`TAVILY_API_KEY`、`ZHIPU_API_KEY`）。 |
 
 ## 使用示例
 

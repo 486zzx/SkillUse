@@ -7,6 +7,7 @@ from __future__ import annotations
 
 from . import baidu  # noqa: F401 - 触发注册
 from . import tavily  # noqa: F401 - 触发注册
+from . import zhipu  # noqa: F401 - 触发注册
 from .base import registry
 
 

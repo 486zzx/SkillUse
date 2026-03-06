@@ -11,7 +11,7 @@ from fetchers.tavily import TavilyFetcher
 
 def main():
     query = sys.argv[1] if len(sys.argv) > 1 else "Python 3.12"
-    key = os.environ.get("TAVILY_API_KEY", "your-key").strip()
+    key = os.environ.get("TAVILY_API_KEY", "").strip()
     print(f"query: {query!r}", file=sys.stderr)
     print(f"TAVILY_API_KEY set: {bool(key)}", file=sys.stderr)
 

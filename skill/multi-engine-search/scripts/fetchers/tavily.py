@@ -11,13 +11,18 @@ import urllib.request
 from .base import registry, Fetcher
 
 TAVILY_MCP_URL = "https://mcp.tavily.com/mcp"
-MAX_RESULTS_PER_ENGINE = 5  # 每个引擎每个关键词只取 5 条
 
 
 class TavilyFetcher:
     """Tavily MCP 端点。"""
 
-    def fetch(self, query: str) -> tuple[str, list[dict], str]:
+    def fetch(
+        self,
+        query: str,
+        *,
+        max_results: int = 5,
+        timeout: float = 10,
+    ) -> tuple[str, list[dict], str]:
         key = os.environ.get("TAVILY_API_KEY", "your-key").strip()
         if not key:
             return "tavily", [], "未配置 TAVILY_API_KEY"
@@ -31,7 +36,7 @@ class TavilyFetcher:
                     "query": query.strip(),
                     "search_depth": "basic",
                     "topic": "general",
-                    "max_results": MAX_RESULTS_PER_ENGINE,
+                    "max_results": max_results,
                 },
             },
         }
@@ -47,7 +52,7 @@ class TavilyFetcher:
                     "x-client-source": "multi-engine-search-skill",
                 },
             )
-            with urllib.request.urlopen(req, timeout=60) as resp:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
                 raw = resp.read().decode("utf-8")
         except Exception as e:
             return "tavily", [], str(e)

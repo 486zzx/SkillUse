@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from fetchers.baidu import BaiduFetcher
 
 def main():
-    key = os.environ.get("BAIDU_APPBUILDER_API_KEY", "your-key")
+    key = os.environ.get("BAIDU_APPBUILDER_API_KEY", "")
     print("BAIDU_APPBUILDER_API_KEY set:", bool(key and key.strip()))
     f = BaiduFetcher()
     query = "python"

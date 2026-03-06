@@ -15,15 +15,18 @@ except ImportError:
 from .base import registry, Fetcher
 
 BAIDU_URL = "https://qianfan.baidubce.com/v2/ai_search/web_search"
-MAX_RESULTS_PER_ENGINE = 5  # 每个引擎每个关键词只取 5 条
-# 单次请求超时（秒）；过大会让失败请求拖慢整次聚合墙钟时间
-REQUEST_TIMEOUT = 60
 
 
 class BaiduFetcher:
     """百度千帆 API。"""
 
-    def fetch(self, query: str) -> tuple[str, list[dict], str]:
+    def fetch(
+        self,
+        query: str,
+        *,
+        max_results: int = 5,
+        timeout: float = 10,
+    ) -> tuple[str, list[dict], str]:
         key = os.environ.get("BAIDU_APPBUILDER_API_KEY", "your-key").strip()
         if not key:
             return "baidu", [], "未配置 BAIDU_APPBUILDER_API_KEY"
@@ -37,10 +40,10 @@ class BaiduFetcher:
             "messages": [{"content": query.strip(), "role": "user"}],
             "search_source": "baidu_search_v2",
             "edition": "standard",
-            "resource_type_filter": [{"type": "web", "top_k": min(MAX_RESULTS_PER_ENGINE, 50)}],
+            "resource_type_filter": [{"type": "web", "top_k": max_results}],
         }
         try:
-            r = requests.post(BAIDU_URL, headers=headers, json=body, timeout=REQUEST_TIMEOUT)
+            r = requests.post(BAIDU_URL, headers=headers, json=body, timeout=timeout)
             data = r.json()
             if r.status_code != 200 or data.get("code"):
                 return "baidu", [], data.get("message", r.text) or f"HTTP {r.status_code}"

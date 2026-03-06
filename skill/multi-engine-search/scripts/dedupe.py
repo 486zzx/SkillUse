@@ -110,3 +110,15 @@ def dedupe_by_url(items: list[dict]) -> list[dict]:
         acc.pop("search_keyword", None)  # 只保留 search_keywords 数组
         out.append(acc)
     return out
+
+
+if __name__ == "__main__":
+    # 可运行示例：python -m dedupe 或 pytest --doctest-modules dedupe.py
+    assert normalize_url("https://example.com/article?utm_source=google&fbclid=abc") == "https://example.com/article"
+    assert normalize_url("https://docs.site.com/page#section-1") == "https://docs.site.com/page"
+    assert normalize_url("example.com/path") == "https://example.com/path"
+    assert normalize_url("https://example.com/blog/") == "https://example.com/blog"
+    assert normalize_url("https://shop.com/item?id=42&gclid=xyz") == "https://shop.com/item?id=42"
+    assert normalize_url("") == ""
+    assert normalize_url("  ") == ""
+    print("dedupe.normalize_url examples OK")
