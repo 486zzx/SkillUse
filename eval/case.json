@@ -1,0 +1,392 @@
+[
+  {
+    "id": 1,
+    "type": "宏观财经",
+    "original_question": "2025年全国一般公共预算收入是多少",
+    "segmented_keywords": [
+      "2025年全国一般公共预算收入",
+      "2025年财政收入数据"
+    ],
+    "ground_truth": "2025年，全国一般公共预算收入216045亿元，比上年下降1.7%。其中，全国税收收入176363亿元，比上年增长0.8%；非税收入39682亿元，比上年下降11.3%。分中央和地方看，中央一般公共预算收入93963亿元，比上年下降6.5%；地方一般公共预算本级收入122082亿元，比上年增长2.4%。 ",
+    "url": "https://gks.mof.gov.cn/tongjishuju/202601/t20260130_3982923.htm",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 2,
+    "type": "中国近现代史",
+    "original_question": "中国抗日战争胜利的具体日期是哪一天",
+    "segmented_keywords": [
+      "抗日战争胜利日期",
+      "中国抗战胜利具体时间"
+    ],
+    "ground_truth": "中国抗日战争胜利的官方认定日期为1945年9月2日。1945年9月2日，日本向盟军投降仪式在东京湾密苏里号军舰上举行，日本代表在投降书上签字，标志着中国抗日战争暨世界反法西斯战争取得最终胜利。此外，每年的9月3日被定为中国人民抗日战争胜利纪念日。",
+    "url": "https://news.qq.com/rain/a/20250902A01P2F00",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 3,
+    "type": "中国地理",
+    "original_question": "中国海拔最高的湖泊是哪个",
+    "segmented_keywords": [
+      "中国海拔最高的湖泊",
+      "国内海拔最高的湖"
+    ],
+    "ground_truth": "中国海拔最高的湖泊是霍尔泊湖，该湖位于西藏自治区珠穆朗玛峰北部，湖面海拔约6166米，属于冰川融水形成的高山湖泊。而大众熟知的纳木错湖面海拔4718米，是中国海拔最高的大型湖泊，也是西藏三大圣湖之一。",
+    "url": "https://www.bing.com/ck/a?!&&p=221a20223e41570acb6512db945f6c7439883aec59834899cae43814ac47266cJmltdHM9MTc3Mjc1NTIwMA&ptn=3&ver=2&hsh=4&fclid=0ae8fadc-749e-611d-08a2-e88e750a6083&u=a1aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTklOUMlOEQlRTUlQjAlOTQlRTYlQjMlOEElRTYlQjklOTYvMzc0MDg4Izp-OnRleHQ9JUU4JUE1JUJGJUU4JTk3JThGJTIwJUU3JTlBJTg0JUU3JThGJUEwJUU1JUIzJUIwJUU1JThDJTk3JUU3JTlBJTg0JUU5JTlDJThEJUU1JUIwJTk0JUU2JUIzJThBJUU2JUI5JTk2JUVGJUJDJThDJUU2JTk4JUFGJUU0JUI4JUFEJUU1JTlCJUJEJUU0JUI5JTlGJUU2JTk4JUFGJUU0JUI4JTk2JUU3JTk1JThDJUU2JTlDJTgwJUU5JUFCJTk4JUU3JTlBJTg0JUU2JUI5JTk2JUVGJUJDJThDJUU2JUI5JTk2JUU5JTlEJUEyJTIwJUU2JUI1JUI3JUU2JThCJTk0JTIwNjE2NiVFNyVCMSVCMyVFMyU4MCU4MiwlNUIxJTVEJTIwJUU5JTlDJThEJUU1JUIwJTk0JUU2JUIzJThBJUU2JUI5JTk2JUVGJUJDJTg4SG9ycG8lMjBMYWtlJUVGJUJDJTg5JUVGJUJDJThDJUU0JUJEJThEJUU0JUJBJThFJUU0JUI4JUFEJUU1JTlCJUJEJUU4JUE1JUJGJUU4JTk3JThGJUU4JTg3JUFBJUU2JUIyJUJCJUU1JThDJUJBJUU3JThGJUEwJUU3JUE5JTg2JUU2JTlDJTk3JUU3JThFJTlCJUU1JUIzJUIwJUU1JThDJTk3JUU5JUJBJTkzJUVGJUJDJThDJUU2JUI5JTk2JUU5JTlEJUEyJUU2JUI1JUI3JUU2JThCJTk0NjE2NiVFNyVCMSVCMyVFRiVCQyU4QyVFNSVCMSU5RSVFNCVCQSU4RSVFNSU4NiVCMCVFNSVCNyU5RCVFOCU5RSU4RCVFNiVCMCVCNCVFOCVBMSVBNSVFNyVCQiU5OSVFNyU5QSU4NCVFNiVCNyVBMSVFNiVCMCVCNCVFNiVCOSU5NiVFMyU4MCU4MiUyMCVFOCVBRiVBNSVFNiVCOSU5NiVFNSU5QyVCMCVFNSVBNCU4NCVFNyU4RiVBMCVFNSVCMyVCMCVFOSVBQiU5OCVFNSVCMSVCMSVFNSU4QyVCQSVFNSU5RiU5RiVFRiVCQyU4QyVFNiVCMCVCNCVFNSU5RiU5RiVFOSU5RCVBMiVFNyVBNyVBRiVFNiU5QyU4OSVFOSU5OSU5MCVFRiVCQyU4QyVFNyU5NCVCMSVFNSU5MSVBOCVFNSU5QiVCNCVFOSU5QiVBQSVFNSVCMSVCMSVFNSU4NiVCMCVFNSVCNyU5RCVFOCU5RSU4RCVFNiVCMCVCNCVFNiVCMSU4NyVFOCU4MSU5QSVFOCU4MCU4QyVFNiU4OCU5MCVFMyU4MCU4MiUyMCVFNyU5NCVCMSVFNCVCQSU4RSVFNSU4RiU5MSVFNyU4RSVCMCVFNiU5NyVCNiVFOSU5NyVCNCVFOCVCRSU4MyVFNiU5OSU5QSVFRiVCQyU4QyVFNyU4RSVCMCVFNSVBRCU5OCVFNyVBNyU5MSVFNyVBMCU5NCVFOCVCNSU4NCVFNiU5NiU5OSVFNSVCMCU5QSVFNiU5QyVBQSVFNSVBRSU4QyVFNSU4NSVBOCVFNiU5QiVCNCVFNiU5NiVCMCVFMyU4MCU4Mg",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 4,
+    "type": "宏观财经",
+    "original_question": "2025年中国国内生产总值GDP同比增速是多少",
+    "segmented_keywords": [
+      "2025年中国GDP增速",
+      "2025年国内生产总值同比增长"
+    ],
+    "ground_truth": "2025年GDP增长5%！全国人均可支配收入43377元，同比增长5%，年末全国城镇调查失业率为5.1%，经济运行总体平稳，高质量发展扎实推进。",
+    "url": "https://finance.sina.cn/2026-02-28/detail-inhpiryq3053394.d.html?vt=4",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 5,
+    "type": "民生法律",
+    "original_question": "我国法定结婚年龄是多少岁",
+    "segmented_keywords": [
+      "中国法定结婚年龄",
+      "民法典 结婚年龄规定"
+    ],
+    "ground_truth": "根据《中华人民共和国民法典》第一千零四十七条的明确规定，我国大陆地区的法定结婚年龄为：男性不得早于二十二周岁，女性不得早于二十周岁。\n针对少数民族地区有合法的变通规定：我国部分民族自治地方（如新疆、内蒙古、西藏等自治区及部分自治州、自治县），可根据本民族实际情况，依法将当地少数民族的最低婚龄调整为男性 20 周岁、女性 18 周岁。该变通规定仅适用于当地的少数民族居民，不适用于该区域内的汉族居民。",
+    "url": "https://www.baike.com/wikiid/6880219418096208372",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 6,
+    "type": "国际体育赛事",
+    "original_question": "2024年巴黎奥运会中国代表团获得的金牌总数是多少",
+    "segmented_keywords": [
+      "2024巴黎奥运会中国金牌数",
+      "巴黎奥运会中国代表团金牌总数"
+    ],
+    "ground_truth": "2024年巴黎夏季奥林匹克运动会，中国体育代表团共获得40枚金牌、27枚银牌、24枚铜牌，奖牌总数91枚，位列金牌榜第二位。",
+    "url": "https://baike.baidu.com/item/2024%E5%B9%B4%E5%B7%B4%E9%BB%8E%E5%A5%A5%E8%BF%90%E4%BC%9A%E5%A5%96%E7%89%8C%E6%A6%9C/64375363",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 7,
+    "type": "国产影视",
+    "original_question": "流浪地球系列电影的导演是谁",
+    "segmented_keywords": [
+      "流浪地球 导演",
+      "流浪地球系列电影 导演是谁"
+    ],
+    "ground_truth": "《流浪地球》系列电影的导演是郭帆，其中《流浪地球1》于2019年上映，《流浪地球2》于2023年上映，及筹备中的《流浪地球3》（2027），三部作品均由郭帆执导，改编自刘慈欣的同名科幻小说。",
+    "url": "https://www.1905.com/m/film/1321444.shtml",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 8,
+    "type": "大众医疗",
+    "original_question": "我国居民推荐的每日食盐摄入量是多少克",
+    "segmented_keywords": [
+      "中国居民每日食盐推荐摄入量",
+      "居民膳食指南 食盐摄入量"
+    ],
+    "ground_truth": "根据《中国居民膳食指南（2022）》推荐，我国18岁及以上成年人每日食盐摄入量不超过5克，倡导低盐饮食，降低心血管疾病等慢性病的发病风险。",
+    "url": "https://health.baidu.com/m/detail/ar_9239816873739257810",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 9,
+    "type": "国内高校",
+    "original_question": "北京大学的建校时间是哪一年",
+    "segmented_keywords": [
+      "北京大学建校时间",
+      "北京大学 创办年份"
+    ],
+    "ground_truth": "北京大学的前身是京师大学堂，创办于1898年，1912年京师大学堂正式更名为北京大学，是中国近代第一所国立综合性大学。",
+    "url": "https://www.pku.edu.cn/about.html",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 10,
+    "type": "新能源汽车",
+    "original_question": "比亚迪2025年全年新能源汽车总销量是多少",
+    "segmented_keywords": [
+      "比亚迪2025年全年销量",
+      "比亚迪2025新能源汽车总销量"
+    ],
+    "ground_truth": "根据比亚迪官方发布的 2025 年 12 月产销快报及全年业绩数据，比亚迪 2025 年全年新能源汽车总销量为460.24 万辆，同比增长 7.73%，持续稳居全球新能源汽车销量榜首。",
+    "url": "https://www.bing.com/ck/a?!&&p=e5176470c1125b00461a27e091f3d465ae50fb14f60c6265c52519c86013d8d7JmltdHM9MTc3Mjc1NTIwMA&ptn=3&ver=2&hsh=4&fclid=0ae8fadc-749e-611d-08a2-e88e750a6083&u=a1aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8yMDAyOTk4OTg0NDc0NjYyMzA2Izp-OnRleHQ9JUU2JTlDJTgwJUU4JUJGJTkxJUVGJUJDJThDMjAyNSVFNSVCOSVCNCVFNCVCOCVBRCVFNSU5QiVCRCVFNiVCMSVCRCVFOCVCRCVBNiVFNSVCOCU4MiVFNSU5QyVCQSVFNSVCOSVCNCVFNSVCQSVBNiVFOSU5NCU4MCVFOSU4NyU4RiVFNiU4QSVBNSVFNSU5MSU4QSVFNiVBRCVBMyVFNSVCQyU4RiVFNSU4NyVCQSVFNyU4MiU4OSVFRiVCQyU4QyUyMCVFNiVBRiU5NCVFNCVCQSU5QSVFOCVCRiVBQSUyMCVFNCVCQiVBNSVFNSU4NSVBOCVFNSVCOSVCNCVFOSU5NCU4MCVFOSU4NyU4RiVFNyVCNCVBRiVFOCVBRSVBMSVFOCVCNiU4NTQ2MCVFNCVCOCU4NyVFOCVCRSU4NiVFNyU5QSU4NCVFNiU4OCU5MCVFNyVCQiVBOSVFRiVCQyU4QyVFNSU4QyU4NSVFNiU4RiVCRCVFNCVCQSU4NiVFNCVCOCVBRCVFNSU5QiVCRCVFNiVCMSVCRCVFOCVCRCVBNiVFNSVCOCU4MiVFNSU5QyVCQSVFOCVCRCVBNiVFNCVCQyU4MSVFOSU5NCU4MCVFOSU4NyU4RiVFNSU4NiVBMCVFNSU4NiU5QiVFMyU4MCU4MSVFNSU5MyU4MSVFNyU4OSU4QyVFOSU5NCU4MCVFOSU4NyU4RiVFNSU4NiVBMCVFNSU4NiU5QiVFMyU4MCU4MiUyMCVFNCVCOCU4RCVFNCVCQiU4NSVFNSVBNiU4MiVFNiVBRCVBNCVFRiVCQyU4QyVFNiVBRiU5NCVFNCVCQSU5QSVFOCVCRiVBQSVFNSVCNyVCMiVFOCVCRiU5RSVFNyVCQiVBRCVFNSU5QiU5QiVFNSVCOSVCNCVFNSU4RCVBQiVFNSU4NiU5NSVFNSU4NSVBOCVFNyU5MCU4MyUyMCVFNiU5NiVCMCVFOCU4MyVCRCVFNiVCQSU5MCVFNiVCMSVCRCVFOCVCRCVBNiUyMCVFNSVCOCU4MiVFNSU5QyVCQSVFOSU5NCU4MCVFOSU4NyU4RiVFNSU4NiVBMCVFNSU4NiU5QiVFRiVCQyU4QyVFNyU5QyU5RiVFNiVBRCVBMyVFNSVBRSU5RSVFNyU4RSVCMCUyMCVFNCVCQSU4NiVFMiU4MCU5QyVFNCVCOCVBRCVFNSU5QiVCRCVFNSU4RiU4QyVFNSU4NiVBMCUyMCUyQiwyMDIyJUU1JUI5JUI0JUVGJUJDJThDMTg2Ljg1JUU0JUI4JTg3JUU4JUJFJTg2JUUzJTgwJTgyJTIwMi4lMjAyMDIzJUU1JUI5JUI0JUVGJUJDJThDMzAyLjQ0JUU0JUI4JTg3JUU4JUJFJTg2JUUzJTgwJTgyJTIwMy4lMjAyMDI0JUU1JUI5JUI0JUVGJUJDJTlBNDI3LjIxJUU0JUI4JTg3JUU4JUJFJTg2JUUzJTgwJTgyJTIwNC4lMjAyMDI1JUU1JUI5JUI0JUVGJUJDJTlBNDYwLjI0JUU0JUI4JTg3JUU4JUJFJTg2JUUzJTgwJTgyJTIwJUU4JUJGJTk5JUU1JTlDJUE4MjAyMSVFNSVCOSVCNCVFNSU4RiU4QSVFNCVCQiVBNSVFNSU4OSU4RCVFNyU5QSU4NCVFNSVCRSU4OCVFNSVBNCU5QSVFNSVCOSVCNCVFRiVCQyU4QyVFNCVCOCVBRCVFNSU5QiVCRCVFNCVCQSVCQSVFNiU4MyVCMyVFOSU4MyVCRCVFNCVCOCU4RCVFNiU5NSVBMiVFNiU4MyVCMyVFNyU5QSU4NCVFNiU4OCU5MCVFNyVCQiVBOSVFRiVCQyU4QyVFNSVBNiU4MiVFNCVCQiU4QSVFNiVBRiU5NCVFNCVCQSU5QSVFOCVCRiVBQSVFNSU4MSU5QSVFNSU4OCVCMCVFNCVCQSU4NiVFMyU4MCU4Mg",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 11,
+    "type": "国内时政",
+    "original_question": "2025年中央一号文件的主题是什么",
+    "segmented_keywords": [
+      "2025年中央一号文件主题",
+      "2025中央一号文件 核心内容"
+    ],
+    "ground_truth": "2025年中央一号文件，是党的十八大以来第13个聚焦“三农”工作的中央一号文件，其官方文件全称为《中共中央 国务院关于进一步深化农村改革 扎实推进乡村全面振兴的意见》，核心主题为**进一步深化农村改革，扎实推进乡村全面振兴**。\n\n该文件于2025年2月23日正式发布，锚定推进乡村全面振兴、建设农业强国目标，以改革开放和科技创新为动力，深入学习运用“千万工程”经验，围绕“三农”工作部署了六大核心重点内容\n1.  持续增强粮食等重要农产品供给保障能\n2.  持续巩固拓展脱贫攻坚成\n3.  着力壮大县域富民产\n4.  着力推进乡村建\n5.  着力健全乡村治理体\n6.  着力健全要素保障和优化配置体制机制",
+    "url": "https://www.gov.cn/zhengce/202502/content_7005158.htm",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 12,
+    "type": "基础物理",
+    "original_question": "光在真空中的传播速度是多少",
+    "segmented_keywords": [
+      "真空中的光速",
+      "光在真空中的传播速度 数值"
+    ],
+    "ground_truth": "光在真空中的传播速度是一个物理常数，精确值为299792458米/秒，通常近似取值为3×10⁸米/秒，该数值是狭义相对论的基本常数之一。",
+    "url": "https://baike.baidu.com/item/%E5%85%89%E9%80%9F/363222",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 13,
+    "type": "家电消费",
+    "original_question": "家用空调的一级能效和三级能效的核心区别是什么",
+    "segmented_keywords": [
+      "空调一级能效和三级能效区别",
+      "家用空调能效等级差异"
+    ],
+    "ground_truth": "家用空调一级能效与三级能效的核心区别在于能效比（APF）不同，一级能效的全年能源消耗效率更高，相同制冷/制热量下耗电量更低，节能性、运行静音性和使用寿命通常更优；三级能效的能效比符合国家最低准入标准，购机成本更低，但长期使用电费更高。根据GB 21455-2019《房间空气调节器能效限定值及能效等级》，以国内最主流的1.5 匹冷暖变频挂机（额定制冷量≤4500W） 为例, 变频式房间空调器一级能效APF值需≥5.0，三级能效APF值需≥4.0。",
+    "url": "https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=BC04CDC71AD8C36B62C0FF4AE58F633C",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 14,
+    "type": "编程语言",
+    "original_question": "Python语言的创始人是谁",
+    "segmented_keywords": [
+      "Python创始人",
+      "Python语言 发明者"
+    ],
+    "ground_truth": "Python编程语言的创始人是荷兰程序员吉多·范罗苏姆（Guido van Rossum），他于1989年圣诞节期间开始编写Python的第一个版本，1991年正式发布Python首个公开版本，也被业界称为“Python之父”。",
+    "url": "https://www.python.org/doc/essays/foreword/",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 15,
+    "type": "中国古典文学",
+    "original_question": "红楼梦的作者是谁",
+    "segmented_keywords": [
+      "红楼梦 作者",
+      "红楼梦原著作者是谁"
+    ],
+    "ground_truth": "《红楼梦》（又名《石头记》）的前80回作者为清代小说家曹雪芹，后40回普遍认为由高鹗、程伟元整理续写完成，该书是中国古典四大名著之一，中国古代章回体长篇小说的巅峰之作。",
+    "url": "https://baike.baidu.com/item/%E7%BA%A2%E6%A5%BC%E6%A2%A6/15311",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 16,
+    "type": "中国传统艺术",
+    "original_question": "京剧的四大名旦分别是谁",
+    "segmented_keywords": [
+      "京剧四大名旦",
+      "京剧四大名旦 分别是谁"
+    ],
+    "ground_truth": "京剧四大名旦指的是梅兰芳、程砚秋、尚小云、荀慧生四位京剧表演艺术家，他们是中国京剧旦角行当中四大艺术流派的创始人，1927年由《顺天时报》评选确立，四人的表演风格各具特色，对京剧艺术的发展影响深远。",
+    "url": "https://baike.baidu.com/item/%E5%9B%9B%E5%A4%A7%E5%90%8D%E6%97%A6/1014",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 17,
+    "type": "科技政策",
+    "original_question": "东数西算工程的八大枢纽节点分别是哪些",
+    "segmented_keywords": [
+      "东数西算八大枢纽节点",
+      "东数西算国家枢纽节点名单"
+    ],
+    "ground_truth": "东数西算是中国于2022年全面启动的国家级算力资源配置工程，旨在构建“数据中心+云计算+大数据”协同发展的新型算力网络体系。“东数西算”工程的8个国家算力枢纽节点分别是：京津冀枢纽、长三角枢纽、粤港澳大湾区枢纽、成渝枢纽、贵州枢纽、内蒙古枢纽、甘肃枢纽、宁夏枢纽。",
+    "url": "https://www.bing.com/ck/a?!&&p=1d959c427799ade3c0be4714c9955ea07b0fb8ee2d6f761bb1d0efc845691738JmltdHM9MTc3Mjc1NTIwMA&ptn=3&ver=2&hsh=4&fclid=0ae8fadc-749e-611d-08a2-e88e750a6083&u=a1aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTQlQjglOUMlRTYlOTUlQjAlRTglQTUlQkYlRTclQUUlOTcvNTc5ODQ3NzEjOn46dGV4dD0lRTUlODUlQjYlRTYlQTAlQjglRTUlQkYlODMlRTUlODYlODUlRTUlQUUlQjklRTUlOEMlODUlRTUlOTAlQUIlRTUlQkIlQkElRTglQUUlQkUlMjAlRTQlQkElQUMlRTYlQjQlQTUlRTUlODYlODAlMjAlRTMlODAlODElMjAlRTklOTUlQkYlRTQlQjglODklRTglQTclOTIlMjAlRTMlODAlODElMjAlRTclQjIlQTQlRTYlQjglQUYlRTYlQkUlQjMlRTUlQTQlQTclRTYlQjklQkUlRTUlOEMlQkEsJUUzJTgwJTgxJUU2JTg4JTkwJUU2JUI4JTlEJUU3JUFEJTg5OCVFNCVCOCVBQSVFNSU5QiVCRCVFNSVBRSVCNiVFNyVBRSU5NyVFNSU4QSU5QiVFNiU5RSVBMiVFNyVCQSVCRCVFOCU4QSU4MiVFNyU4MiVCOSVFRiVCQyU4QyVFNSVCRCVBMiVFNiU4OCU5MCVFOCVBNiU4NiVFNyU5QiU5NiVFNSU4NSVBOCVFNSU5QiVCRCVFNyU5QSU4NCVFNyVBRSU5NyVFNSU4QSU5QiVFOCVCNSU4NCVFNiVCQSU5MCVFOCVCMCU4MyVFNSVCQSVBNiVFNyVCRCU5MSVFNyVCQiU5QyVFMyU4MCU4MiUyMCVFOCVBRiVBNSVFNSVCNyVBNSVFNyVBOCU4QiVFOCVCNSVCNyVFNiVCQSU5MCVFNCVCQSU4RTIwMTgtMjAxOSVFNSVCOSVCNCVFNSU5QiVCRCVFNSVBRSVCNiVFNSU4RiU5MSVFNiU5NCVCOSVFNSVBNyU5NCVFNSVCQyU4MCVFNSVCMSU5NSVFNyU5QSU4NCUyMCVFNSU4NSVBOCVFNSU5QiVCRCVFNCVCOCU4MCVFNCVCRCU5MyVFNSU4QyU5NiVFNSVBNCVBNyVFNiU5NSVCMCVFNiU4RCVBRSVFNCVCOCVBRCVFNSVCRiU4MyVFNCVCRCU5MyVFNyVCMyVCQiUyMCVFNyVBMCU5NCVFNyVBOSVCNiVFRiVCQyU4QzIwMjElRTUlQjklQjQlRTMlODAlOEElRTUlODUlQTglRTUlOUIlQkQlRTQlQjglODAlRTQlQkQlOTMlRTUlOEMlOTYlRTUlQTQlQTclRTYlOTUlQjAlRTYlOEQlQUUlRTQlQjglQUQlRTUlQkYlODMlRTUlOEQlOEYlRTUlOTAlOEMlRTUlODglOUIlRTYlOTYlQjAlRTQlQkQlOTMlRTclQjMlQkIlRTclQUUlOTclRTUlOEElOUIlRTYlOUUlQTIlRTclQkElQkQlRTUlQUUlOUUlRTYlOTYlQkQlRTYlOTYlQjklRTYlQTElODglRTMlODAlOEIlRTYlOTglOEUlRTclQTElQUUlRTUlQUUlOUUlRTYlOTYlQkQlRTglQjclQUYlRTUlQkUlODQlRTMlODAlODIlMjAlRTYlODglQUElRTglODclQjMyMDI0JUU1JUI5JUI0JUVGJUJDJThDJUU1JTg1JUFCJUU1JUE0JUE3JUU2JTlFJUEyJUU3JUJBJUJEJUU3JTlCJUI0JUU2JThFJUE1JUU2JThBJTk1JUU4JUI1JTg0JUU4JUI2JTg1NDM1JUU0JUJBJUJGJUU1JTg1JTgzJUVGJUJDJThDJUU1JUJCJUJBJUU2JTg4JTkwMTk1JUU0JUI4JTg3JUU2JUEwJTg3JUU1JTg3JTg2JUU2JTlDJUJBJUU2JTlFJUI2JUVGJUJDJThDJUU2JTk1JUI0JUU0JUJEJTkzJUU0JUI4JThBJUU2JTlFJUI2JUU3JThFJTg3NjMlMjUlRUYlQkMlOEMlRTYlOUUlQTIlRTclQkElQkQlRTklOTclQjQlRTclQkQlOTElRTclQkIlOUMlRTYlOTclQjYlRTUlQkIlQjYlRTclQkMlQTklRTglODclQjMyMCVFNiVBRiVBQiVFNyVBNyU5MiVFRiVCQyU4QyVFNyVCQiVCRiVFNyU5NCVCNSVFNCVCRCVCRiVFNyU5NCVBOCVFNyU4RSU4NyVFNyVBQSU4MSVFNyVBMCVCNCVFNSU4NSVBOCVFNSU5QiVCRCVFNSVCOSVCMyVFNSU5RCU4NyVFNiVCMCVCNCVFNSVCOSVCMyVFMyU4MCU4MiUyMCVFNyU5NCU5OCVFOCU4MiU4MyVFNSVCQSU4NiVFOSU5OCVCMyVFMyU4MCU4MSVFNSVBRSU4MSVFNSVBNCU4RiVFNCVCOCVBRCVFNSU4RCVBQiVFNyVBRCU4OSVFOSU5QiU4NiVFNyVCRSVBNCVFNyVBRSU5NyVFNSU4QSU5QiVFOCVBNyU4NCVFNiVBOCVBMSVFNyVBQSU4MSVFNyVBMCVCNDUlRTQlQjglODdQJUVGJUJDJThDMjAyMyVFNSVCOSVCNCVFMyU4MCU4QSVFNSU4QSVBMCVFNSVCRiVBQiVFNiU5RSU4NCVFNSVCQiVCQSVFNSU4NSVBOCVFNSU5QiVCRCVFNCVCOCU4MCVFNCVCRCU5MyVFNSU4QyU5NiVFNyVBRSU5NyVFNSU4QSU5QiVFNyVCRCU5MSVFNyU5QSU4NCVFNSVBRSU5RSVFNiU5NiVCRCVFNiU4NCU4RiVFOCVBNyU4MSVFMyU4MCU4QiVFNiU4RiU5MCVFNSU4NyVCQSVFNSU4OCVCMDIwMjUlRTUlQjklQjQlRTUlODglOUQlRTYlQUQlQTUlRTUlQkIlQkElRTYlODglOTAlRTclQkIlQkMlRTUlOTAlODglRTclQUUlOTclRTUlOEElOUIlRTUlOUYlQkElRTclQTElODAlRTglQUUlQkUlRTYlOTYlQkQlRTQlQkQlOTMlRTclQjMlQkIlRTMlODAlODI",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 18,
+    "type": "现代农业",
+    "original_question": "我国杂交水稻的主要发明人是谁",
+    "segmented_keywords": [
+      "杂交水稻发明人",
+      "中国杂交水稻 主要发明者"
+    ],
+    "ground_truth": "我国杂交水稻的主要发明人是袁隆平院士，他被誉为“杂交水稻之父”。袁隆平团队率先在国内开展水稻杂种优势利用研究，1973年实现了杂交水稻三系配套成功，后续不断研发出高产杂交水稻品种，大幅提升了我国水稻产量，为保障国家粮食安全做出了巨大贡献。",
+    "url": "https://www.xinhuanet.com/politics/2018-12/12/c_1123843951.htm",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 19,
+    "type": "前沿科技",
+    "original_question": "目前实现商用的第三代半导体材料主要有哪些",
+    "segmented_keywords": [
+      "第三代半导体材料 商用",
+      "第三代半导体主要材料"
+    ],
+    "ground_truth": "目前已实现产业化、商用化的第三代半导体材料主要是：碳化硅（SiC）、氮化镓（GaN）、氧化镓（Ga₂O₃）、金刚石等，其中以碳化硅和氮化镓应用最广、最成熟。",
+    "url": "https://www.bing.com/ck/a?!&&p=6bbb002358a9f5d6a989771fd69b6dc58fcf1802d2ed0e792ef7a03178cb6f59JmltdHM9MTc3Mjc1NTIwMA&ptn=3&ver=2&hsh=4&fclid=0ae8fadc-749e-611d-08a2-e88e750a6083&u=a1aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTclQUMlQUMlRTQlQjglODklRTQlQkIlQTMlRTUlOEQlOEElRTUlQUYlQkMlRTQlQkQlOTMlRTYlOUQlOTAlRTYlOTYlOTkvNTM5NDY1NzYjOn46dGV4dD0lRTclQUMlQUMlRTQlQjglODklRTQlQkIlQTMlRTUlOEQlOEElRTUlQUYlQkMlRTQlQkQlOTMlRTYlOUQlOTAlRTYlOTYlOTklRTYlOTglQUYlRTQlQkIlQTUlRTclQTIlQjMlRTUlOEMlOTYlRTclQTElODUlRUYlQkMlODhTaUMlRUYlQkMlODklRTMlODAlODElRTYlQjAlQUUlRTUlOEMlOTYlRTklOTUlOTMlRUYlQkMlODhHYU4lRUYlQkMlODklRTMlODAlODElRTYlQjAlQTclRTUlOEMlOTYlRTklOTQlOEMlRUYlQkMlODhabk8lRUYlQkMlODklRTUlOEYlOEElRTklODclOTElRTUlODglOUElRTclOUYlQjMlRTQlQjglQkElRTQlQkIlQTMlRTglQTElQTglRTclOUElODQlRTUlQUUlQkQlRTclQTYlODElRTUlQjglQTYlRTUlOEQlOEElRTUlQUYlQkMlRTQlQkQlOTMlRTYlOUQlOTAlRTYlOTYlOTklRUYlQkMlOEMlRTUlODUlQjclRTYlOUMlODklRTclQTYlODElRTUlQjglQTYlRTUlQUUlQkQlRTUlQkElQTYlRTUlQTQlQTclRTMlODAlODElRTUlQUYlQkMlRTclODMlQUQlRTclOEUlODclRTklQUIlOTglRTMlODAlODElRTYlOEElOTclRTglQkUlOTAlRTUlQjAlODQlRTglODMlQkQlRTUlOEElOUIlRTUlQkMlQkElRTclQUQlODklRTclODklQjklRTYlODAlQTclRUYlQkMlOEMlRTUlOEYlQUYlRTQlQkIlQTUlRTUlQUUlOUUlRTclOEUlQjAlRTYlOUIlQjQlRTUlQTUlQkQlRTclOUElODQlRTclOTQlQjUlRTUlQUQlOTAlRTYlQjUlOTMlRTUlQkElQTYlRTUlOTIlOEMlRTglQkYlOTAlRTUlOEElQTglRTYlOEUlQTclRTUlODglQjYlRUYlQkMlOEMlRTYlOUIlQjQlRTklODAlODIlRTUlOTAlODglRTQlQkElOEUlRTUlODglQjYlRTQlQkQlOUMlRTklQUIlOTglRTYlQjglQTklRTMlODAlODElRTklQUIlOTglRTklQTIlOTElRTMlODAlODElRTYlOEElOTclRTglQkUlOTAlRTUlQjAlODQlRTUlOEYlOEElRTUlQTQlQTclRTUlOEElOUYlRTclOEUlODclRTclOTQlQjUlRTUlQUQlOTAlRTUlOTklQTglRTQlQkIlQjYlRUYlQkMlOEMlRTQlQjglQkIlRTglQTYlODElRTUlQkElOTQlRTclOTQlQTglRTQlQkElOEU1RyVFNSU5RiVCQSVFNyVBQiU5OSVFMyU4MCU4MSVFNiU5NiVCMCVFOCU4MyVCRCVFNiVCQSU5MCVFNiVCMSVCRCVFOCVCRCVBNiVFMyU4MCU4MSVFNSVCRiVBQiVFNSU4NSU4NSVFNSU4RiU4QSVFNiU5NiVCMCVFOCU4MyVCRCVFNiVCQSU5MCVFNSVCOSVCNiVFNyVCRCU5MSVFNyVBRCU4OSVFOSVBMiU4NiVFNSU5RiU5RiVFMyU4MCU4MiwlRTUlODUlQjYlRTQlQkElQTclRTQlQjglOUElRTklOTMlQkUlRTYlQjYlQjUlRTclOUIlOTYlRTglQTElQUMlRTUlQkElOTUlRTUlODglQjYlRTUlQTQlODclRTMlODAlODElRTUlQTQlOTYlRTUlQkIlQjYlRTclOTQlOUYlRTklOTUlQkYlRTUlOEYlOEElRTUlOTklQTglRTQlQkIlQjYlRTUlODglQjYlRTklODAlQTAlRUYlQkMlOEMlRTUlQUYlQkMlRTclOTQlQjUlRTUlOUUlOEIlRTclQTIlQjMlRTUlOEMlOTYlRTclQTElODUlRTglQTElQUMlRTUlQkElOTUlRTclOTQlQTglRTQlQkElOEUlRTUlOEElOUYlRTclOEUlODclRTUlOTklQTglRTQlQkIlQjYlRUYlQkMlOEMlRTUlOEQlOEElRTclQkIlOUQlRTclQkMlOTglRTUlOUUlOEIlRTglQTElQUMlRTUlQkElOTUlRTUlODglOTklRTclOTQlQTglRTQlQkElOEUlRTUlQkUlQUUlRTYlQjMlQTIlRTUlQjAlODQlRTklQTIlOTElRTUlOTklQTglRTQlQkIlQjYlRTMlODAlODIlMjAlRTUlOUMlQTglRTUlODUlODklRTclOTQlQjUlRTUlQUQlOTAlRTUlOTIlOEMlRTUlQkUlQUUlRTclOTQlQjUlRTUlQUQlOTAlRTklQTIlODYlRTUlOUYlOUYlRTUlODUlQjclRTYlOUMlODklRTklODclOEQlRTglQTYlODElRTclOUElODQlRTUlQkElOTQlRTclOTQlQTglRTQlQkIlQjclRTUlODAlQkMlRUYlQkMlOEMlRTQlQjglQkIlRTglQTYlODElRTUlQkElOTQlRTclOTQlQTglRTQlQkElOEU1RyVFNSU5RiVCQSVFNyVBQiU5OSVFMyU4MCU4MSVFNiU5NiVCMCVFOCU4MyVCRCVFNiVCQSU5MCVFNiVCMSVCRCVFOCVCRCVBNiVFMyU4MCU4MSVFNSVCRiVBQiVFNSU4NSU4NSVFMyU4MCU4MSVFNyU5NCVCNSVFNSU4QSU5QiVFNCVCRSU5QiVFNSVCQSU5NCVFNSU4RiU4QSVFOCVCRCVBOCVFOSU4MSU5MyVFNCVCQSVBNCVFOSU4MCU5QSVFNyVBRCU4OSVFOSVBMiU4NiVFNSU5RiU5RiVFMyU4MCU4Mg",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 20,
+    "type": "中国航天",
+    "original_question": "神舟十五号载人飞船的航天员乘组都有谁",
+    "segmented_keywords": [
+      "神舟十五号航天员乘组",
+      "神舟十五号 航天员名单"
+    ],
+    "ground_truth": "神舟十五号载人飞船的航天员乘组由费俊龙、邓清明、张陆3名航天员组成，其中费俊龙担任指令长。神舟十五号于2022年11月29日发射升空，在轨驻留6个月，完成了多项空间科学实验和技术试验任务，于2023年6月4日成功返回地球。",
+    "url": "https://www.bing.com/ck/a?!&&p=016b2e67cfbc241e816a91fdace1547e4a43447fb84f3259ad07cb04e80b9e57JmltdHM9MTc3Mjc1NTIwMA&ptn=3&ver=2&hsh=4&fclid=0ae8fadc-749e-611d-08a2-e88e750a6083&u=a1aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTclQTUlOUUlRTglODglOUYlRTUlOEQlODElRTQlQkElOTQlRTUlOEYlQjclRTklQTMlOUUlRTglQTElOEMlRTQlQjklOTglRTclQkIlODQvNjEzMDkzNjcjOn46dGV4dD0lRTclQTUlOUUlRTglODglOUYlRTUlOEQlODElRTQlQkElOTQlRTUlOEYlQjclMjAlRTklQTMlOUUlRTglQTElOEMlRTQlQjklOTglRTclQkIlODQlRTYlOTglQUYlRTclOTQlQjElRTglODglQUElRTUlQTQlQTklRTUlOTElOTglMjAlRTglQjQlQjklRTQlQkYlOEElRTklQkUlOTklMjAlRUYlQkMlODglRTYlOEMlODclRTQlQkIlQTQlRTklOTUlQkYlRUYlQkMlODklRTMlODAlODElMjAlRTklODIlOTMlRTYlQjglODUlRTYlOTglOEUlMjAlRTMlODAlODElMjAlRTUlQkMlQTAlRTklOTklODYlMjAlRTclQkIlODQlRTYlODglOTAlRTclOUElODQlMjIlRTUlOUMlODYlRTYlQTIlQTYlRTQlQjklOTglRTclQkIlODQlMjIlRUYlQkMlOEMlRTYlODklQTclRTglQTElOEMsJTIyJUVGJUJDJThDJUU1JUI5JUI2JUU0JUJBJThFMTElRTYlOUMlODgzMCVFNiU5NyVBNSVFOSVBMSVCQSVFNSU4OCVBOSVFOCVCRiU5QiVFOSVBOSVCQiVFNCVCOCVBRCVFNSU5QiVCRCVFNyVBOSVCQSVFOSU5NyVCNCVFNyVBQiU5OSUyMCU1QjEzJTVEJTIwJTVCMTUlNUQlMjAlNUIzNCU1RCVFMyU4MCU4MiUyMCVFNCVCOSU5OCVFNyVCQiU4NCVFNSU5QyVBOCVFNCVCOCVCQSVFNiU5QyU5RjYlRTQlQjglQUElRTYlOUMlODglRTclOUElODQlRTUlQTQlQUElRTclQTklQkElRTklQTklQkIlRTclOTUlOTklRTYlOUMlOUYlRTklOTclQjQlRTUlQUUlOEMlRTYlODglOTA0JUU2JUFDJUExJUU1JTg3JUJBJUU4JTg4JUIxJUU2JUI0JUJCJUU1JThBJUE4JUVGJUJDJThDJUU1JTg4JUI3JUU2JTk2JUIwJUU1JThEJTk1JUU0JUI4JUFBJUU0JUI5JTk4JUU3JUJCJTg0JUU1JTg3JUJBJUU4JTg4JUIxJUU2JUFDJUExJUU2JTk1JUIwJUU3JUJBJUFBJUU1JUJEJTk1JUVGJUJDJThDJUU2JTlDJTlGJUU5JTk3JUI0JUU1JUJDJTgwJUU1JUIxJTk1JUU0JUJBJTg2JUU3JUE5JUJBJUU5JTk3JUI0JUU3JUFCJTk5JUU1JThGJThDJUU1JTg1JTg5JUU1JUFEJTkwJUU2JTk4JUJFJUU1JUJFJUFFJUU5JTk1JTlDJUU1JUFFJTlFJUU5JUFBJThDJUUzJTgwJTgxJUU4JUI0JUE3JUU3JTg5JUE5JUU4JUJEJUFDJUU4JUJGJTkwJUU3JUFEJTg5JUU0JUJCJUJCJUU1JThBJUExJTIwJTVCMjElNUQlMjAlNUIyNiU1RCUyMCU1QjMxLTMyJTVEJUUzJTgwJTgy",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 21,
+    "type": "食品安全",
+    "original_question": "我国国标中纯牛奶的蛋白质含量最低要求是多少",
+    "segmented_keywords": [
+      "纯牛奶蛋白质含量国标",
+      "GB25190 纯牛奶蛋白质最低要求"
+    ],
+    "ground_truth": "根据我国GB 25190-2010《食品安全国家标准 灭菌乳》规定，纯牛奶（灭菌乳）的蛋白质含量最低要求为≥2.9克/100克，脂肪含量最低要求为≥3.1克/100克，该标准为纯牛奶产品的强制国家标准。",
+    "url": "https://zhuanlan.zhihu.com/p/15413371555",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 22,
+    "type": "美妆护肤",
+    "original_question": "护肤品中烟酰胺的核心功效是什么",
+    "segmented_keywords": [
+      "烟酰胺 护肤功效",
+      "护肤品中烟酰胺的作用"
+    ],
+    "ground_truth": "烟酰胺（维生素B3的酰胺形式）在护肤品中的核心功效包括：1. 抑制黑色素向角质层转运，提亮肤色、改善色斑和痘印；2. 修复皮肤屏障，促进角质层神经酰胺合成，增强皮肤锁水能力；3. 调节皮脂腺分泌，控油缩毛孔，改善痘痘肌；4. 促进胶原蛋白合成，延缓皮肤衰老，改善细纹。",
+    "url": "https://www.bing.com/ck/a?!&&p=303f7ebc4731ca010251eae1f9e4d24c1fc7a9125862b91b73fd1568f6603f97JmltdHM9MTc3Mjc1NTIwMA&ptn=3&ver=2&hsh=4&fclid=0ae8fadc-749e-611d-08a2-e88e750a6083&u=a1aHR0cHM6Ly9tYWtlc2tpbmhhcHB5LmNvbS8lZTclODMlOWYlZTklODUlYjAlZTglODMlYmElZTYlOWMlODklZTQlYmIlODAlZTQlYjklODglZTUlYTUlYmQlZTUlYTQlODQlZWYlYmMlOWYvIzp-OnRleHQ9JUU2JThGJTkwJUU0JUJBJUFFJUU4JTgyJUE0JUU4JTg5JUIyJUVGJUJDJTlBJTIwJUU1JTg3JThGJUU1JUIwJTkxJUU4JTg5JUIyJUU3JUI0JUEwJUU2JUIyJTg5JUU3JTlEJTgwJUUzJTgwJTgxJUU5JUJCJTkxJUU2JTk2JTkxJUU1JTkyJThDJUU2JTlBJTk3JUU2JUIyJTg5JUVGJUJDJThDJUU0JUJEJUJGJUU4JTgyJUE0JUU4JTg5JUIyJUU2JTlCJUI0JUU1JTlEJTg3JUU1JThDJTgwJUUzJTgwJTgyJTIwJUU2JTlDJUJBJUU1JTg4JUI2JUVGJUJDJTlBJUU2JThBJTkxJUU1JTg4JUI2JUU5JUJCJTkxJUU4JTg5JUIyJUU3JUI0JUEwJUU0JUJCJThFJUU5JUJCJTkxJUU4JTg5JUIyJUU3JUI0JUEwJUU3JUJCJTg2JUU4JTgzJTlFJUU1JTkwJTkxJUU4JUE3JTkyJUU4JUI0JUE4JUU1JUJEJUEyJUU2JTg4JTkwJUU3JUJCJTg2JUU4JTgzJTlFJUU3JTlBJTg0JUU4JUJEJUFDJUU4JUJGJTkwJUVGJUJDJThDJUU1JTg3JThGJUU1JUIwJTkxJUU4JUExJUE4JUU3JTlBJUFFJUU4JTg5JUIyJUU3JUI0JUEwJUU2JUIyJTg5JUU3JUE3JUFGJUUzJTgwJTgyJTIwJUU3JUEwJTk0JUU3JUE5JUI2JUU2JTk0JUFGJUU2JThDJTgxJUVGJUJDJTlBJUU1JUFFJTlEJUU2JUI0JTgxJUU1JTg1JUFDJUU1JThGJUI4JUU3JUEwJTk0JUU3JUE5JUI2JUU1JThGJTkxJUU3JThFJUIwJUVGJUJDJThDNSUyNSVFNyU4MyU5RiVFOSU4NSVCMCVFOCU4MyVCQSVFNCVCRCVCRiVFNyU5NCVBODglRTUlOTElQTglRTUlOEYlQUYlRTYlOTglQkUlRTglOTElOTclRTYlOTQlQjklRTUlOTYlODQlRTglODIlQTQlRTglODklQjIlRTQlQjglOEQlRTUlOUQlODclRTUlOTIlOEMlRTglODklQjIlRTYlOTYlOTElRUYlQkMlODglRTUlOEYlODIlRTglODAlODMlRTMlODAlOEFCcml0aXNoJTIwSm91cm5hbCUyMG9mJTIwRGVybWF0b2xvZ3klRTMlODAlOEIlRUYlQkMlODklRTMlODAlODIsJUU5JTgwJTgyJUU3JTk0JUE4JUU0JUJBJUJBJUU3JUJFJUE0JUVGJUJDJTlBJUU5JUJCJTg0JUU4JUE0JTkwJUU2JTk2JTkxJUUzJTgwJTgxJUU3JTk3JTk4JUU1JThEJUIwJUUzJTgwJTgxJUU2JTk5JTkyJUU1JTkwJThFJUU0JUJGJUFFJUU1JUE0JThEJUUzJTgwJTgyJTIwJUU1JTg3JThGJUU1JUIwJTkxJUU1JThGJTkxJUU3JUJBJUEyJUU1JTkyJThDJUU1JThGJTkxJUU3JTgyJThFJUVGJUJDJTlBJTIwJUU4JTg4JTkyJUU3JUJDJTkzJUU1JTg4JUJBJUU2JUJGJTgwJUVGJUJDJThDJUU1JUFGJUI5JUU2JTk1JThGJUU2JTg0JTlGJUU1JTkyJThDJUU2JTk4JTkzJUU2JTgyJUEzJUU3JUJBJUEyJUU2JTk2JTkxJUU3JTk3JUE0JUU3JTk2JUFFJUU3JTlBJTg0JUU3JTlBJUFFJUU4JTgyJUE0JUU2JTlDJTg5JUU3JTlCJThBJUUzJTgwJTgyJTIwJUU1JUJBJTk0JUU3JTk0JUE4JUVGJUJDJTlBNCUyNS01JTI1JUU2JUI1JTkzJUU1JUJBJUE2JUU1JThGJUFGJUU4JUJFJTg1JUU1JThBJUE5JUU2JUIyJUJCJUU3JTk2JTk3JUU3JTk3JUE0JUU3JTk2JUFFJUVGJUJDJThDJUU2JThBJTkxJUU1JTg4JUI2JUU3JTgyJThFJUU3JTk3JTg3JUU1JTlCJUEwJUU1JUFEJTkwJUVGJUJDJTg4JUU1JUE2JTgySUwtNiVFMyU4MCU4MVRORi0lQ0UlQjElRUYlQkMlODklRTMlODAlODIlMjAlRTclQTAlOTQlRTclQTklQjYlRUYlQkMlOUElRTUlQUYlQjklRTclOEUlQUIlRTclOTElQjAlRTclOTclQTQlRTclOTYlQUUlRTYlODIlQTMlRTglODAlODUlRTYlOUMlODklRTclQkMlOTMlRTglQTclQTMlRTclQkElQTIlRTYlOTYlOTElRTQlQkQlOUMlRTclOTQlQTglRUYlQkMlODglRTMlODAlOEFDdXRpcyVFMyU4MCU4QiVFNiU5QyU5RiVFNSU4OCU4QSVFRiVCQyU4OSVFMyU4MCU4MiUyMCVFNCVCRiU4MyVFOCVCRiU5QiVFNCVCRiU5RCVFNiVCOSVCRiVFRiVCQyU5QSUyMCVFNSVCQyVCQSVFNSU4QyU5NiVFNyU5QSVBRSVFOCU4MiVBNCVFNSVCMSU4RiVFOSU5QSU5QyVFRiVCQyU4QyVFOSU5OCVCMiVFNiVBRCVBMiVFNiVCMCVCNCVFNSU4OCU4NiVFNiVCNSU4MSVFNSVBNCVCMSVFNSVCOSVCNiVFNiU4RiU5MCVFOSVBQiU5OCVFNCVCRiU5RCVFNiVCOSVCRiVFNiVCMCVCNCVFNSVCOSVCMyVFMyU4MCU4MiUyMCVFNiU5QyVCQSVFNSU4OCVCNiVFRiVCQyU5QSVFNSVBMiU5RSVFNSU4QSVBMCVFNyVBNSU5RSVFNyVCQiU4RiVFOSU4NSVCMCVFOCU4MyVCQSVFMyU4MCU4MSVFOCU4NCU4MiVFOCU4MiVBQSVFOSU4NSVCOCVFNSU5MCU4OCVFNiU4OCU5MCVFRiVCQyU4QyVFNSVCQyVCQSVFNSU4QyU5NiVFOCVBNyU5MiVFOCVCNCVBOCVFNSVCMSU4MiVFNyVCQiU5MyVFNiU5RSU4NCVFMyU4MCU4Mg",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 23,
+    "type": "文旅旅游",
+    "original_question": "世界文化遗产敦煌莫高窟位于我国哪个省份",
+    "segmented_keywords": [
+      "敦煌莫高窟 所在省份",
+      "莫高窟位于中国哪个省"
+    ],
+    "ground_truth": "敦煌莫高窟位于我国甘肃省酒泉市敦煌市，始建于前秦宣昭帝苻坚时期，是世界上现存规模最大、内容最丰富的佛教艺术地，1987年被联合国教科文组织列入《世界文化遗产名录》。",
+    "url": "https://baike.baidu.com/item/%E8%8E%AB%E9%AB%98%E7%AA%9F/303038",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 24,
+    "type": "个人理财",
+    "original_question": "2025年我国居民一年期定期存款基准利率是多少",
+    "segmented_keywords": [
+      "2025年一年期定期存款基准利率",
+      "央行 一年期存款基准利率 2025"
+    ],
+    "ground_truth": "2025年中国人民银行公布的金融机构人民币存款基准利率中，一年期定期存款基准利率为1.5%，1.5% 是中国人民银行（央行）公布的一年期整存整取存款基准利率。该利率自 2015 年 10 月 24 日 央行最后一次降息后，一直未再调整。各商业银行可在基准利率基础上，结合市场情况和自身经营需求进行合理浮动。",
+    "url": "https://www.chinamoney.org.cn/chinese/sddsint/?f_link_type=f_linkinlinenote&flow_extra=eyJpbmxpbmVfZGlzcGxheV9wb3NpdGlvbiI6MCwiZG9jX3Bvc2l0aW9uIjowLCJkb2NfaWQiOiIwNWY0MTgxNjk0MWFkMTk3LWY3ZDZjNDU2MDllMjc5OTAifQ%3D%3D",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 25,
+    "type": "职场社保",
+    "original_question": "我国职工法定退休年龄是多少岁",
+    "segmented_keywords": [
+      "职工法定退休年龄",
+      "中国职工退休年龄 最新规定"
+    ],
+    "ground_truth": "我国职工法定退休年龄：现行实施渐进式延迟退休政策（2025年1月1日起），最终目标为男63岁、女干部/管理岗58岁、女工人/操作岗55岁。原法定退休年龄为男职工60周岁，女工人50周岁，女干部55周岁。2025—2039年逐步延迟：男职工每4个月延迟1个月，原55岁退休的女职工每4个月延迟1个月，原50岁退休的女职工每2个月延迟1个月。弹性退休：满足最低缴费年限可提前最多3年，不低于原法定退休年龄；与单位协商一致可最多延迟3年。",
+    "url": "https://www.gov.cn/yaowen/liebiao/202409/content_6974294.htm",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 26,
+    "type": "电竞行业",
+    "original_question": "英雄联盟S15全球总决赛的冠军是哪支战队",
+    "segmented_keywords": [
+      "英雄联盟S15全球总决赛冠军",
+      "S15冠军战队"
+    ],
+    "ground_truth": "英雄联盟 S15（2025）全球总决赛的冠军是T1 战队。2025 年 11 月 9 日，T1 在成都以3-2的比分战胜 KT 战队，实现 S 赛三连冠，并夺得队史第六座全球总决赛冠军奖杯，队内选手Gumayusi当选 FMVP，核心选手Faker斩获个人第六个 S 赛冠军。",
+    "url": "https://www.toutiao.com/article/7570952285014999590/?&source=m_redirect",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 27,
+    "type": "国产动漫",
+    "original_question": "国产动画《哪吒之魔童降世》的导演是谁",
+    "segmented_keywords": [
+      "哪吒之魔童降世 导演",
+      "哪吒之魔童降世 动画导演"
+    ],
+    "ground_truth": "国产动画电影《哪吒之魔童降世》的导演是饺子（本名杨宇），该片于2019年上映，打破了国产动画电影的票房纪录，累计票房超50亿元，位列中国影史票房前列，同时也入围了第92届奥斯卡金像奖最佳动画长片初选名单。",
+    "url": "https://www.bing.com/ck/a?!&&p=44490287663bd833a9ff833587f24e0a1463799f4c435f5b56987a6e0cf1478dJmltdHM9MTc3Mjc1NTIwMA&ptn=3&ver=2&hsh=4&fclid=0ae8fadc-749e-611d-08a2-e88e750a6083&u=a1aHR0cHM6Ly9iYWlrZS5zb2dvdS5jb20vbS92MTU4NTg4NjgxLmh0bSM6fjp0ZXh0PSVFMyU4MCU4QSVFNSU5MyVBQSVFNSU5MCU5MiVFNCVCOSU4QiVFOSVBRCU5NCVFNyVBQiVBNSVFOSU5OSU4RCVFNCVCOCU5NiVFMyU4MCU4QiVFRiVCQyU4OE5lemhhJTNBJTIwQmlydGglMjBvZiUyMHRoZSUyMERlbW9uJTIwQ2hpbGQlRUYlQkMlODklRTYlOTglQUYlRTclOTQlQjElMjAlRTYlOUQlQTglRTUlQUUlODclMjAlRUYlQkMlODglRTklQTUlQkElRTUlQUQlOTAlRUYlQkMlODklRTYlODklQTclRTUlQUYlQkMlRUYlQkMlOEMlRTYlOUQlQTglRTUlQUUlODclRTMlODAlODElRTYlOTglOTMlRTUlQjclQTclRTMlODAlODElRTklQUQlOEYlRTglOEElQjglRTglOEElQjglRTYlOEIlODUlRTQlQkIlQkIlRTclQkMlOTYlRTUlODklQTclRUYlQkMlOEMsMjAyMCVFNSVCOSVCNDElRTYlOUMlODgzMSVFNiU5NyVBNSUyMCVFNSU5QyVBOCVFNSU4QyU5NyVFNyVCRSU4RSVFNCVCOCU4QSVFNiU5OCVBMCUyMCU1QjElNUQlMjAlNUIyJTVEJTIwJTVCMyU1RCVFMyU4MCU4MiUyMCVFOCVBRiVBNSVFNyU5NCVCNSVFNSVCRCVCMSUyMCVFNSU4RiU5NiVFNiU5RCU5MCVFNCVCQSU4RSVFNCVCOCVBRCVFNSU5QiVCRCVFNyVBNSU5RSVFOCVBRiU5RCVFNiU5NSU4NSVFNCVCQSU4QiVFRiVCQyU4QyVFOCVBRSVCMiVFOCVCRiVCMCVFMiU4MCU5QyVFNyU5NCU5RiVFOCU4MCU4QyVFNCVCOCVCQSVFOSVBRCU5NCVFMiU4MCU5RCVFNyU5QSU4NCVFNSU5MyVBQSVFNSU5MCU5MiVFNSU4RSU4NiVFNyVCQiU4RiVFNyVBMyVBOCVFOSU5QSVCRSVFRiVCQyU4QyVFNSU4RCVCNCVFMiU4MCU5QyVFNCVCOCU4RCVFOCVBRSVBNCVFNSU5MSVCRCVFMiU4MCU5RCVFMiU4MCU5QyVFNiU5NiU5NyVFNSU4OCVCMCVFNSVCQSU5NSVFMiU4MCU5RCVFNyU5QSU4NCVFNiU4OCU5MCVFOSU5NSVCRiVFNiU5NSU4NSVFNCVCQSU4QiUyMCU1QjIlNUQlRTMlODAlODI",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 28,
+    "type": "中国古建筑",
+    "original_question": "北京故宫的建造时间是哪一年",
+    "segmented_keywords": [
+      "北京故宫建造时间",
+      "故宫 始建年份"
+    ],
+    "ground_truth": "北京故宫（紫禁城）始建于明永乐四年（公元1406年），于明永乐十八年（公元1420年）正式建成，是明清两代的皇家宫殿，是世界上现存规模最大、保存最为完整的木质结构古建筑群之一，1987年被列入《世界文化遗产名录》。",
+    "url": "https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E6%95%85%E5%AE%AB/345415",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 29,
+    "type": "新能源行业",
+    "original_question": "我国“西电东送”工程的核心目的是什么",
+    "segmented_keywords": [
+      "西电东送工程核心目的",
+      "西电东送 工程意义"
+    ],
+    "ground_truth": "我国“西电东送”工程的核心目的是解决我国能源资源与电力负荷分布不均衡的问题，将西部煤炭、水能、风能、太阳能等丰富的能源资源转化为电力，输送到电力需求旺盛的东部沿海经济发达地区，实现资源的优化配置，推动东西部区域经济协调发展，同时优化全国能源结构，减少东部地区环境污染，保障国家能源安全。",
+    "url": "https://baike.baidu.com/item/%E8%A5%BF%E7%94%B5%E4%B8%9C%E9%80%81/1431153#1",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 30,
+    "type": "汉语规范",
+    "original_question": "现代汉语普通话的标准音是以哪里的方言为基础",
+    "segmented_keywords": [
+      "普通话标准音 基础方言",
+      "普通话 以哪里的语音为标准音"
+    ],
+    "ground_truth": "现代汉语普通话的标准音以北京语音为标准音，以北方话为基础方言，以典范的现代白话文著作为语法规范。该标准于1955年在全国文字改革会议上正式确立，是国家通用语言的规范标准。",
+    "url": "https://www.bing.com/ck/a?!&&p=f3a90071bc4b742e42a1dd87689e723a0b09c4c1a41800f5ec886835a02563a3JmltdHM9MTc3Mjc1NTIwMA&ptn=3&ver=2&hsh=4&fclid=0ae8fadc-749e-611d-08a2-e88e750a6083&u=a1aHR0cHM6Ly9iYWlrZS5zb2dvdS5jb20vbS92NTI0NjEuaHRtIzp-OnRleHQ9JUU2JTk5JUFFJUU5JTgwJTlBJUU4JUFGJTlEJUVGJUJDJTg4U3RhbmRhcmQlMjBNYW5kYXJpbiUyRlB1dG9uZ2h1YSVFRiVCQyU4OSVFNiU5OCVBRiVFNCVCQiVBNSVFNSU4QyU5NyVFNCVCQSVBQyVFOCVBRiVBRCVFOSU5RiVCMyVFNCVCOCVCQSVFNiVBMCU4NyVFNSU4NyU4NiVFOSU5RiVCMyVFRiVCQyU4QyVFNCVCQiVBNSVFNSU4QyU5NyVFNiU5NiVCOSVFOCVBRiU5RCVFNCVCOCVCQSVFNSU5RiVCQSVFNyVBMSU4MCVFNiU5NiVCOSVFOCVBOCU4MCVFRiVCQyU4QyVFNCVCQiVBNSVFNSU4NSVCOCVFOCU4QyU4MyVFNyU5QSU4NCVFNyU4RSVCMCVFNCVCQiVBMyVFNyU5OSVCRCVFOCVBRiU5RCVFNiU5NiU4NyVFOCU5MSU5NyVFNCVCRCU5QyVFNCVCOCVCQSVFOCVBRiVBRCVFNiVCMyU5NSVFOCVBNyU4NCVFOCU4QyU4MyVFNyU5QSU4NCVFOSU4MCU5QSVFNyU5NCVBOCVFOCVBRiVBRCUyMCU1QjElNUQlRTMlODAlODIlMjAlRTYlOEUlQTglRTUlQjklQkYlRTYlOTklQUUlRTklODAlOUElRTglQUYlOUQlRTUlQjklQjYlRTQlQjglOEQlRTYlOTglQUYlRTglQTYlODElRTQlQkElQkElRTQlQjglQkElRTUlOUMlQjAlRTYlQjYlODglRTclODElQUQlRTYlOTYlQjklRTglQTglODAlRUYlQkMlOEMlRTQlQjglQkIlRTglQTYlODElRTYlOTglQUYlRTQlQjglQkElRTQlQkElODYlRTYlQjYlODglRTklOTklQTQlRTYlOTYlQjklRTglQTglODAlRTklOUElOTQlRTklOTglODIlRUYlQkMlOEMlRTQlQkIlQTUlRTUlODglQTklRTclQTQlQkUlRTQlQkMlOUElRTQlQkElQTQlRTklOTklODUlRUYlQkMlOEMlRTQlQjglOEUlRTQlQkElQkElRTYlQjAlOTElRTQlQkQlQkYlRTclOTQlQTglRTQlQkMlQTAlRTYlODklQkYlRTYlOTYlQjklRTglQTglODAlRTUlQjklQjYlRTQlQjglOEQlRTclOUYlOUIlRTclOUIlQkUlRTMlODAlODIsMTkwOSVFNSVCOSVCNCVFNiVCOCU4NSVFNiU5NCVCRiVFNSVCQSU5QyVFNSVCMCU4NiVFNSU4QyU5NyVFNSVCOSVCMyVFOCVBRiVBRCVFOSU5RiVCMyVFNSU5MSVCRCVFNSU5MCU4RCVFNCVCOCVCQSVFNSU5QiVCRCVFOCVBRiVBRCVFMyU4MCU4MiUyMCVFNiVCMCU5MSVFNSU5QiVCRCVFNiU5NyVCNiVFNSVBNCU5QSVFNiVBQyVBMSVFNSU4OCVCNiVFNSVBRSU5QSVFNiVBMCU4NyVFNSU4NyU4NiVFRiVCQyU4QzE5MTglRTUlQjklQjQlRTUlOEMlOTclRTYlQjQlOEIlRTYlOTQlQkYlRTUlQkElOUMlRTUlODUlQUMlRTUlQjglODMlRTQlQkElODYlRTclQUMlQUMlRTQlQjglODAlRTUlQTUlOTclRTUlOUIlQkQlRTUlQUUlQjYlRTglQUUlQTQlRTUlOEYlQUYlRTclOUElODQlRTUlOUIlQkQlRTklOUYlQjMlRTYlQjMlQTglRTklOUYlQjMlRTUlQUQlOTclRTYlQUYlOEQlRTMlODAlODIlMjAxOTMyJUU1JUI5JUI0JUU3JUJCJThGJUU1JTlCJUJEJUU2JUIwJTkxJUU2JTk0JUJGJUU1JUJBJTlDJUU2JTk1JTk5JUU4JTgyJUIyJUU5JTgzJUE4JUU5JUEyJTgxJUU1JUI4JTgzJUUzJTgwJThBJUU1JTlCJUJEJUU5JTlGJUIzJUU1JUI4JUI4JUU3JTk0JUE4JUU1JUFEJTk3JUU2JUIxJTg3JUUzJTgwJThCJUU1JTkwJThFJUVGJUJDJThDJUU3JUExJUFFJUU1JUFFJTlBJUU1JTlCJUJEJUU4JUFGJUFEJUU2JUEwJTg3JUU1JTg3JTg2JUUzJTgwJTgyJTIwJUU1JTg4JUI2JUU1JUFFJTlBJUU2JUEwJTg3JUU1JTg3JTg2JUU1JTkwJThFJUU0JUJBJThFMTk1NSVFNSVCOSVCNCVFNSU5MCU5MSVFNSU4NSVBOCVFNSU5QiVCRCVFNiU4RSVBOCVFNSVCOSVCRiVFMyU4MCU4MiUyMDIwMDAlRTUlQjklQjQlRUYlQkMlOEMlRTMlODAlOEElRTQlQjglQUQlRTUlOEQlOEUlRTQlQkElQkElRTYlQjAlOTElRTUlODUlQjElRTUlOTIlOEMlRTUlOUIlQkQlRTUlOUIlQkQlRTUlQUUlQjYlRTklODAlOUElRTclOTQlQTglRTglQUYlQUQlRTglQTglODAlRTYlOTYlODclRTUlQUQlOTclRTYlQjMlOTUlRTMlODAlOEIlRTclQTElQUUlRTclQUIlOEIlRTQlQkElODYlRTYlOTklQUUlRTklODAlOUElRTglQUYlOUQlRTUlOTIlOEMlRTglQTclODQlRTglOEMlODMlRTYlQjElODklRTUlQUQlOTclRTQlQkQlOUMlRTQlQjglQkElRTUlOUIlQkQlRTUlQUUlQjYlRTklODAlOUElRTclOTQlQTglRTglQUYlQUQlRTglQTglODAlRTYlOTYlODclRTUlQUQlOTclRTclOUElODQlRTYlQjMlOTUlRTUlQkUlOEIlRTUlOUMlQjAlRTQlQkQlOEQlRTMlODAlODI",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 31,
+    "type": "科技企业动态",
+    "original_question": "华为中国区总部是哪里",
+    "segmented_keywords": [
+      "华为中国区总部地址",
+      "华为中国总部位置"
+    ],
+    "ground_truth": "华为中国区总部位于北京市丰台区丽泽路 20 号丽泽 SOHO。\n补充说明\n全球总部：华为全球总部（注册地、核心研发与行政总部）在广东省深圳市龙岗区坂田华为基地。\n定位区别：深圳总部侧重全球战略、研发与整体管理；北京中国区总部聚焦中国区市场运营、客户服务与本土化业务推进。",
+    "url": "https://m.163.com/dy/article/G021SI8I05371JD5.html",
+    "case_source": "user_provided"
+  },
+  {
+    "id": 32,
+    "type": "汽车消费",
+    "original_question": "问界M7这个月的价格和刚上市相比有没有大的变化",
+    "segmented_keywords": ["问界M7 2026年3月价格", "问界M7 上市价格", "问界M7 官方指导价 最新优惠"],
+    "ground_truth": "问界 M7 官方指导价与 2025 年 9 月刚上市时一致，为 27.98 万 - 37.98 万元；2026 年 3 月有至高 7 万元限时购车权益（至 3 月 22 日），含购置税补贴、ADS 智驾补贴、选配金等，实际购车价比上市时大幅降低，叠加置换补贴后最高可省 7 万元。",
+    "url": "https://m.sohu.com/a/992804562_121312550/",
+    "case_source": "user_provided"
+  },
+  {
+    "id": 33,
+    "type": "宏观财经",
+    "original_question": "查一下中国联通2025年的主营业务收入和业务发展，再看一下移动和电信的",
+    "segmented_keywords": ["中国联通 2025年 主营业务收入", "中国移动 2025年 业务发展", "中国电信 2025年 财报"],
+    "ground_truth": "作为产业链龙头，最新财报显示，2025年前三季度，、和中国联通的营收分别为7947亿元、3943亿元、2930亿元，其增速分别较2024年同期的2.0%、2.9%、3.0%降至0.4%、0.6%、1.0%。在利润方面，三家增速则仍保持正增长。2025年前三季度，中国移动、中国电信和中国联通净利润分别达1154亿元、308亿元、200亿元，增速分别为4.0%、5.0%和5.1%。但较去年同期的5.1、8.1%、10.0%，均有所放缓。",
+    "url": "http://finance.sina.cn/2025-11-03/detail-infwaxxp5640081.d.html",
+    "case_source": "user_provided"
+  }
+]
