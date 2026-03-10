@@ -13,11 +13,16 @@ import urllib.parse
 import urllib.request
 from typing import Any
 
-# 聚合数据火车票 API（start.md）
-TRAIN_API_URL = "https://apis.juhe.cn/fapigw/train/query"
-# 环境变量：key 在聚合个人中心 -> 数据中心 -> 我的API 查看
-API_KEY_ENV = "JUHE_TRAIN_API_KEY"
-DEBUG_ENV = "JUHE_TRAIN_DEBUG"  # 设为 1 时在 stderr 打印请求与原始响应，便于排查空结果
+from config import (
+    TRAIN_API_URL,
+    API_KEY,
+    API_KEY_ENV,
+    DEBUG_ENV,
+    API_TIMEOUT_SECONDS,
+    API_SEARCH_TYPE,
+    API_ENABLE_BOOKING_DEFAULT,
+    DEPARTURE_TIME_RANGE_OPTIONS,
+)
 
 
 def _parse_duration_minutes(duration: str) -> int:
@@ -39,18 +44,14 @@ def _parse_duration_minutes(duration: str) -> int:
     return total
 
 
-# API 出发时段：凌晨 [0:00-06:00)、上午 [6:00-12:00)、下午 [12:00-18:00)、晚上 [18:00-24:00)
-DEPARTURE_TIME_RANGE_OPTIONS = ("凌晨", "上午", "下午", "晚上")
-
-
 def _call_juhe_train_api(
     departure_station: str,
     arrival_station: str,
     date: str,
-    search_type: str = "1",
+    search_type: str = API_SEARCH_TYPE,
     filter_type: str | None = None,
     departure_time_range: str | None = None,
-    enable_booking: str = "2",
+    enable_booking: str = API_ENABLE_BOOKING_DEFAULT,
 ) -> tuple[list[dict[str, Any]], str | None]:
     """
     调用聚合数据列车站到站时刻表 API。
@@ -65,9 +66,9 @@ def _call_juhe_train_api(
       enable_booking   否  string  默认 1
     返回 (result 列表, error)。成功时 error 为 None。
     """
-    key = (os.environ.get(API_KEY_ENV) or "your-key").strip()
+    key = (os.environ.get(API_KEY_ENV) or API_KEY or "").strip()
     if not key:
-        return [], "请配置环境变量 " + API_KEY_ENV + "（聚合数据接口 key）"
+        return [], "请配置环境变量 " + API_KEY_ENV + " 或在 config 中设置 API_KEY（聚合数据接口 key）"
 
     params = {
         "key": key,
@@ -89,7 +90,7 @@ def _call_juhe_train_api(
             debug_params = {**params, "key": "***" if params.get("key") else ""}
             print("JUHE_TRAIN_DEBUG request:", TRAIN_API_URL + "?" + urllib.parse.urlencode(debug_params, encoding="utf-8"), file=sys.stderr)
         req = urllib.request.Request(url, method="GET")
-        with urllib.request.urlopen(req, timeout=15) as resp:
+        with urllib.request.urlopen(req, timeout=API_TIMEOUT_SECONDS) as resp:
             data = resp.read().decode("utf-8")
         body = json.loads(data)
         if os.environ.get(DEBUG_ENV):
@@ -125,7 +126,7 @@ def _call_juhe_train_api(
             search_type=search_type,
             filter_type=filter_type,
             departure_time_range=departure_time_range,
-            enable_booking="2",
+            enable_booking=API_ENABLE_BOOKING_DEFAULT,
         )
         if not err_retry and trains_retry:
             return trains_retry, None
@@ -168,7 +169,6 @@ def _map_juhe_result_to_trains(result: list[Any]) -> list[dict[str, Any]]:
             "duration": dur,
             "seat_types": seat_types,
             "train_flags": item.get("train_flags") or [],
-            "data_source": "juhe",
         })
     return trains
 
@@ -204,7 +204,7 @@ def query_trains(
         departure_station=from_station,
         arrival_station=to_station,
         date=departure_date,
-        search_type="1",
+        search_type=API_SEARCH_TYPE,
         filter_type=train_filter,
         departure_time_range=departure_time_range,
     )

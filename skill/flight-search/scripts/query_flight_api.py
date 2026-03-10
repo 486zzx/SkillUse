@@ -12,8 +12,13 @@ import sys
 import urllib.parse
 import urllib.request
 
-
-API_URL = "https://apis.juhe.cn/flight/query"
+from config import (
+    API_KEY,
+    API_KEY_ENV,
+    API_TIMEOUT_SECONDS,
+    API_URL,
+    DEFAULT_MAX_SEGMENTS,
+)
 
 
 def _ensure_utf8_io() -> None:
@@ -31,12 +36,13 @@ def query(
     arrival: str,
     departure_date: str,
     flight_no: str = "",
-    max_segments: str = "0",
+    max_segments: str | None = None,
     key: str | None = None,
 ) -> dict:
-    key = key or (os.environ.get("JUHE_FLIGHT_API_KEY") or "your-key").strip()
+    max_segments = (max_segments or DEFAULT_MAX_SEGMENTS).strip() or DEFAULT_MAX_SEGMENTS
+    key = (key or (API_KEY or os.environ.get(API_KEY_ENV) or "") or "").strip()
     if not key:
-        return {"error": "缺少 JUHE_FLIGHT_API_KEY", "error_code": -1}
+        return {"error": "缺少 API Key，请在 config.py 中配置 API_KEY 或设置环境变量 " + API_KEY_ENV, "error_code": -1}
 
     params = {
         "key": key,
@@ -44,14 +50,14 @@ def query(
         "arrival": arrival.strip().upper(),
         "departureDate": departure_date.strip(),
         "flightNo": (flight_no or "").strip(),
-        "maxSegments": str(max_segments).strip() or "0",
+        "maxSegments": max_segments,
     }
     url = API_URL + "?" + urllib.parse.urlencode(params)
 
     try:
         req = urllib.request.Request(url, method="GET")
         req.add_header("Content-Type", "application/x-www-form-urlencoded")
-        with urllib.request.urlopen(req, timeout=15) as resp:
+        with urllib.request.urlopen(req, timeout=API_TIMEOUT_SECONDS) as resp:
             body = resp.read().decode("utf-8")
     except Exception as e:
         return {"error": str(e), "error_code": -2}
@@ -101,7 +107,7 @@ def main() -> None:
         arrival=arrival,
         departure_date=departure_date,
         flight_no=opts.get("flightNo", ""),
-        max_segments=opts.get("maxSegments", "0"),
+        max_segments=opts.get("maxSegments") or DEFAULT_MAX_SEGMENTS,
     )
     # 压缩输出，无缩进与空行，节省 token
     print(json.dumps(result, ensure_ascii=False, separators=(",", ":")))

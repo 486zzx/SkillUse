@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-周边搜索主入口：地理编码 → 周边 POI → 统一结果。
+周边搜索主入口：地理编码 → 周边搜索 → 统一结果。
 用法：
-  python run_surround_search.py <目标地址> [--city 城市] [--keyword 关键词] [--sort-by distance|weight] [--radius 米] [--max-results N]
+  python run_surround_search.py <目标地址> --keyword <搜索项> [--city 城市]
 环境变量：AMAP_KEY（高德 Web 服务 API Key）
 """
 from __future__ import annotations
@@ -14,10 +14,15 @@ import sys
 import urllib.parse
 import urllib.request
 
-GEOCODE_URL = "https://restapi.amap.com/v3/geocode/geo"
-AROUND_URL = "https://restapi.amap.com/v3/place/around"
-DEFAULT_RADIUS = 5000
-MAX_OFFSET = 25
+from config import (
+    AROUND_URL,
+    API_KEY,
+    API_KEY_ENV,
+    DEFAULT_MAX_RESULTS,
+    DEFAULT_RADIUS,
+    GEOCODE_URL,
+    REQUEST_TIMEOUT_SECONDS,
+)
 
 
 def _ensure_utf8_io() -> None:
@@ -30,7 +35,10 @@ def _ensure_utf8_io() -> None:
 
 
 def _get_key() -> str | None:
-    return os.environ.get("AMAP_KEY", "your-key").strip()
+    key = os.environ.get(API_KEY_ENV, "").strip()
+    if not key and API_KEY:
+        key = (API_KEY or "").strip()
+    return key or None
 
 
 def _http_get(url: str, params: dict) -> dict:
@@ -38,7 +46,7 @@ def _http_get(url: str, params: dict) -> dict:
         url + "?" + urllib.parse.urlencode(params),
         method="GET",
     )
-    with urllib.request.urlopen(req, timeout=15) as resp:
+    with urllib.request.urlopen(req, timeout=REQUEST_TIMEOUT_SECONDS) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
 
@@ -63,24 +71,19 @@ def geocode(key: str, address: str, city: str | None) -> dict:
 def around(
     key: str,
     location: str,
-    keywords: str | None,
+    keywords: str,
     city: str | None,
     radius: int,
-    sortrule: str,
-    offset: int,
     page: int = 1,
 ) -> dict:
-    """高德周边搜索。location 为 "经度,纬度"。"""
+    """高德周边搜索。location 为 "经度,纬度"。不传 offset、sortrule，使用 API 默认。"""
     params = {
         "key": key,
         "location": location,
-        "radius": min(max(0, radius), 50000) or 5000,
-        "sortrule": "distance" if sortrule == "distance" else "weight",
-        "offset": min(max(1, offset), MAX_OFFSET),
+        "radius": min(max(0, radius), 50000) or DEFAULT_RADIUS,
+        "keywords": keywords,
         "page": max(1, page),
     }
-    if keywords:
-        params["keywords"] = keywords
     if city:
         params["city"] = city
     return _http_get(AROUND_URL, params)
@@ -117,15 +120,24 @@ def integrate_pois(amap_pois: list) -> list:
     return out
 
 
+def _clarification_output(missing: list[str], error: str) -> None:
+    out = {
+        "success": False,
+        "pois": [],
+        "total_count": 0,
+        "needs_clarification": True,
+        "missing_params": missing,
+        "error": error,
+    }
+    print(json.dumps(out, ensure_ascii=False))
+
+
 def main() -> None:
     _ensure_utf8_io()
-    parser = argparse.ArgumentParser(description="周边搜索：地理编码 + 高德周边 POI")
-    parser.add_argument("location", help="目标地址，如 北京西站、三里屯")
+    parser = argparse.ArgumentParser(description="周边搜索：地理编码 + 周边搜索")
+    parser.add_argument("location", nargs="?", default="", help="目标地址，如 北京西站、三里屯")
     parser.add_argument("--city", default=None, help="城市名，如 北京")
-    parser.add_argument("--keyword", default=None, help="搜索关键词，如 餐厅、咖啡店")
-    parser.add_argument("--sort-by", default="distance", choices=["distance", "weight"], dest="sort_by", help="排序：distance 或 weight")
-    parser.add_argument("--radius", type=int, default=DEFAULT_RADIUS, help="搜索半径(米)，0-50000")
-    parser.add_argument("--max-results", type=int, default=25, dest="max_results", help="返回条数上限，不传时默认25；建议≤25（高德单页限制）")
+    parser.add_argument("--keyword", default=None, help="搜索项（必选），即用户要搜索的内容，如 餐厅、咖啡店")
     args = parser.parse_args()
 
     key = _get_key()
@@ -134,20 +146,23 @@ def main() -> None:
             "success": False,
             "pois": [],
             "total_count": 0,
-            "error": "未设置环境变量 AMAP_KEY，请配置高德 Web 服务 API Key",
+            "error": f"未配置 API Key，请设置环境变量 {API_KEY_ENV} 或在 config.py 中配置 API_KEY",
         }
         print(json.dumps(out, ensure_ascii=False))
         return
 
     location_str = (args.location or "").strip()
+    keyword_str = (args.keyword or "").strip()
+    missing = []
     if not location_str:
-        out = {
-            "success": False,
-            "pois": [],
-            "total_count": 0,
-            "error": "目标地址不能为空",
-        }
-        print(json.dumps(out, ensure_ascii=False))
+        missing.append("location")
+    if not keyword_str:
+        missing.append("keyword")
+    if missing:
+        _clarification_output(
+            missing,
+            "缺少必选参数：目标地址、搜索项。请补充后再调用。",
+        )
         return
 
     # 1) 地理编码
@@ -164,26 +179,23 @@ def main() -> None:
         return
 
     center = geo["location"]
-    radius = args.radius if 0 < args.radius <= 50000 else DEFAULT_RADIUS
-    offset = min(args.max_results, MAX_OFFSET) if args.max_results > 0 else 25
+    radius = DEFAULT_RADIUS
 
-    # 2) 周边搜索
+    # 2) 周边搜索（不传 offset、sortrule，使用 API 默认）
     try:
         around_resp = around(
             key,
             center,
-            args.keyword,
+            keyword_str,
             args.city,
             radius=radius,
-            sortrule=args.sort_by,
-            offset=offset,
         )
     except Exception as e:
         out = {
             "success": False,
             "pois": [],
             "total_count": 0,
-            "query_summary": {"location": location_str, "city": args.city, "keyword": args.keyword},
+            "query_summary": {"location": location_str, "city": args.city, "keyword": keyword_str},
             "error": "周边搜索请求异常：" + str(e),
         }
         print(json.dumps(out, ensure_ascii=False))
@@ -194,7 +206,7 @@ def main() -> None:
             "success": False,
             "pois": [],
             "total_count": 0,
-            "query_summary": {"location": location_str, "city": args.city, "keyword": args.keyword},
+            "query_summary": {"location": location_str, "city": args.city, "keyword": keyword_str},
             "error": "周边搜索失败：" + (around_resp.get("info") or "未知错误"),
         }
         print(json.dumps(out, ensure_ascii=False))
@@ -202,21 +214,25 @@ def main() -> None:
 
     amap_pois = around_resp.get("pois") or []
     pois = integrate_pois(amap_pois)
-    if args.max_results > 0 and len(pois) > args.max_results:
-        pois = pois[: args.max_results]
+    if DEFAULT_MAX_RESULTS != -1 and len(pois) > DEFAULT_MAX_RESULTS:
+        pois = pois[:DEFAULT_MAX_RESULTS]
 
+    total = len(pois)
     out = {
         "success": True,
         "pois": pois,
-        "total_count": len(pois),
+        "total_count": total,
         "query_summary": {
             "location": location_str,
             "city": args.city,
-            "keyword": args.keyword,
-            "sort_by": args.sort_by,
-            "radius": radius,
+            "keyword": keyword_str,
         },
     }
+    if total == 0:
+        out["message"] = (
+            "未找到符合条件的周边结果。可能原因：该地址附近暂无此类场所；"
+            "或可尝试更换搜索项、补充或修正目标地址后重试。"
+        )
     print(json.dumps(out, ensure_ascii=False))
 
 

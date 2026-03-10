@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 """
-自然语言时间 → 单日日期(YYYY-MM-DD) + 时间段(HH:MM)。
-使用 jionlp.parse_time 解析「明天」「后天下午五点后」「五点后」等，并归一为「仅当天」的时间段（如 17:00~23:59）。
+时间解析：支持 (1) 标准格式 yyyy-MM-dd HH:mm, yyyy-MM-dd HH:mm；(2) 自然语言（jionlp）解析。
 """
 from __future__ import annotations
 
+import re
 from datetime import datetime
 from typing import Any
+
+# 标准范围格式：yyyy-MM-dd HH:mm, yyyy-MM-dd HH:mm（起止用逗号分隔）
+_STANDARD_RANGE_RE = re.compile(
+    r"^(\d{4}-\d{2}-\d{2})\s+(\d{1,2}):(\d{2})\s*,\s*(\d{4}-\d{2}-\d{2})\s+(\d{1,2}):(\d{2})\s*$"
+)
 
 
 def _parse_with_jionlp(text: str, time_base: float | datetime) -> dict[str, Any] | None:
@@ -84,6 +89,54 @@ def _extract_time_list(res: dict[str, Any]) -> list[str] | None:
         if isinstance(pt, list) and len(pt) >= 1:
             return [pt[0], pt[0][:10] + " 23:59:59"]
     return None
+
+
+def _hhmm(d: int, h: int, m: int) -> str:
+    """将日、时、分转为 HH:MM（仅时间部分）。"""
+    h, m = int(h), int(m)
+    h = max(0, min(23, h))
+    m = max(0, min(59, m))
+    return f"{h:02d}:{m:02d}"
+
+
+def parse_standard_departure_range(text: str) -> dict[str, str] | None:
+    """
+    仅解析标准格式：yyyy-MM-dd HH:mm, yyyy-MM-dd HH:mm。
+    返回 {"date": "YYYY-MM-DD", "time_min": "HH:MM", "time_max": "HH:MM"}，失败返回 None。
+    日期取第一段。若起止为两天（跨日），只使用第一天内的时间：time_max 截断为 23:59。
+    例如「明天晚上到后天早上」→ 明天当天晚上至 23:59。
+    """
+    text = (text or "").strip()
+    if not text:
+        return None
+    m = _STANDARD_RANGE_RE.match(text)
+    if not m:
+        return None
+    date1, hour1, min1 = m.group(1), int(m.group(2)), int(m.group(3))
+    date2, hour2, min2 = m.group(4), int(m.group(5)), int(m.group(6))
+    time_min = _hhmm(0, hour1, min1)
+    if date1 != date2:
+        time_max = "23:59"
+    else:
+        time_max = _hhmm(0, hour2, min2)
+    return {"date": date1, "time_min": time_min, "time_max": time_max}
+
+
+def parse_standard_arrival_range(text: str) -> dict[str, str] | None:
+    """
+    仅解析标准格式：yyyy-MM-dd HH:mm, yyyy-MM-dd HH:mm。
+    返回 {"time_min": "HH:MM", "time_max": "HH:MM"}（用于到达时刻筛选），失败返回 None。
+    到达时间不做跨日截断，起止时间原样使用。
+    """
+    text = (text or "").strip()
+    if not text:
+        return None
+    m = _STANDARD_RANGE_RE.match(text)
+    if not m:
+        return None
+    date1, hour1, min1 = m.group(1), int(m.group(2)), int(m.group(3))
+    date2, hour2, min2 = m.group(4), int(m.group(5)), int(m.group(6))
+    return {"time_min": _hhmm(0, hour1, min1), "time_max": _hhmm(0, hour2, min2)}
 
 
 def parse_departure_time(

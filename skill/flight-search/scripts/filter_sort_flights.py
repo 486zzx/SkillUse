@@ -9,7 +9,10 @@ from __future__ import annotations
 import json
 import re
 import sys
+from datetime import datetime
 from pathlib import Path
+
+from config import DATETIME_FMT
 
 
 def _ensure_utf8_io() -> None:
@@ -45,6 +48,25 @@ def _parse_duration(s: str) -> int:
     return total
 
 
+def _parse_datetime(date_str: str, time_str: str) -> datetime | None:
+    """将 departureDate + departureTime 或 arrivalDate + arrivalTime 拼成 datetime。"""
+    d = (date_str or "").strip()
+    t = (time_str or "").strip()
+    if not d:
+        return None
+    if not t or len(t) < 4:
+        t = "00:00"
+    elif len(t) == 4 and ":" not in t:
+        t = t[:2] + ":" + t[2:]
+    s = f"{d} {t}"
+    if len(s) < 16:
+        s = s + " 00:00"[: 16 - len(s)]
+    try:
+        return datetime.strptime(s[:16], DATETIME_FMT)
+    except ValueError:
+        return None
+
+
 def filter_and_sort(flight_info: list[dict], options: dict | None = None) -> list[dict]:
     options = options or {}
     out = list(flight_info)
@@ -57,17 +79,37 @@ def filter_and_sort(flight_info: list[dict], options: dict | None = None) -> lis
         except (TypeError, ValueError):
             pass
 
-    if "min_departure_time" in options and options["min_departure_time"]:
-        t_min = _parse_time(options["min_departure_time"])
-        out = [f for f in out if _parse_time(f.get("departureTime") or "") >= t_min]
+    # 出发时间范围 [start, end]，格式 yyyy-MM-dd HH:mm
+    if "departure_time_range" in options and options["departure_time_range"]:
+        r = options["departure_time_range"]
+        if isinstance(r, (list, tuple)) and len(r) >= 2:
+            try:
+                start_dt = datetime.strptime(str(r[0]).strip()[:16], DATETIME_FMT)
+                end_dt = datetime.strptime(str(r[1]).strip()[:16], DATETIME_FMT)
+            except ValueError:
+                pass
+            else:
+                out = [
+                    f
+                    for f in out
+                    if start_dt <= (_parse_datetime(f.get("departureDate"), f.get("departureTime")) or datetime.min) <= end_dt
+                ]
 
-    if "max_departure_time" in options and options["max_departure_time"]:
-        t_max = _parse_time(options["max_departure_time"])
-        out = [f for f in out if _parse_time(f.get("departureTime") or "") <= t_max]
-
-    if "equipment_contains" in options and options["equipment_contains"]:
-        kw = str(options["equipment_contains"]).strip()
-        out = [f for f in out if kw in str(f.get("equipment") or "")]
+    # 到达时间范围 [start, end]，格式 yyyy-MM-dd HH:mm
+    if "arrival_time_range" in options and options["arrival_time_range"]:
+        r = options["arrival_time_range"]
+        if isinstance(r, (list, tuple)) and len(r) >= 2:
+            try:
+                start_dt = datetime.strptime(str(r[0]).strip()[:16], DATETIME_FMT)
+                end_dt = datetime.strptime(str(r[1]).strip()[:16], DATETIME_FMT)
+            except ValueError:
+                pass
+            else:
+                out = [
+                    f
+                    for f in out
+                    if start_dt <= (_parse_datetime(f.get("arrivalDate"), f.get("arrivalTime")) or datetime.min) <= end_dt
+                ]
 
     # 排序
     sort_by = (options.get("sort_by") or "").strip().lower()

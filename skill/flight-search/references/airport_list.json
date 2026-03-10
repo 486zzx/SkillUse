@@ -1,1066 +1,1066 @@
 [
-  {
-    "iata": "BAR",
-    "name_zh": "琼海博鳌国际机场"
-  },
-  {
-    "iata": "WGN",
-    "name_zh": "邵阳武冈机场"
-  },
-  {
-    "iata": "SQJ",
-    "name_zh": "三明沙县机场"
-  },
-  {
-    "iata": "DTU",
-    "name_zh": "五大连池机场"
-  },
-  {
-    "iata": "WMT",
-    "name_zh": "遵义茅台机场"
-  },
-  {
-    "iata": "QSZ",
-    "name_zh": "莎车机场"
-  },
-  {
-    "iata": "PEK",
-    "name_zh": "北京首都国际机场"
-  },
-  {
-    "iata": "CGQ",
-    "name_zh": "长春龙嘉国际机场"
-  },
-  {
-    "iata": "CSX",
-    "name_zh": "长沙黄花国际机场"
-  },
-  {
-    "iata": "CTU",
-    "name_zh": "成都双流国际机场"
-  },
-  {
-    "iata": "CKG",
-    "name_zh": "重庆江北国际机场"
-  },
-  {
-    "iata": "DLC",
-    "name_zh": "大连周水子国际机场"
-  },
-  {
-    "iata": "FOC",
-    "name_zh": "福州长乐国际机场"
-  },
-  {
-    "iata": "CAN",
-    "name_zh": "广州白云国际机场"
-  },
-  {
-    "iata": "KWE",
-    "name_zh": "贵阳龙洞堡国际机场"
-  },
-  {
-    "iata": "HAK",
-    "name_zh": "海口美兰国际机场"
-  },
-  {
-    "iata": "HGH",
-    "name_zh": "杭州萧山国际机场"
-  },
-  {
-    "iata": "HRB",
-    "name_zh": "哈尔滨太平国际机场"
-  },
-  {
-    "iata": "HET",
-    "name_zh": "呼和浩特白塔国际机场"
-  },
-  {
-    "iata": "TNA",
-    "name_zh": "济南遥墙国际机场"
-  },
-  {
-    "iata": "KMG",
-    "name_zh": "昆明长水国际机场"
-  },
-  {
-    "iata": "KHN",
-    "name_zh": "南昌昌北国际机场"
-  },
-  {
-    "iata": "NKG",
-    "name_zh": "南京禄口国际机场"
-  },
-  {
-    "iata": "NNG",
-    "name_zh": "南宁吴圩机场"
-  },
-  {
-    "iata": "TAO",
-    "name_zh": "青岛流亭国际机场"
-  },
-  {
-    "iata": "SYX",
-    "name_zh": "三亚凤凰国际机场"
-  },
-  {
-    "iata": "PVG",
-    "name_zh": "上海浦东国际机场"
-  },
-  {
-    "iata": "SHA",
-    "name_zh": "上海虹桥国际机场"
-  },
-  {
-    "iata": "SHE",
-    "name_zh": "沈阳桃仙国际机场"
-  },
-  {
-    "iata": "SZX",
-    "name_zh": "深圳宝安国际机场"
-  },
-  {
-    "iata": "SJW",
-    "name_zh": "石家庄正定机场"
-  },
-  {
-    "iata": "TYN",
-    "name_zh": "太原武宿机场"
-  },
-  {
-    "iata": "TSN",
-    "name_zh": "天津滨海国际机场"
-  },
-  {
-    "iata": "URC",
-    "name_zh": "乌鲁木齐地窝堡国际机场"
-  },
-  {
-    "iata": "WNZ",
-    "name_zh": "温州龙湾国际机场"
-  },
-  {
-    "iata": "WUH",
-    "name_zh": "武汉天河国际机场"
-  },
-  {
-    "iata": "XMN",
-    "name_zh": "厦门高崎国际机场"
-  },
-  {
-    "iata": "XIY",
-    "name_zh": "西安咸阳国际机场"
-  },
-  {
-    "iata": "CGO",
-    "name_zh": "郑州新郑国际机场"
-  },
-  {
-    "iata": "AKU",
-    "name_zh": "阿克苏机场"
-  },
-  {
-    "iata": "AAT",
-    "name_zh": "阿勒泰机场"
-  },
-  {
-    "iata": "AXF",
-    "name_zh": "内蒙古自治区阿拉善左旗巴彦浩特机场"
-  },
-  {
-    "iata": "RHT",
-    "name_zh": "内蒙古自治区阿拉善右旗巴丹吉林机场"
-  },
-  {
-    "iata": "AVA",
-    "name_zh": "安顺黄果树机场"
-  },
-  {
-    "iata": "AKA",
-    "name_zh": "安康富强机场"
-  },
-  {
-    "iata": "AQG",
-    "name_zh": "安庆天柱山机场"
-  },
-  {
-    "iata": "AOG",
-    "name_zh": "鞍山腾鳌机场"
-  },
-  {
-    "iata": "YIE",
-    "name_zh": "阿尔山伊尔施机场"
-  },
-  {
-    "iata": "AEB",
-    "name_zh": "百色巴马机场"
-  },
-  {
-    "iata": "NBS",
-    "name_zh": "长白山机场"
-  },
-  {
-    "iata": "BPX",
-    "name_zh": "昌都邦达机场"
-  },
-  {
-    "iata": "BSD",
-    "name_zh": "保山云端机场"
-  },
-  {
-    "iata": "BAV",
-    "name_zh": "包头机场"
-  },
-  {
-    "iata": "RLK",
-    "name_zh": "巴彦淖尔天吉泰机场"
-  },
-  {
-    "iata": "BHY",
-    "name_zh": "北海福成机场"
-  },
-  {
-    "iata": "NAY",
-    "name_zh": "北京南苑国际机场"
-  },
-  {
-    "iata": "BFJ",
-    "name_zh": "毕节飞雄机场"
-  },
-  {
-    "iata": "BPL",
-    "name_zh": "博乐阿拉山口机场"
-  },
-  {
-    "iata": "KJI",
-    "name_zh": "布尔津喀纳斯机场"
-  },
-  {
-    "iata": "CGD",
-    "name_zh": "常德桃花源机场"
-  },
-  {
-    "iata": "CIH",
-    "name_zh": "长治王村机场"
-  },
-  {
-    "iata": "CZX",
-    "name_zh": "常州奔牛机场"
-  },
-  {
-    "iata": "CHG",
-    "name_zh": "朝阳机场"
-  },
-  {
-    "iata": "CIF",
-    "name_zh": "赤峰玉龙机场"
-  },
-  {
-    "iata": "JUH",
-    "name_zh": "池州九华山机场"
-  },
-  {
-    "iata": "DLU",
-    "name_zh": "大理机场"
-  },
-  {
-    "iata": "DDG",
-    "name_zh": "丹东浪头机场"
-  },
-  {
-    "iata": "DCY",
-    "name_zh": "稻城亚丁机场"
-  },
-  {
-    "iata": "DQA",
-    "name_zh": "大庆萨尔图机场"
-  },
-  {
-    "iata": "DAT",
-    "name_zh": "大同云冈机场"
-  },
-  {
-    "iata": "DAX",
-    "name_zh": "达州河市机场"
-  },
-  {
-    "iata": "DYG",
-    "name_zh": "张家界荷花国际机场"
-  },
-  {
-    "iata": "DIG",
-    "name_zh": "迪庆香格里拉机场"
-  },
-  {
-    "iata": "DSN",
-    "name_zh": "鄂尔多斯伊金霍洛国际机场"
-  },
-  {
-    "iata": "DOY",
-    "name_zh": "东营胜利机场"
-  },
-  {
-    "iata": "DNH",
-    "name_zh": "敦煌机场"
-  },
-  {
-    "iata": "EJN",
-    "name_zh": "额济纳旗桃来机场"
-  },
-  {
-    "iata": "ENH",
-    "name_zh": "恩施许家坪机场"
-  },
-  {
-    "iata": "ERL",
-    "name_zh": "二连浩特赛乌苏国际机场"
-  },
-  {
-    "iata": "FUO",
-    "name_zh": "佛山沙堤机场"
-  },
-  {
-    "iata": "FUG",
-    "name_zh": "阜阳西关机场"
-  },
-  {
-    "iata": "FYJ",
-    "name_zh": "抚远东极机场"
-  },
-  {
-    "iata": "KOW",
-    "name_zh": "赣州黄金机场"
-  },
-  {
-    "iata": "GOQ",
-    "name_zh": "格尔木机场"
-  },
-  {
-    "iata": "GYS",
-    "name_zh": "广元盘龙机场"
-  },
-  {
-    "iata": "KWL",
-    "name_zh": "桂林两江国际机场"
-  },
-  {
-    "iata": "GYU",
-    "name_zh": "固原六盘山机场"
-  },
-  {
-    "iata": "HLD",
-    "name_zh": "呼伦贝尔东山国际机场"
-  },
-  {
-    "iata": "HMI",
-    "name_zh": "哈密机场"
-  },
-  {
-    "iata": "HDG",
-    "name_zh": "邯郸机场"
-  },
-  {
-    "iata": "HZG",
-    "name_zh": "汉中机场"
-  },
-  {
-    "iata": "HFE",
-    "name_zh": "合肥新桥国际机场"
-  },
-  {
-    "iata": "HEK",
-    "name_zh": "黑河瑷珲机场"
-  },
-  {
-    "iata": "HPG",
-    "name_zh": "神农架红坪机场"
-  },
-  {
-    "iata": "HTN",
-    "name_zh": "和田机场"
-  },
-  {
-    "iata": "HIA",
-    "name_zh": "淮安涟水机场"
-  },
-  {
-    "iata": "HJJ",
-    "name_zh": "怀化芷江机场"
-  },
-  {
-    "iata": "JGS",
-    "name_zh": "井冈山机场"
-  },
-  {
-    "iata": "JGD",
-    "name_zh": "加格达奇嘎仙机场"
-  },
-  {
-    "iata": "JMU",
-    "name_zh": "佳木斯东郊机场"
-  },
-  {
-    "iata": "JGN",
-    "name_zh": "嘉峪关机场"
-  },
-  {
-    "iata": "JIC",
-    "name_zh": "金昌机场"
-  },
-  {
-    "iata": "JDZ",
-    "name_zh": "景德镇罗家机场"
-  },
-  {
-    "iata": "JHG",
-    "name_zh": "西双版纳嘎洒国际机场"
-  },
-  {
-    "iata": "JNG",
-    "name_zh": "济宁曲阜机场"
-  },
-  {
-    "iata": "JJN",
-    "name_zh": "泉州晋江国际机场"
-  },
-  {
-    "iata": "JNZ",
-    "name_zh": "锦州湾国际机场"
-  },
-  {
-    "iata": "JXA",
-    "name_zh": "鸡西兴凯湖机场"
-  },
-  {
-    "iata": "KJH",
-    "name_zh": "凯里黄平机场"
-  },
-  {
-    "iata": "KGT",
-    "name_zh": "甘孜康定机场"
-  },
-  {
-    "iata": "KRY",
-    "name_zh": "克拉玛依机场"
-  },
-  {
-    "iata": "KHG",
-    "name_zh": "喀什机场"
-  },
-  {
-    "iata": "KRL",
-    "name_zh": "库尔勒机场"
-  },
-  {
-    "iata": "KCA",
-    "name_zh": "库车龟兹机场"
-  },
-  {
-    "iata": "LHW",
-    "name_zh": "兰州中川国际机场"
-  },
-  {
-    "iata": "LXA",
-    "name_zh": "拉萨贡嘎国际机场"
-  },
-  {
-    "iata": "LYG",
-    "name_zh": "连云港白塔埠机场"
-  },
-  {
-    "iata": "LLB",
-    "name_zh": "黔南州荔波机场"
-  },
-  {
-    "iata": "LJG",
-    "name_zh": "丽江三义机场"
-  },
-  {
-    "iata": "LNJ",
-    "name_zh": "临沧机场"
-  },
-  {
-    "iata": "LYI",
-    "name_zh": "临沂机场"
-  },
-  {
-    "iata": "HZH",
-    "name_zh": "黎平机场"
-  },
-  {
-    "iata": "LZH",
-    "name_zh": "柳州白莲机场"
-  },
-  {
-    "iata": "LCX",
-    "name_zh": "龙岩冠豸山机场"
-  },
-  {
-    "iata": "LYA",
-    "name_zh": "洛阳北郊机场"
-  },
-  {
-    "iata": "LZO",
-    "name_zh": "泸州蓝田机场"
-  },
-  {
-    "iata": "LUM",
-    "name_zh": "德宏芒市机场"
-  },
-  {
-    "iata": "NZH",
-    "name_zh": "满洲里西郊国际机场"
-  },
-  {
-    "iata": "MXZ",
-    "name_zh": "梅县机场"
-  },
-  {
-    "iata": "MIG",
-    "name_zh": "绵阳南郊机场"
-  },
-  {
-    "iata": "OHE",
-    "name_zh": "漠河古莲机场"
-  },
-  {
-    "iata": "MDG",
-    "name_zh": "牡丹江海浪机场"
-  },
-  {
-    "iata": "NAO",
-    "name_zh": "南充高坪机场"
-  },
-  {
-    "iata": "NTG",
-    "name_zh": "南通兴东国际机场"
-  },
-  {
-    "iata": "NNY",
-    "name_zh": "南阳姜营机场"
-  },
-  {
-    "iata": "NGB",
-    "name_zh": "宁波栎社国际机场"
-  },
-  {
-    "iata": "LZY",
-    "name_zh": "林芝米林机场"
-  },
-  {
-    "iata": "PZI",
-    "name_zh": "攀枝花保安营机场"
-  },
-  {
-    "iata": "JIQ",
-    "name_zh": "黔江武陵山机场"
-  },
-  {
-    "iata": "IQM",
-    "name_zh": "且末机场"
-  },
-  {
-    "iata": "IQN",
-    "name_zh": "庆阳机场"
-  },
-  {
-    "iata": "NDG",
-    "name_zh": "齐齐哈尔三家子机场"
-  },
-  {
-    "iata": "JUZ",
-    "name_zh": "衢州机场"
-  },
-  {
-    "iata": "SWA",
-    "name_zh": "揭阳潮汕国际机场"
-  },
-  {
-    "iata": "NGQ",
-    "name_zh": "阿里昆莎机场"
-  },
-  {
-    "iata": "RKZ",
-    "name_zh": "日喀则和平机场"
-  },
-  {
-    "iata": "SYM",
-    "name_zh": "普洱思茅机场"
-  },
-  {
-    "iata": "JZH",
-    "name_zh": "九寨黄龙机场"
-  },
-  {
-    "iata": "TCG",
-    "name_zh": "塔城机场"
-  },
-  {
-    "iata": "HYN",
-    "name_zh": "台州路桥机场"
-  },
-  {
-    "iata": "TVS",
-    "name_zh": "唐山三女河机场"
-  },
-  {
-    "iata": "TCZ",
-    "name_zh": "腾冲驼峰机场"
-  },
-  {
-    "iata": "THQ",
-    "name_zh": "天水机场"
-  },
-  {
-    "iata": "TGO",
-    "name_zh": "通辽机场"
-  },
-  {
-    "iata": "TEN",
-    "name_zh": "铜仁凤凰机场"
-  },
-  {
-    "iata": "TXN",
-    "name_zh": "黄山屯溪国际机场"
-  },
-  {
-    "iata": "TLQ",
-    "name_zh": "吐鲁番交河机场"
-  },
-  {
-    "iata": "HLH",
-    "name_zh": "乌兰浩特机场"
-  },
-  {
-    "iata": "WXN",
-    "name_zh": "万州五桥机场"
-  },
-  {
-    "iata": "WEF",
-    "name_zh": "潍坊南苑机场"
-  },
-  {
-    "iata": "WEH",
-    "name_zh": "威海大水泊国际机场"
-  },
-  {
-    "iata": "WNH",
-    "name_zh": "文山普者黑机场"
-  },
-  {
-    "iata": "WUA",
-    "name_zh": "乌海机场"
-  },
-  {
-    "iata": "WUX",
-    "name_zh": "苏南硕放国际机场"
-  },
-  {
-    "iata": "WUS",
-    "name_zh": "武夷山机场"
-  },
-  {
-    "iata": "WUZ",
-    "name_zh": "梧州长洲岛机场"
-  },
-  {
-    "iata": "GXH",
-    "name_zh": "甘南夏河机场"
-  },
-  {
-    "iata": "XFN",
-    "name_zh": "襄阳刘集机场"
-  },
-  {
-    "iata": "XIC",
-    "name_zh": "西昌青山机场"
-  },
-  {
-    "iata": "XIL",
-    "name_zh": "锡林浩特机场"
-  },
-  {
-    "iata": "ACX",
-    "name_zh": "兴义万峰林机场"
-  },
-  {
-    "iata": "XNN",
-    "name_zh": "西宁曹家堡机场"
-  },
-  {
-    "iata": "NLT",
-    "name_zh": "那拉提机场"
-  },
-  {
-    "iata": "XUZ",
-    "name_zh": "徐州观音国际机场"
-  },
-  {
-    "iata": "ENY",
-    "name_zh": "延安南泥湾机场"
-  },
-  {
-    "iata": "YNZ",
-    "name_zh": "盐城南洋机场"
-  },
-  {
-    "iata": "YTY",
-    "name_zh": "扬州泰州国际机场"
-  },
-  {
-    "iata": "YNJ",
-    "name_zh": "延吉朝阳川国际机场"
-  },
-  {
-    "iata": "YNT",
-    "name_zh": "烟台莱山国际机场"
-  },
-  {
-    "iata": "YBP",
-    "name_zh": "宜宾菜坝机场"
-  },
-  {
-    "iata": "YIH",
-    "name_zh": "宜昌三峡机场"
-  },
-  {
-    "iata": "LDS",
-    "name_zh": "伊春林都机场"
-  },
-  {
-    "iata": "YIC",
-    "name_zh": "宜春明月山机场"
-  },
-  {
-    "iata": "INC",
-    "name_zh": "银川河东国际机场"
-  },
-  {
-    "iata": "YIN",
-    "name_zh": "伊宁机场"
-  },
-  {
-    "iata": "YIW",
-    "name_zh": "义乌机场"
-  },
-  {
-    "iata": "LLF",
-    "name_zh": "永州零陵机场"
-  },
-  {
-    "iata": "UYN",
-    "name_zh": "榆林榆阳机场"
-  },
-  {
-    "iata": "YCU",
-    "name_zh": "运城关公机场"
-  },
-  {
-    "iata": "YUS",
-    "name_zh": "玉树巴塘机场"
-  },
-  {
-    "iata": "ZQZ",
-    "name_zh": "张家口宁远机场"
-  },
-  {
-    "iata": "YZY",
-    "name_zh": "张掖甘州机场"
-  },
-  {
-    "iata": "ZHA",
-    "name_zh": "湛江机场"
-  },
-  {
-    "iata": "ZAT",
-    "name_zh": "昭通机场"
-  },
-  {
-    "iata": "ZHY",
-    "name_zh": "中卫沙坡头机场"
-  },
-  {
-    "iata": "HSN",
-    "name_zh": "舟山普陀山机场"
-  },
-  {
-    "iata": "ZUH",
-    "name_zh": "珠海金湾国际机场"
-  },
-  {
-    "iata": "ZYI",
-    "name_zh": "遵义新舟机场"
-  },
-  {
-    "iata": "FYN",
-    "name_zh": "富蕴可可托海机场"
-  },
-  {
-    "iata": "HNY",
-    "name_zh": "衡阳南岳机场"
-  },
-  {
-    "iata": "HUZ",
-    "name_zh": "惠州平潭机场"
-  },
-  {
-    "iata": "SHF",
-    "name_zh": "石河子花园机场"
-  },
-  {
-    "iata": "TNH",
-    "name_zh": "通化三源浦机场"
-  },
-  {
-    "iata": "JSJ",
-    "name_zh": "建三江机场"
-  },
-  {
-    "iata": "BPE",
-    "name_zh": "秦皇岛北戴河机场"
-  },
-  {
-    "iata": "HTT",
-    "name_zh": "花土沟机场"
-  },
-  {
-    "iata": "CDE",
-    "name_zh": "承德普宁机场"
-  },
-  {
-    "iata": "RIZ",
-    "name_zh": "日照山字河国际机场"
-  },
-  {
-    "iata": "LLV",
-    "name_zh": "吕梁机场"
-  },
-  {
-    "iata": "HXD",
-    "name_zh": "德令哈机场"
-  },
-  {
-    "iata": "AHJ",
-    "name_zh": "阿坝红原机场"
-  },
-  {
-    "iata": "HCJ",
-    "name_zh": "河池金城江机场"
-  },
-  {
-    "iata": "LPF",
-    "name_zh": "六盘水月照机场"
-  },
-  {
-    "iata": "HUO",
-    "name_zh": "霍林郭勒霍林河机场"
-  },
-  {
-    "iata": "DBC",
-    "name_zh": "白城长安机场"
-  },
-  {
-    "iata": "NZL",
-    "name_zh": "扎兰屯成吉思汗机场"
-  },
-  {
-    "iata": "WUT",
-    "name_zh": "忻州五台山机场"
-  },
-  {
-    "iata": "YKH",
-    "name_zh": "营口兰旗机场"
-  },
-  {
-    "iata": "LFQ",
-    "name_zh": "临汾乔李机场"
-  },
-  {
-    "iata": "SQD",
-    "name_zh": "上饶三清山机场"
-  },
-  {
-    "iata": "YSQ",
-    "name_zh": "松原查干湖机场"
-  },
-  {
-    "iata": "WDS",
-    "name_zh": "十堰武当山机场"
-  },
-  {
-    "iata": "UCB",
-    "name_zh": "乌兰察布机场"
-  },
-  {
-    "iata": "GMQ",
-    "name_zh": "果洛玛沁机场"
-  },
-  {
-    "iata": "JMJ",
-    "name_zh": "澜沧景迈机场"
-  },
-  {
-    "iata": "CWJ",
-    "name_zh": "沧源佤山机场"
-  },
-  {
-    "iata": "RQA",
-    "name_zh": "若羌楼兰机场"
-  },
-  {
-    "iata": "LNL",
-    "name_zh": "陇南成县机场"
-  },
-  {
-    "iata": "HBQ",
-    "name_zh": "祁连海北机场"
-  },
-  {
-    "iata": "XAI",
-    "name_zh": "信阳明港机场"
-  },
-  {
-    "iata": "NLH",
-    "name_zh": "宁蒗泸沽湖机场"
-  },
-  {
-    "iata": "CNI",
-    "name_zh": "长海大长山岛机场"
-  },
-  {
-    "iata": "YYA",
-    "name_zh": "岳阳三荷机场"
-  },
-  {
-    "iata": "TWC",
-    "name_zh": "图木舒克唐王城机场"
-  },
-  {
-    "iata": "AKA",
-    "name_zh": "安康机场"
-  },
-  {
-    "iata": "BZX",
-    "name_zh": "巴中恩阳机场"
-  },
-  {
-    "iata": "ACF",
-    "name_zh": "塔里木机场"
-  },
-  {
-    "iata": "HQQ",
-    "name_zh": "红旗渠机场"
-  },
-  {
-    "iata": "BFY",
-    "name_zh": "蚌埠腾湖机场"
-  },
-  {
-    "iata": "PKX",
-    "name_zh": "大兴国际机场"
-  },
-  {
-    "iata": "XIK",
-    "name_zh": "郑州新郑国际机场货运"
-  },
-  {
-    "iata": "CQW",
-    "name_zh": "重庆仙女山机场"
-  },
-  {
-    "iata": "TFU",
-    "name_zh": "成都天府国际机场"
-  },
-  {
-    "iata": "DZH",
-    "name_zh": "金垭机场"
-  },
-  {
-    "iata": "DDR",
-    "name_zh": "定日机场"
-  },
-  {
-    "iata": "DXJ",
-    "name_zh": "边城机场"
-  },
-  {
-    "iata": "EHU",
-    "name_zh": "花湖机场"
-  },
-  {
-    "iata": "GZG",
-    "name_zh": "甘孜格萨尔机场"
-  },
-  {
-    "iata": "HQL",
-    "name_zh": "红其拉甫机场"
-  },
-  {
-    "iata": "HSC",
-    "name_zh": "韶关丹霞机场"
-  },
-  {
-    "iata": "HZA",
-    "name_zh": "菏泽牡丹机场"
-  },
-  {
-    "iata": "JBK",
-    "name_zh": "奇台江布拉克机场"
-  },
-  {
-    "iata": "JIU",
-    "name_zh": "庐山机场"
-  },
-  {
-    "iata": "LGZ",
-    "name_zh": "隆子机场"
-  },
-  {
-    "iata": "HCZ",
-    "name_zh": "郴州北湖机场"
-  },
-  {
-    "iata": "LZG",
-    "name_zh": "阆中古城机场"
-  },
-  {
-    "iata": "SHS",
-    "name_zh": "沙市机场"
-  },
-  {
-    "iata": "SIA",
-    "name_zh": "西关机场"
-  },
-  {
-    "iata": "SZH",
-    "name_zh": "朔州滋润机场"
-  },
-  {
-    "iata": "SZV",
-    "name_zh": "苏州光福机场"
-  },
-  {
-    "iata": "WHA",
-    "name_zh": "芜湖宣州机场"
-  },
-  {
-    "iata": "WSK",
-    "name_zh": "重庆巫山机场"
-  },
-  {
-    "iata": "XNT",
-    "name_zh": "褡裢机场"
-  },
-  {
-    "iata": "YLX",
-    "name_zh": "玉林福绵机场"
-  },
-  {
-    "iata": "YTW",
-    "name_zh": "万方机场"
-  },
-  {
-    "iata": "ZFL",
-    "name_zh": "昭苏天马机场"
-  }
+{
+"iata": "BAR",
+"name_zh": "琼海博鳌国际机场"
+},
+{
+"iata": "WGN",
+"name_zh": "邵阳武冈机场"
+},
+{
+"iata": "SQJ",
+"name_zh": "三明沙县机场"
+},
+{
+"iata": "DTU",
+"name_zh": "五大连池机场"
+},
+{
+"iata": "WMT",
+"name_zh": "遵义茅台机场"
+},
+{
+"iata": "QSZ",
+"name_zh": "莎车机场"
+},
+{
+"iata": "PEK",
+"name_zh": "北京首都国际机场"
+},
+{
+"iata": "CGQ",
+"name_zh": "长春龙嘉国际机场"
+},
+{
+"iata": "CSX",
+"name_zh": "长沙黄花国际机场"
+},
+{
+"iata": "CTU",
+"name_zh": "成都双流国际机场"
+},
+{
+"iata": "CKG",
+"name_zh": "重庆江北国际机场"
+},
+{
+"iata": "DLC",
+"name_zh": "大连周水子国际机场"
+},
+{
+"iata": "FOC",
+"name_zh": "福州长乐国际机场"
+},
+{
+"iata": "CAN",
+"name_zh": "广州白云国际机场"
+},
+{
+"iata": "KWE",
+"name_zh": "贵阳龙洞堡国际机场"
+},
+{
+"iata": "HAK",
+"name_zh": "海口美兰国际机场"
+},
+{
+"iata": "HGH",
+"name_zh": "杭州萧山国际机场"
+},
+{
+"iata": "HRB",
+"name_zh": "哈尔滨太平国际机场"
+},
+{
+"iata": "HET",
+"name_zh": "呼和浩特白塔国际机场"
+},
+{
+"iata": "TNA",
+"name_zh": "济南遥墙国际机场"
+},
+{
+"iata": "KMG",
+"name_zh": "昆明长水国际机场"
+},
+{
+"iata": "KHN",
+"name_zh": "南昌昌北国际机场"
+},
+{
+"iata": "NKG",
+"name_zh": "南京禄口国际机场"
+},
+{
+"iata": "NNG",
+"name_zh": "南宁吴圩机场"
+},
+{
+"iata": "TAO",
+"name_zh": "青岛流亭国际机场"
+},
+{
+"iata": "SYX",
+"name_zh": "三亚凤凰国际机场"
+},
+{
+"iata": "PVG",
+"name_zh": "上海浦东国际机场"
+},
+{
+"iata": "SHA",
+"name_zh": "上海虹桥国际机场"
+},
+{
+"iata": "SHE",
+"name_zh": "沈阳桃仙国际机场"
+},
+{
+"iata": "SZX",
+"name_zh": "深圳宝安国际机场"
+},
+{
+"iata": "SJW",
+"name_zh": "石家庄正定机场"
+},
+{
+"iata": "TYN",
+"name_zh": "太原武宿机场"
+},
+{
+"iata": "TSN",
+"name_zh": "天津滨海国际机场"
+},
+{
+"iata": "URC",
+"name_zh": "乌鲁木齐地窝堡国际机场"
+},
+{
+"iata": "WNZ",
+"name_zh": "温州龙湾国际机场"
+},
+{
+"iata": "WUH",
+"name_zh": "武汉天河国际机场"
+},
+{
+"iata": "XMN",
+"name_zh": "厦门高崎国际机场"
+},
+{
+"iata": "XIY",
+"name_zh": "西安咸阳国际机场"
+},
+{
+"iata": "CGO",
+"name_zh": "郑州新郑国际机场"
+},
+{
+"iata": "AKU",
+"name_zh": "阿克苏机场"
+},
+{
+"iata": "AAT",
+"name_zh": "阿勒泰机场"
+},
+{
+"iata": "AXF",
+"name_zh": "内蒙古自治区阿拉善左旗巴彦浩特机场"
+},
+{
+"iata": "RHT",
+"name_zh": "内蒙古自治区阿拉善右旗巴丹吉林机场"
+},
+{
+"iata": "AVA",
+"name_zh": "安顺黄果树机场"
+},
+{
+"iata": "AKA",
+"name_zh": "安康富强机场"
+},
+{
+"iata": "AQG",
+"name_zh": "安庆天柱山机场"
+},
+{
+"iata": "AOG",
+"name_zh": "鞍山腾鳌机场"
+},
+{
+"iata": "YIE",
+"name_zh": "阿尔山伊尔施机场"
+},
+{
+"iata": "AEB",
+"name_zh": "百色巴马机场"
+},
+{
+"iata": "NBS",
+"name_zh": "长白山机场"
+},
+{
+"iata": "BPX",
+"name_zh": "昌都邦达机场"
+},
+{
+"iata": "BSD",
+"name_zh": "保山云端机场"
+},
+{
+"iata": "BAV",
+"name_zh": "包头机场"
+},
+{
+"iata": "RLK",
+"name_zh": "巴彦淖尔天吉泰机场"
+},
+{
+"iata": "BHY",
+"name_zh": "北海福成机场"
+},
+{
+"iata": "NAY",
+"name_zh": "北京南苑国际机场"
+},
+{
+"iata": "BFJ",
+"name_zh": "毕节飞雄机场"
+},
+{
+"iata": "BPL",
+"name_zh": "博乐阿拉山口机场"
+},
+{
+"iata": "KJI",
+"name_zh": "布尔津喀纳斯机场"
+},
+{
+"iata": "CGD",
+"name_zh": "常德桃花源机场"
+},
+{
+"iata": "CIH",
+"name_zh": "长治王村机场"
+},
+{
+"iata": "CZX",
+"name_zh": "常州奔牛机场"
+},
+{
+"iata": "CHG",
+"name_zh": "朝阳机场"
+},
+{
+"iata": "CIF",
+"name_zh": "赤峰玉龙机场"
+},
+{
+"iata": "JUH",
+"name_zh": "池州九华山机场"
+},
+{
+"iata": "DLU",
+"name_zh": "大理机场"
+},
+{
+"iata": "DDG",
+"name_zh": "丹东浪头机场"
+},
+{
+"iata": "DCY",
+"name_zh": "稻城亚丁机场"
+},
+{
+"iata": "DQA",
+"name_zh": "大庆萨尔图机场"
+},
+{
+"iata": "DAT",
+"name_zh": "大同云冈机场"
+},
+{
+"iata": "DAX",
+"name_zh": "达州河市机场"
+},
+{
+"iata": "DYG",
+"name_zh": "张家界荷花国际机场"
+},
+{
+"iata": "DIG",
+"name_zh": "迪庆香格里拉机场"
+},
+{
+"iata": "DSN",
+"name_zh": "鄂尔多斯伊金霍洛国际机场"
+},
+{
+"iata": "DOY",
+"name_zh": "东营胜利机场"
+},
+{
+"iata": "DNH",
+"name_zh": "敦煌机场"
+},
+{
+"iata": "EJN",
+"name_zh": "额济纳旗桃来机场"
+},
+{
+"iata": "ENH",
+"name_zh": "恩施许家坪机场"
+},
+{
+"iata": "ERL",
+"name_zh": "二连浩特赛乌苏国际机场"
+},
+{
+"iata": "FUO",
+"name_zh": "佛山沙堤机场"
+},
+{
+"iata": "FUG",
+"name_zh": "阜阳西关机场"
+},
+{
+"iata": "FYJ",
+"name_zh": "抚远东极机场"
+},
+{
+"iata": "KOW",
+"name_zh": "赣州黄金机场"
+},
+{
+"iata": "GOQ",
+"name_zh": "格尔木机场"
+},
+{
+"iata": "GYS",
+"name_zh": "广元盘龙机场"
+},
+{
+"iata": "KWL",
+"name_zh": "桂林两江国际机场"
+},
+{
+"iata": "GYU",
+"name_zh": "固原六盘山机场"
+},
+{
+"iata": "HLD",
+"name_zh": "呼伦贝尔东山国际机场"
+},
+{
+"iata": "HMI",
+"name_zh": "哈密机场"
+},
+{
+"iata": "HDG",
+"name_zh": "邯郸机场"
+},
+{
+"iata": "HZG",
+"name_zh": "汉中机场"
+},
+{
+"iata": "HFE",
+"name_zh": "合肥新桥国际机场"
+},
+{
+"iata": "HEK",
+"name_zh": "黑河瑷珲机场"
+},
+{
+"iata": "HPG",
+"name_zh": "神农架红坪机场"
+},
+{
+"iata": "HTN",
+"name_zh": "和田机场"
+},
+{
+"iata": "HIA",
+"name_zh": "淮安涟水机场"
+},
+{
+"iata": "HJJ",
+"name_zh": "怀化芷江机场"
+},
+{
+"iata": "JGS",
+"name_zh": "井冈山机场"
+},
+{
+"iata": "JGD",
+"name_zh": "加格达奇嘎仙机场"
+},
+{
+"iata": "JMU",
+"name_zh": "佳木斯东郊机场"
+},
+{
+"iata": "JGN",
+"name_zh": "嘉峪关机场"
+},
+{
+"iata": "JIC",
+"name_zh": "金昌机场"
+},
+{
+"iata": "JDZ",
+"name_zh": "景德镇罗家机场"
+},
+{
+"iata": "JHG",
+"name_zh": "西双版纳嘎洒国际机场"
+},
+{
+"iata": "JNG",
+"name_zh": "济宁曲阜机场"
+},
+{
+"iata": "JJN",
+"name_zh": "泉州晋江国际机场"
+},
+{
+"iata": "JNZ",
+"name_zh": "锦州湾国际机场"
+},
+{
+"iata": "JXA",
+"name_zh": "鸡西兴凯湖机场"
+},
+{
+"iata": "KJH",
+"name_zh": "凯里黄平机场"
+},
+{
+"iata": "KGT",
+"name_zh": "甘孜康定机场"
+},
+{
+"iata": "KRY",
+"name_zh": "克拉玛依机场"
+},
+{
+"iata": "KHG",
+"name_zh": "喀什机场"
+},
+{
+"iata": "KRL",
+"name_zh": "库尔勒机场"
+},
+{
+"iata": "KCA",
+"name_zh": "库车龟兹机场"
+},
+{
+"iata": "LHW",
+"name_zh": "兰州中川国际机场"
+},
+{
+"iata": "LXA",
+"name_zh": "拉萨贡嘎国际机场"
+},
+{
+"iata": "LYG",
+"name_zh": "连云港白塔埠机场"
+},
+{
+"iata": "LLB",
+"name_zh": "黔南州荔波机场"
+},
+{
+"iata": "LJG",
+"name_zh": "丽江三义机场"
+},
+{
+"iata": "LNJ",
+"name_zh": "临沧机场"
+},
+{
+"iata": "LYI",
+"name_zh": "临沂机场"
+},
+{
+"iata": "HZH",
+"name_zh": "黎平机场"
+},
+{
+"iata": "LZH",
+"name_zh": "柳州白莲机场"
+},
+{
+"iata": "LCX",
+"name_zh": "龙岩冠豸山机场"
+},
+{
+"iata": "LYA",
+"name_zh": "洛阳北郊机场"
+},
+{
+"iata": "LZO",
+"name_zh": "泸州蓝田机场"
+},
+{
+"iata": "LUM",
+"name_zh": "德宏芒市机场"
+},
+{
+"iata": "NZH",
+"name_zh": "满洲里西郊国际机场"
+},
+{
+"iata": "MXZ",
+"name_zh": "梅县机场"
+},
+{
+"iata": "MIG",
+"name_zh": "绵阳南郊机场"
+},
+{
+"iata": "OHE",
+"name_zh": "漠河古莲机场"
+},
+{
+"iata": "MDG",
+"name_zh": "牡丹江海浪机场"
+},
+{
+"iata": "NAO",
+"name_zh": "南充高坪机场"
+},
+{
+"iata": "NTG",
+"name_zh": "南通兴东国际机场"
+},
+{
+"iata": "NNY",
+"name_zh": "南阳姜营机场"
+},
+{
+"iata": "NGB",
+"name_zh": "宁波栎社国际机场"
+},
+{
+"iata": "LZY",
+"name_zh": "林芝米林机场"
+},
+{
+"iata": "PZI",
+"name_zh": "攀枝花保安营机场"
+},
+{
+"iata": "JIQ",
+"name_zh": "黔江武陵山机场"
+},
+{
+"iata": "IQM",
+"name_zh": "且末机场"
+},
+{
+"iata": "IQN",
+"name_zh": "庆阳机场"
+},
+{
+"iata": "NDG",
+"name_zh": "齐齐哈尔三家子机场"
+},
+{
+"iata": "JUZ",
+"name_zh": "衢州机场"
+},
+{
+"iata": "SWA",
+"name_zh": "揭阳潮汕国际机场"
+},
+{
+"iata": "NGQ",
+"name_zh": "阿里昆莎机场"
+},
+{
+"iata": "RKZ",
+"name_zh": "日喀则和平机场"
+},
+{
+"iata": "SYM",
+"name_zh": "普洱思茅机场"
+},
+{
+"iata": "JZH",
+"name_zh": "九寨黄龙机场"
+},
+{
+"iata": "TCG",
+"name_zh": "塔城机场"
+},
+{
+"iata": "HYN",
+"name_zh": "台州路桥机场"
+},
+{
+"iata": "TVS",
+"name_zh": "唐山三女河机场"
+},
+{
+"iata": "TCZ",
+"name_zh": "腾冲驼峰机场"
+},
+{
+"iata": "THQ",
+"name_zh": "天水机场"
+},
+{
+"iata": "TGO",
+"name_zh": "通辽机场"
+},
+{
+"iata": "TEN",
+"name_zh": "铜仁凤凰机场"
+},
+{
+"iata": "TXN",
+"name_zh": "黄山屯溪国际机场"
+},
+{
+"iata": "TLQ",
+"name_zh": "吐鲁番交河机场"
+},
+{
+"iata": "HLH",
+"name_zh": "乌兰浩特机场"
+},
+{
+"iata": "WXN",
+"name_zh": "万州五桥机场"
+},
+{
+"iata": "WEF",
+"name_zh": "潍坊南苑机场"
+},
+{
+"iata": "WEH",
+"name_zh": "威海大水泊国际机场"
+},
+{
+"iata": "WNH",
+"name_zh": "文山普者黑机场"
+},
+{
+"iata": "WUA",
+"name_zh": "乌海机场"
+},
+{
+"iata": "WUX",
+"name_zh": "苏南硕放国际机场"
+},
+{
+"iata": "WUS",
+"name_zh": "武夷山机场"
+},
+{
+"iata": "WUZ",
+"name_zh": "梧州长洲岛机场"
+},
+{
+"iata": "GXH",
+"name_zh": "甘南夏河机场"
+},
+{
+"iata": "XFN",
+"name_zh": "襄阳刘集机场"
+},
+{
+"iata": "XIC",
+"name_zh": "西昌青山机场"
+},
+{
+"iata": "XIL",
+"name_zh": "锡林浩特机场"
+},
+{
+"iata": "ACX",
+"name_zh": "兴义万峰林机场"
+},
+{
+"iata": "XNN",
+"name_zh": "西宁曹家堡机场"
+},
+{
+"iata": "NLT",
+"name_zh": "那拉提机场"
+},
+{
+"iata": "XUZ",
+"name_zh": "徐州观音国际机场"
+},
+{
+"iata": "ENY",
+"name_zh": "延安南泥湾机场"
+},
+{
+"iata": "YNZ",
+"name_zh": "盐城南洋机场"
+},
+{
+"iata": "YTY",
+"name_zh": "扬州泰州国际机场"
+},
+{
+"iata": "YNJ",
+"name_zh": "延吉朝阳川国际机场"
+},
+{
+"iata": "YNT",
+"name_zh": "烟台莱山国际机场"
+},
+{
+"iata": "YBP",
+"name_zh": "宜宾菜坝机场"
+},
+{
+"iata": "YIH",
+"name_zh": "宜昌三峡机场"
+},
+{
+"iata": "LDS",
+"name_zh": "伊春林都机场"
+},
+{
+"iata": "YIC",
+"name_zh": "宜春明月山机场"
+},
+{
+"iata": "INC",
+"name_zh": "银川河东国际机场"
+},
+{
+"iata": "YIN",
+"name_zh": "伊宁机场"
+},
+{
+"iata": "YIW",
+"name_zh": "义乌机场"
+},
+{
+"iata": "LLF",
+"name_zh": "永州零陵机场"
+},
+{
+"iata": "UYN",
+"name_zh": "榆林榆阳机场"
+},
+{
+"iata": "YCU",
+"name_zh": "运城关公机场"
+},
+{
+"iata": "YUS",
+"name_zh": "玉树巴塘机场"
+},
+{
+"iata": "ZQZ",
+"name_zh": "张家口宁远机场"
+},
+{
+"iata": "YZY",
+"name_zh": "张掖甘州机场"
+},
+{
+"iata": "ZHA",
+"name_zh": "湛江机场"
+},
+{
+"iata": "ZAT",
+"name_zh": "昭通机场"
+},
+{
+"iata": "ZHY",
+"name_zh": "中卫沙坡头机场"
+},
+{
+"iata": "HSN",
+"name_zh": "舟山普陀山机场"
+},
+{
+"iata": "ZUH",
+"name_zh": "珠海金湾国际机场"
+},
+{
+"iata": "ZYI",
+"name_zh": "遵义新舟机场"
+},
+{
+"iata": "FYN",
+"name_zh": "富蕴可可托海机场"
+},
+{
+"iata": "HNY",
+"name_zh": "衡阳南岳机场"
+},
+{
+"iata": "HUZ",
+"name_zh": "惠州平潭机场"
+},
+{
+"iata": "SHF",
+"name_zh": "石河子花园机场"
+},
+{
+"iata": "TNH",
+"name_zh": "通化三源浦机场"
+},
+{
+"iata": "JSJ",
+"name_zh": "建三江机场"
+},
+{
+"iata": "BPE",
+"name_zh": "秦皇岛北戴河机场"
+},
+{
+"iata": "HTT",
+"name_zh": "花土沟机场"
+},
+{
+"iata": "CDE",
+"name_zh": "承德普宁机场"
+},
+{
+"iata": "RIZ",
+"name_zh": "日照山字河国际机场"
+},
+{
+"iata": "LLV",
+"name_zh": "吕梁机场"
+},
+{
+"iata": "HXD",
+"name_zh": "德令哈机场"
+},
+{
+"iata": "AHJ",
+"name_zh": "阿坝红原机场"
+},
+{
+"iata": "HCJ",
+"name_zh": "河池金城江机场"
+},
+{
+"iata": "LPF",
+"name_zh": "六盘水月照机场"
+},
+{
+"iata": "HUO",
+"name_zh": "霍林郭勒霍林河机场"
+},
+{
+"iata": "DBC",
+"name_zh": "白城长安机场"
+},
+{
+"iata": "NZL",
+"name_zh": "扎兰屯成吉思汗机场"
+},
+{
+"iata": "WUT",
+"name_zh": "忻州五台山机场"
+},
+{
+"iata": "YKH",
+"name_zh": "营口兰旗机场"
+},
+{
+"iata": "LFQ",
+"name_zh": "临汾乔李机场"
+},
+{
+"iata": "SQD",
+"name_zh": "上饶三清山机场"
+},
+{
+"iata": "YSQ",
+"name_zh": "松原查干湖机场"
+},
+{
+"iata": "WDS",
+"name_zh": "十堰武当山机场"
+},
+{
+"iata": "UCB",
+"name_zh": "乌兰察布机场"
+},
+{
+"iata": "GMQ",
+"name_zh": "果洛玛沁机场"
+},
+{
+"iata": "JMJ",
+"name_zh": "澜沧景迈机场"
+},
+{
+"iata": "CWJ",
+"name_zh": "沧源佤山机场"
+},
+{
+"iata": "RQA",
+"name_zh": "若羌楼兰机场"
+},
+{
+"iata": "LNL",
+"name_zh": "陇南成县机场"
+},
+{
+"iata": "HBQ",
+"name_zh": "祁连海北机场"
+},
+{
+"iata": "XAI",
+"name_zh": "信阳明港机场"
+},
+{
+"iata": "NLH",
+"name_zh": "宁蒗泸沽湖机场"
+},
+{
+"iata": "CNI",
+"name_zh": "长海大长山岛机场"
+},
+{
+"iata": "YYA",
+"name_zh": "岳阳三荷机场"
+},
+{
+"iata": "TWC",
+"name_zh": "图木舒克唐王城机场"
+},
+{
+"iata": "AKA",
+"name_zh": "安康机场"
+},
+{
+"iata": "BZX",
+"name_zh": "巴中恩阳机场"
+},
+{
+"iata": "ACF",
+"name_zh": "塔里木机场"
+},
+{
+"iata": "HQQ",
+"name_zh": "红旗渠机场"
+},
+{
+"iata": "BFY",
+"name_zh": "蚌埠腾湖机场"
+},
+{
+"iata": "PKX",
+"name_zh": "大兴国际机场"
+},
+{
+"iata": "XIK",
+"name_zh": "郑州新郑国际机场货运"
+},
+{
+"iata": "CQW",
+"name_zh": "重庆仙女山机场"
+},
+{
+"iata": "TFU",
+"name_zh": "成都天府国际机场"
+},
+{
+"iata": "DZH",
+"name_zh": "金垭机场"
+},
+{
+"iata": "DDR",
+"name_zh": "定日机场"
+},
+{
+"iata": "DXJ",
+"name_zh": "边城机场"
+},
+{
+"iata": "EHU",
+"name_zh": "花湖机场"
+},
+{
+"iata": "GZG",
+"name_zh": "甘孜格萨尔机场"
+},
+{
+"iata": "HQL",
+"name_zh": "红其拉甫机场"
+},
+{
+"iata": "HSC",
+"name_zh": "韶关丹霞机场"
+},
+{
+"iata": "HZA",
+"name_zh": "菏泽牡丹机场"
+},
+{
+"iata": "JBK",
+"name_zh": "奇台江布拉克机场"
+},
+{
+"iata": "JIU",
+"name_zh": "庐山机场"
+},
+{
+"iata": "LGZ",
+"name_zh": "隆子机场"
+},
+{
+"iata": "HCZ",
+"name_zh": "郴州北湖机场"
+},
+{
+"iata": "LZG",
+"name_zh": "阆中古城机场"
+},
+{
+"iata": "SHS",
+"name_zh": "沙市机场"
+},
+{
+"iata": "SIA",
+"name_zh": "西关机场"
+},
+{
+"iata": "SZH",
+"name_zh": "朔州滋润机场"
+},
+{
+"iata": "SZV",
+"name_zh": "苏州光福机场"
+},
+{
+"iata": "WHA",
+"name_zh": "芜湖宣州机场"
+},
+{
+"iata": "WSK",
+"name_zh": "重庆巫山机场"
+},
+{
+"iata": "XNT",
+"name_zh": "褡裢机场"
+},
+{
+"iata": "YLX",
+"name_zh": "玉林福绵机场"
+},
+{
+"iata": "YTW",
+"name_zh": "万方机场"
+},
+{
+"iata": "ZFL",
+"name_zh": "昭苏天马机场"
+}
 ]

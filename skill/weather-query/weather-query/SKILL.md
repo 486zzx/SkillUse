@@ -1,132 +1,97 @@
 ---
 name: weather-query
-description: "天气查询：基于心知天气 API，根据城市/地点查询实况与逐日预报，可选生活指数与空气质量。Capabilities: 心知 now/daily/suggestion/air、中文地点、私钥或签名认证。Use for: 查天气、某地天气、今天明天天气、气温、穿衣建议、空气质量、PM2.5。Triggers: 天气、气温、下雨、明天天气、北京天气、查天气、穿衣、空气质量"
+description: "天气查询：根据城市中文名、时间范围（标准格式）与查询类型（天气/空气质量/两者）查询。Use for: 查天气、某地天气、气温、穿衣建议、空气质量、PM2.5。Triggers: 天气、气温、下雨、北京天气、查天气、穿衣、空气质量"
 ---
 
-# 天气查询（心知天气）
+# 天气查询
 
-根据用户自然语言查询天气：解析地点（城市中文名/拼音/英文/经纬度），调用**心知天气 API** 获取实况、逐日预报，可选生活指数与空气质量，输出统一 JSON。**推荐**：直接调用总入口 **`scripts/run_weather_search.py`**，传入**位置参数**（地点必填，日期可选）；脚本输出压缩 JSON，由模型整理后呈现给用户。
+根据用户查询天气：解析**城市中文名**、**时间范围**（标准格式）与**查询类型**（天气逐日 / 空气质量 / 两者），返回对应结果。**时间只有一个**，只传**标准格式**（yyyy-MM-dd,yyyy-MM-dd 或单日 yyyy-MM-dd）；可只查天气、只查空气质量，或两者都查；**不传 query 时默认仅查天气**。调用 **`scripts/run_weather_search.py`**，传入位置参数与 **`--query`**；脚本输出压缩 JSON，由模型整理后呈现给用户。
 
 所有脚本**仅通过命令行长参数**接收输入，不使用 stdin、不传 JSON。
 
 ## 1. 输入输出与范围
 
-- **输入**：自然语言（地点、可选日期如今天/明天/昨天、或「未来几天」）；可选「要生活指数」「要空气质量」。
-- **输出**：当前天气（实况）+ 逐日预报；可选生活指数、空气质量；解析或 API 失败时给出清晰原因。
-- **范围**：心知支持全国约 3156、全球约 24,962 个城市；**生活指数仅支持中国城市**。
-- **结果展示**：拿到 API 返回后，**由模型进行输出**，把天气信息用自然语言或表格呈现；不得截断关键字段。
+- **输入**：**城市**（必填，仅支持城市中文名）、**时间范围**（必填，标准格式见下）、**查询类型 query**（可选，见下）。
+- **输出**：按所选类型返回逐日天气和/或空气质量；失败时给出清晰原因。
+- **结果展示**：拿到脚本返回后，**由模型进行输出**，把天气/空气质量信息用自然语言或表格呈现；不得截断关键字段。
 
-## 2. 认证（必配）
+### 1.1 参数不足与澄清流程
 
-- **方式一**：环境变量 **`SENIVERSE_KEY`** = 心知私钥（从 [心知产品管理](https://www.seniverse.com/products) 获取），请求时传 `key=xxx`。
-- **方式二**：签名验证（推荐生产环境）：**`SENIVERSE_UID`**（公钥）+ **`SENIVERSE_PRIVATE_KEY`**（私钥，仅用于生成签名）；脚本按心知规范生成 `ts`、`ttl`、`sig` 与请求一起发送，不传 key。
+当**输入没有给足够的参数**（例如缺少城市或时间范围）导致无法执行本 skill 时，**必须走澄清流程**：向用户发起澄清，说明需要补充的内容（如「请提供要查询的城市」或「请提供时间范围，格式为 yyyy-MM-dd,yyyy-MM-dd」），待用户补充后再执行查询。
 
-未配置时脚本返回 `success: false`，提示配置 SENIVERSE_KEY 或签名参数。
+## 2. 地点（仅城市中文名）
 
-## 3. 地点（location）
+- **仅支持城市中文名**（如：北京、上海、杭州）。不支持城市 ID、英文名、拼音、经纬度；若用户提供上述形式，应提示「仅支持城市中文名」或引导用户改为中文名。
 
-心知 **location** 支持多种形式，脚本直接透传（必要时可用 references/city_map 做中文别名→标准名）：
+## 3. 时间范围（只有一个参数，标准格式）
 
-| 形式 | 示例 |
-|------|------|
-| 城市中文名 | 北京、上海 |
-| 拼音/英文名 | beijing、shanghai |
-| 城市 ID | WX4FBXXFKE4F |
-| 经纬度 | 纬度:经度（如 39.9:116.4） |
+- **只传标准格式**：`yyyy-MM-dd,yyyy-MM-dd`（起止日期）或单日 `yyyy-MM-dd`。例如 `2026-03-10,2026-03-12`、`2026-03-10`。
+- 传参方式：第二个位置参数，必填。
 
-无需单独地理编码接口；心知接口直接接受上述 location。
+## 4. 查询类型 query（一个参数里选择）
 
-## 4. 日期与预报范围
+- **含义**：在**一个参数**里选择要查「天气」还是「空气质量」，或两者都查。
+- **取值**：
+  - **weather**（或 天气）：仅查**逐日天气**；
+  - **air**（或 空气/空气质量）：仅查**空气质量**；
+  - **both**（或 all）：同时查天气与空气质量。
+- 传参方式：`--query weather`、`--query air`、`--query both`。**不传时默认 weather**（仅查逐日天气）。
 
-- **未指定日期**：仅返回**实况**（current）+ 默认 3 天逐日（今日起）。
-- **指定「今天」**：实况 + 逐日，start=0，从今天起。
-- **指定「明天」「后天」**：start=1 或 2，从该日起的逐日。
-- **指定「昨天」「前天」**：start=-1 或 -2，逐日接口可查历史单日。
-- **具体日期**：start=yyyy/m/d（如 2026/3/5），days=1 或更多。
-- **天数**：`--days N`，免费版一般 3 天，付费最多 15 天；脚本默认 3。
+## 5. 两种查询各自支持的时间
 
-### 4.1 模糊时间与调用约定（重要）
+- **天气（逐日）**：支持**昨天、今天、未来 15 天**。若用户请求的时间范围与此有重叠，则只返回重叠部分的逐日预报。
+- **空气质量**：支持**今天、未来 5 天**。若用户请求的时间范围与此有重叠，则只返回重叠天数内的空气质量；无重叠则不返回空气质量。
 
-为提高模糊时间场景下的识别准确性，约定如下：
+后端会对**请求时间**与**各数据源支持的时间**取**重叠部分**，只请求并返回重叠范围内的结果。
 
-- **大模型**：只**原样抽取**用户输入中的时间字段（如「明天」「下周一下午」「3月5号」），**不做**时间解析或推理；将抽取到的**原始时间字符串**作为第二个位置参数传给 `run_weather_search.py`。
-- **脚本**：由 `run_weather_search.py` 使用 **JioNLP** 对传入的原始时间字符串进行语义解析，得到心知 API 所需的 start 参数（0/1/2/-1/-2 或 yyyy/m/d）。
+## 6. 执行与命令
 
-## 5. 调用的心知接口
+调用总入口 **`scripts/run_weather_search.py`**：
 
-| 能力 | 心知路径 | 说明 |
-|------|----------|------|
-| 实况 | GET /v3/weather/now.json | 当前温度、体感、天气现象、风力等；免费约 3 项。 |
-| 逐日 | GET /v3/weather/daily.json | start、days；免费 3 天，付费 15 天。 |
-| 生活指数 | GET /v3/life/suggestion.json | 穿衣、紫外线等；**仅中国城市**；可选 `--with-suggestion`。 |
-| 空气质量 | GET /v3/air/now.json | AQI、PM2.5、PM10 等；可选 `--with-air`。 |
+- **必填（位置参数）**：第 1 个为**城市中文名**，第 2 个为**时间范围**（标准格式 `yyyy-MM-dd,yyyy-MM-dd` 或 `yyyy-MM-dd`）。
+- **可选**：`--query weather|air|both`，表示只查天气、只查空气，或两者都查（**默认 weather**）。
 
-基础 URL：`https://api.seniverse.com`。成功时脚本返回 `success: true` 与 `result`；失败返回 `success: false` 与 `error`。
-
-## 6. 执行流程
-
-**推荐**：调用总入口 **`scripts/run_weather_search.py`**，传入**位置参数**。
-
-### 6.1 命令构造（PowerShell / Linux）
-
-- **必填（位置参数）**：第 1 个为**地点**（如 北京、上海、beijing）。
-- **可选（位置参数）**：第 2 个为**日期**（今天、明天、后天、昨天、前天、或 `yyyy-mm-dd`）；不传则从今天起查逐日。
-- **可选（--key 值）**：`--days 5`（逐日天数，默认 3）、`--with-suggestion`（拉取生活指数）、`--with-air`（拉取空气质量）、`--language zh-Hans`、`--unit c`。
-
-**PowerShell**
-
-```powershell
-$env:SENIVERSE_KEY = "你的私钥"
-python scripts/run_weather_search.py 北京
-python scripts/run_weather_search.py 上海 明天 --days 5
-python scripts/run_weather_search.py 北京 --with-suggestion --with-air
-```
-
-**Linux / Bash**
+示例：
 
 ```bash
-export SENIVERSE_KEY="你的私钥"
-python scripts/run_weather_search.py 北京
-python scripts/run_weather_search.py 上海 明天 --days 5
-python scripts/run_weather_search.py 北京 --with-suggestion --with-air
+python scripts/run_weather_search.py 北京 2026-03-10,2026-03-12
+python scripts/run_weather_search.py 上海 2026-03-10 --query weather
+python scripts/run_weather_search.py 北京 2026-03-10,2026-03-15 --query air
+python scripts/run_weather_search.py 北京 2026-03-10,2026-03-11 --query both
 ```
 
-**规则**：第一个参数为地点，第二个可选为日期；需要生活指数/空气质量时加对应 flag。
-
-## 7. 输出结构示例
+## 7. 输出结构
 
 成功时输出压缩 JSON，例如：
 
 ```json
-{"success":true,"result":{"location":{"name":"北京","id":"WX4FBXXFKE4F"},"current":{"text":"晴","code":"0","temperature":"5","feels_like":"2"},"daily":[{"date":"2026-03-04","high":"8","low":"-1","text_day":"晴","text_night":"多云"}],"suggestion":{},"air":{}}}
+{"success":true,"result":{"location":{"name":"北京","id":"..."},"daily":[...],"air":{...},"time_range":["2026-03-10","2026-03-12"]}}
 ```
 
-- `result.location`：地点名、ID（若有）。
-- `result.current`：实况（text、code、temperature、feels_like 等；免费版字段可能较少）。
-- `result.daily`：逐日数组，每项含 date、high、low、text_day、text_night、降水等（以心知实际返回为准）。
-- `result.suggestion`：生活指数（仅当请求带 `--with-suggestion` 且为中国城市时有内容）。
-- `result.air`：空气质量（仅当请求带 `--with-air` 时有内容）。
+- `result.location`：城市名（name）、id（若有）。
+- `result.daily`：逐日天气数组（仅当 query 含 weather 时有内容），每项含 date、high、low、text_day、text_night 等。
+- `result.air`：空气质量（仅当 query 含 air 且在支持时间内有内容）。
+- `result.time_range`：本次请求的日期范围 `[start, end]`，格式 yyyy-MM-dd。
+- `result.uncovered_note`：可选。当请求的时间范围有部分超出天气/空气质量各自支持范围时，会给出说明（字符串数组），指明哪段日期未覆盖及原因；**输出给用户时需一并呈现**，避免用户误以为未返回的日期有数据。
+- `result.empty_reason`：可选。当逐日预报或空气质量有一项或两项为空时，合并说明原因（如时间无重叠、接口未返回等）；**输出给用户时需一并呈现**。
+- 报错时（`success: false`）：`error` 字段会说明失败原因（如缺少参数、认证失败、时间范围无法解析、该地点无数据及原因等），**输出给用户时需原样或转述呈现**。
 
-## 8. 脚本参数速查
+## 8. 基于天气结果的建议（由模型自主给出）
+
+拿到脚本返回的**天气信息**（逐日、空气质量等）后，**由模型根据结果自主给出建议**。可针对以下类别中的若干项进行建议（不必全部覆盖）：
+
+- **基本类**：穿衣、紫外线强度、洗车、旅游、感冒、运动  
+- **交通类**：交通、路况  
+- **生活类**：晾晒、雨伞、空调开启、啤酒、逛街、夜生活、约会  
+- **运动类**：晨练、钓鱼、划船、放风筝  
+- **健康类**：过敏、美发、化妆、风寒、防晒、空气污染扩散条件、舒适度、心情  
+
+## 9. 脚本参数速查
 
 | 脚本 | 入口 | 关键参数 | 输出 |
 |------|------|----------|------|
-| **run_weather_search.py** | 位置参数 | 必填：地点。可选：日期、`--days N`、`--with-suggestion`、`--with-air`、`--language`、`--unit` | 压缩 JSON：`{success, result: {location, current, daily, suggestion?, air?}}` 或 `{success:false, error}` |
-
-## 9. 数据与依赖
-
-- **API**：心知天气 v3（实况、逐日、生活指数、空气质量），需 API Key 或签名，见 [心知天气-API接口文档](references/心知天气-API接口文档.md)。
-- **依赖**：`requests`、`jionlp`（时间语义解析）；Python 3.8+。
-- **环境变量**：`SENIVERSE_KEY`（私钥）或 `SENIVERSE_UID` + `SENIVERSE_PRIVATE_KEY`（签名）；可选 `WEATHER_DATA_DIR` 指向 references 目录。
-- **references**：可选 `city_map.json` 做地点别名；详见 [心知天气-需求场景与特性设计方案](references/心知天气-需求场景与特性设计方案.md)。
+| **run_weather_search.py** | 位置参数 | 必填：城市中文名、时间范围（标准格式）。可选：`--query weather\|air\|both`（默认 weather） | 压缩 JSON：`{success, result: {location, daily?, air?, time_range}}` 或 `{success:false, error}` |
 
 ## 10. 触发场景
 
-当用户表达以下意图时使用本 skill：查天气、某地天气、今天/明天/后天/昨天天气、气温、会不会下雨、穿衣建议、紫外线、空气质量、PM2.5、北京/上海/xx 天气。
-
-## 11. 参考文档
-
-- **心知天气接口文档**： [references/心知天气-API接口文档.md](references/心知天气-API接口文档.md)
-- **心知天气需求与特性设计**： [references/心知天气-需求场景与特性设计方案.md](references/心知天气-需求场景与特性设计方案.md)
-- **测试用例与评估方法**： [references/测试用例与评估方法.md](references/测试用例与评估方法.md) — 单元/功能/系统测试用例与通过标准、覆盖率与 CI 建议。
-- **Open-Meteo 接口与设计**（备用数据源）： [references/API-接口文档.md](references/API-接口文档.md)、 [references/需求场景与特性设计方案.md](references/需求场景与特性设计方案.md)
+当用户表达以下意图时使用本 skill：查天气、某地天气、今明几天天气、气温、会不会下雨、穿衣建议、紫外线、空气质量、PM2.5、北京/上海/xx 天气。

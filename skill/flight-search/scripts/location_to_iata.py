@@ -11,10 +11,7 @@ import os
 import sys
 from pathlib import Path
 
-# 默认数据目录：本 skill 下的 references（可通过环境变量 FLIGHT_DATA_DIR 覆盖）
-SCRIPT_DIR = Path(__file__).resolve().parent
-SKILL_DIR = SCRIPT_DIR.parent
-DEFAULT_DATA_DIR = SKILL_DIR / "references"
+from config import DATA_DIR_DEFAULT, DATA_DIR_ENV
 
 
 def _ensure_utf8_io() -> None:
@@ -28,7 +25,7 @@ def _ensure_utf8_io() -> None:
 
 
 def get_data_dir() -> Path:
-    return Path(os.environ.get("FLIGHT_DATA_DIR", str(DEFAULT_DATA_DIR)))
+    return Path(os.environ.get(DATA_DIR_ENV, str(DATA_DIR_DEFAULT)))
 
 
 def load_maps(data_dir: Path) -> tuple[dict, dict]:

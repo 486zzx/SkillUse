@@ -11,17 +11,12 @@ from typing import Any
 
 from query_api import get_duration_minutes
 
-# 支持的车型首字母（与 start.md / API 一致，不可扩展）
-# [G(高铁/城际), D(动车), Z(直达特快), T(特快), K(快速), O(其他), F(复兴号), S(智能动车组)]
-TRAIN_TYPE_PREFIX = frozenset("G D Z T K O F S".split())
-
-# 支持的排序键
-SORT_OPTIONS = {
-    "price_asc", "price_desc",
-    "departure_asc", "departure_desc",
-    "arrival_asc", "arrival_desc",
-    "duration_asc", "duration_desc",
-}
+from config import (
+    TRAIN_TYPE_PREFIX,
+    SORT_OPTIONS,
+    TIME_RANGE_MINUTES,
+    TIME_RANGE_OPTIONS,
+)
 
 
 def _train_type_prefix(train_no: str) -> str:
@@ -55,17 +50,6 @@ def _time_to_minutes(t: str) -> int:
     if m:
         return int(m.group(1)) * 60 + int(m.group(2))
     return 0
-
-
-# 时段名称 → (起始分钟, 结束分钟)，左闭右开，与 API 一致
-# 凌晨 [0:00-06:00) 上午 [6:00-12:00) 下午 [12:00-18:00) 晚上 [18:00-24:00)
-TIME_RANGE_MINUTES = {
-    "凌晨": (0, 6 * 60),
-    "上午": (6 * 60, 12 * 60),
-    "下午": (12 * 60, 18 * 60),
-    "晚上": (18 * 60, 24 * 60),
-}
-TIME_RANGE_OPTIONS = frozenset(TIME_RANGE_MINUTES)
 
 
 def time_range_to_api_name(time_min: str | None, time_max: str | None) -> str | None:
