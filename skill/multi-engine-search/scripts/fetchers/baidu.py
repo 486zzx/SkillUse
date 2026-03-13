@@ -4,7 +4,6 @@
 
 from __future__ import annotations
 
-import os
 from typing import Any
 
 try:
@@ -13,6 +12,16 @@ except ImportError:
     requests = None
 
 from .base import registry, Fetcher
+
+try:
+    import config as _config
+except ImportError:
+    import sys
+    from pathlib import Path
+    _root = Path(__file__).resolve().parent.parent
+    if str(_root) not in sys.path:
+        sys.path.insert(0, str(_root))
+    import config as _config
 
 BAIDU_URL = "https://qianfan.baidubce.com/v2/ai_search/web_search"
 
@@ -24,10 +33,10 @@ class BaiduFetcher:
         self,
         query: str,
         *,
-        max_results: int = 5,
+        max_results: int = 20,
         timeout: float = 10,
     ) -> tuple[str, list[dict], str]:
-        key = os.environ.get("BAIDU_APPBUILDER_API_KEY", "your-key").strip()
+        key = _config.get_baidu_api_key()
         if not key:
             return "baidu", [], "未配置 BAIDU_APPBUILDER_API_KEY"
         if not requests:

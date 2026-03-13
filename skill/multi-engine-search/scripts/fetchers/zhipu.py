@@ -5,8 +5,20 @@ API: POST /paas/v4/web_search，返回统一格式 (source_id, items, error)。
 
 from __future__ import annotations
 
-import os
+import json
+import time
+from pathlib import Path
 from typing import Any
+
+# #region agent log
+def _debug_log(msg: str, data: dict, hypothesis_id: str) -> None:
+    _log_path = Path(__file__).resolve().parent.parent.parent.parent.parent.parent / "debug-8dbb21.log"
+    try:
+        with open(_log_path, "a", encoding="utf-8") as _f:
+            _f.write(json.dumps({"sessionId": "8dbb21", "timestamp": int(time.time() * 1000), "location": "zhipu.py", "message": msg, "data": data, "hypothesisId": hypothesis_id}, ensure_ascii=False) + "\n")
+    except Exception:
+        pass
+# #endregion
 
 try:
     import requests
@@ -14,6 +26,16 @@ except ImportError:
     requests = None
 
 from .base import registry, Fetcher
+
+try:
+    import config as _config
+except ImportError:
+    import sys
+    from pathlib import Path
+    _root = Path(__file__).resolve().parent.parent
+    if str(_root) not in sys.path:
+        sys.path.insert(0, str(_root))
+    import config as _config
 
 ZHIPU_URL = "https://open.bigmodel.cn/api/paas/v4/web_search"
 MAX_QUERY_LEN = 70  # API 建议 search query 不超过 70 字符
@@ -26,10 +48,10 @@ class ZhipuFetcher:
         self,
         query: str,
         *,
-        max_results: int = 5,
+        max_results: int = 20,
         timeout: float = 10,
     ) -> tuple[str, list[dict], str]:
-        key = os.environ.get("ZHIPU_API_KEY", "your-key").strip()
+        key = _config.get_zhipu_api_key()
         if not key:
             return "zhipu", [], "未配置 ZHIPU_API_KEY"
         if not requests:
@@ -51,6 +73,9 @@ class ZhipuFetcher:
         }
         try:
             r = requests.post(ZHIPU_URL, json=body, headers=headers, timeout=timeout)
+            # #region agent log
+            _debug_log("zhipu_post_done", {"status": r.status_code, "content_len": len(r.content) if r.content else 0}, "H2")
+            # #endregion
             data = r.json() if r.content else {}
             if r.status_code != 200:
                 err = data.get("error")
@@ -72,6 +97,9 @@ class ZhipuFetcher:
                 })
             return "zhipu", items, ""
         except Exception as e:
+            # #region agent log
+            _debug_log("zhipu_except", {"exc_type": type(e).__name__, "exc_msg_prefix": str(e)[:200], "is_unicode_encode": "encode" in str(e).lower() and "unicode" in str(e).lower()}, "H1,H2,H3")
+            # #endregion
             return "zhipu", [], str(e)[:500]
 
 

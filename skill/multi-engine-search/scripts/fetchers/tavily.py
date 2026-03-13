@@ -5,10 +5,19 @@ Tavily 搜索 Fetcher。
 from __future__ import annotations
 
 import json
-import os
 import urllib.request
 
 from .base import registry, Fetcher
+
+try:
+    import config as _config
+except ImportError:
+    import sys
+    from pathlib import Path
+    _root = Path(__file__).resolve().parent.parent
+    if str(_root) not in sys.path:
+        sys.path.insert(0, str(_root))
+    import config as _config
 
 TAVILY_MCP_URL = "https://mcp.tavily.com/mcp"
 
@@ -20,10 +29,10 @@ class TavilyFetcher:
         self,
         query: str,
         *,
-        max_results: int = 5,
+        max_results: int = 20,
         timeout: float = 10,
     ) -> tuple[str, list[dict], str]:
-        key = os.environ.get("TAVILY_API_KEY", "your-key").strip()
+        key = _config.get_tavily_api_key()
         if not key:
             return "tavily", [], "未配置 TAVILY_API_KEY"
         body = {

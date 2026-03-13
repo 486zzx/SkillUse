@@ -16,7 +16,22 @@ _STRIP_QUERY_KEYS = frozenset({
 
 
 def normalize_url(url: str) -> str:
-    """规范化 URL：统一协议、去掉追踪参数、去掉 fragment、尾部斜杠。"""
+    """规范化 URL：统一协议、去掉追踪参数、去掉 fragment、尾部斜杠。
+
+    Examples:
+        >>> normalize_url("https://example.com/article?utm_source=google&fbclid=abc")
+        'https://example.com/article'
+        >>> normalize_url("https://docs.site.com/page#section-1")
+        'https://docs.site.com/page'
+        >>> normalize_url("example.com/path")
+        'https://example.com/path'
+        >>> normalize_url("https://example.com/blog/")
+        'https://example.com/blog'
+        >>> normalize_url("https://shop.com/item?id=42&gclid=xyz")
+        'https://shop.com/item?id=42'
+        >>> normalize_url("")
+        ''
+    """
     if not url or not url.strip():
         return ""
     s = url.strip()
@@ -79,6 +94,7 @@ def dedupe_by_url(items: list[dict]) -> list[dict]:
         title = (x.get("title") or "").strip()
         content = (x.get("content") or "").strip()
         kw = (x.get("search_keyword") or "").strip()
+        rank = x.get("stream_rank")
         if u not in merged:
             row = dict(x)
             row["url"] = u
@@ -87,6 +103,9 @@ def dedupe_by_url(items: list[dict]) -> list[dict]:
             row["sources"] = [src]
             row["breadcrumbs"] = breadcrumbs_from_url(u)
             row["search_keywords"] = [kw] if kw else []
+            row["stream_ranks"] = []
+            if kw and isinstance(rank, int) and rank > 0:
+                row["stream_ranks"].append({"source": src, "keyword": kw, "rank": rank})
             merged[u] = row
             continue
         acc = merged[u]
@@ -94,6 +113,17 @@ def dedupe_by_url(items: list[dict]) -> list[dict]:
             acc["sources"].append(src)
         if kw and kw not in acc["search_keywords"]:
             acc["search_keywords"].append(kw)
+        if kw and isinstance(rank, int) and rank > 0:
+            found = False
+            for sr in acc.get("stream_ranks", []):
+                if sr.get("source") == src and sr.get("keyword") == kw:
+                    sr["rank"] = min(int(sr.get("rank", rank)), rank)
+                    found = True
+                    break
+            if not found:
+                acc.setdefault("stream_ranks", []).append(
+                    {"source": src, "keyword": kw, "rank": rank}
+                )
         if len(title) > len(acc.get("title") or ""):
             acc["title"] = title
         if len(content) > len(acc.get("content") or ""):
@@ -108,6 +138,7 @@ def dedupe_by_url(items: list[dict]) -> list[dict]:
             acc["breadcrumbs"] = breadcrumbs_from_url(acc.get("url") or "")
         acc.pop("source", None)  # 只保留 sources 数组
         acc.pop("search_keyword", None)  # 只保留 search_keywords 数组
+        acc.pop("stream_rank", None)
         out.append(acc)
     return out
 

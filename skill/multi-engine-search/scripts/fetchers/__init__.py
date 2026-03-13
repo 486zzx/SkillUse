@@ -11,6 +11,6 @@ from . import zhipu  # noqa: F401 - 触发注册
 from .base import registry
 
 
-def get_fetchers():
+def get_fetchers(engine_ids: list[str] | None = None):
     """返回当前启用的 Fetcher 实例列表（顺序与 AGGREGATE_ENGINES 或默认一致）。"""
-    return registry.get_enabled()
+    return registry.get_enabled(ids_override=engine_ids)

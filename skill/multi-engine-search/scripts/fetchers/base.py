@@ -5,8 +5,18 @@ Fetcher 协议与注册表。支持几十～上百个搜索源：通过注册 + 
 
 from __future__ import annotations
 
-import os
 from typing import Protocol, runtime_checkable
+
+# 从 scripts 根目录加载统一配置（入口为 scripts/aggregate_search.py 时 path 含 scripts）
+try:
+    import config as _config
+except ImportError:
+    import sys
+    from pathlib import Path
+    _root = Path(__file__).resolve().parent.parent
+    if str(_root) not in sys.path:
+        sys.path.insert(0, str(_root))
+    import config as _config
 
 
 @runtime_checkable
@@ -47,13 +57,14 @@ class Registry:
         """显式设置启用列表（测试或配置用）。"""
         self._enabled_ids = ids
 
-    def get_enabled(self) -> list[Fetcher]:
+    def get_enabled(self, ids_override: list[str] | None = None) -> list[Fetcher]:
         """返回当前启用的 Fetcher 实例列表，顺序与启用列表一致。"""
-        if self._enabled_ids is not None:
+        if ids_override is not None:
+            ids = ids_override
+        elif self._enabled_ids is not None:
             ids = self._enabled_ids
         else:
-            env = os.environ.get("AGGREGATE_ENGINES", "").strip()
-            ids = [x.strip() for x in env.split(",") if x.strip()] if env else ["baidu", "tavily", "zhipu"]
+            ids = _config.get_aggregate_engines()
         return [self._fetchers[id] for id in ids if id in self._fetchers]
 
 
