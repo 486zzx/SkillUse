@@ -1,0 +1,24 @@
+{
+  "bm25_filter": {
+    "enabled": true,
+    "tokenize": "原有关键词分词逻辑",
+    "doc_analyzer": "char_ngram_2_3",
+    "min_score_percentile": 0.2,
+    "keep_min_results": 20
+  },
+  "fusion_score": {
+    "formula": "score = w_rrf * rrf + w_engine * engine_weight + w_domain * domain_weight",
+    "weights": {
+      "w_rrf": 0.5,
+      "w_engine": 0.3,
+      "w_domain": 0.2
+    },
+    "rrf_k": 60
+  },
+  "token_budget": {
+    "enabled": true,
+    "keep_min_results": 8,
+    "max_results_after_budget": 50
+  },
+  "top_k": 20
+}

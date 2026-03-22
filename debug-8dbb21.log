@@ -1,0 +1,15 @@
+{"sessionId": "8dbb21", "timestamp": 1773391841863, "location": "zhipu.py", "message": "zhipu_post_done", "data": {"status": 200, "content_len": 13987}, "hypothesisId": "H2"}
+{"sessionId": "8dbb21", "timestamp": 1773391841865, "location": "zhipu.py", "message": "before_print_r_text", "data": {"content_len": 13987}, "hypothesisId": "H1"}
+{"sessionId": "8dbb21", "timestamp": 1773391841866, "location": "zhipu.py", "message": "zhipu_except", "data": {"exc_type": "UnicodeEncodeError", "exc_msg_prefix": "'gbk' codec can't encode character '\\uff61' in position 267: illegal multibyte sequence", "is_unicode_encode": false}, "hypothesisId": "H1,H2,H3"}
+{"sessionId": "8dbb21", "timestamp": 1773391841953, "location": "zhipu.py", "message": "zhipu_post_done", "data": {"status": 200, "content_len": 42767}, "hypothesisId": "H2"}
+{"sessionId": "8dbb21", "timestamp": 1773391841955, "location": "zhipu.py", "message": "before_print_r_text", "data": {"content_len": 42767}, "hypothesisId": "H1"}
+{"sessionId": "8dbb21", "timestamp": 1773391841957, "location": "zhipu.py", "message": "zhipu_except", "data": {"exc_type": "UnicodeEncodeError", "exc_msg_prefix": "'gbk' codec can't encode character '\\uff64' in position 1351: illegal multibyte sequence", "is_unicode_encode": false}, "hypothesisId": "H1,H2,H3"}
+{"sessionId": "8dbb21", "timestamp": 1773391842011, "location": "zhipu.py", "message": "zhipu_post_done", "data": {"status": 200, "content_len": 31209}, "hypothesisId": "H2"}
+{"sessionId": "8dbb21", "timestamp": 1773391842013, "location": "zhipu.py", "message": "before_print_r_text", "data": {"content_len": 31209}, "hypothesisId": "H1"}
+{"sessionId": "8dbb21", "timestamp": 1773391842015, "location": "zhipu.py", "message": "zhipu_except", "data": {"exc_type": "UnicodeEncodeError", "exc_msg_prefix": "'gbk' codec can't encode character '\\xbb' in position 272: illegal multibyte sequence", "is_unicode_encode": false}, "hypothesisId": "H1,H2,H3"}
+{"sessionId": "8dbb21", "timestamp": 1773393032132, "location": "zhipu.py", "message": "zhipu_post_done", "data": {"status": 200, "content_len": 32127}, "hypothesisId": "H2"}
+{"sessionId": "8dbb21", "timestamp": 1773393033799, "location": "zhipu.py", "message": "zhipu_post_done", "data": {"status": 200, "content_len": 245}, "hypothesisId": "H2"}
+{"sessionId": "8dbb21", "timestamp": 1773393481673, "location": "zhipu.py", "message": "zhipu_post_done", "data": {"status": 200, "content_len": 19173}, "hypothesisId": "H2"}
+{"sessionId": "8dbb21", "timestamp": 1773393481742, "location": "zhipu.py", "message": "zhipu_post_done", "data": {"status": 200, "content_len": 31791}, "hypothesisId": "H2"}
+{"sessionId": "8dbb21", "timestamp": 1773393481906, "location": "zhipu.py", "message": "zhipu_post_done", "data": {"status": 200, "content_len": 31241}, "hypothesisId": "H2"}
+{"sessionId": "8dbb21", "timestamp": 1773402548523, "location": "zhipu.py", "message": "zhipu_post_done", "data": {"status": 200, "content_len": 21852}, "hypothesisId": "H2"}

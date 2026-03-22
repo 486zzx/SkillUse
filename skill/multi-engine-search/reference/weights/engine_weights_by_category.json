@@ -1,0 +1,432 @@
+{
+  "metric_weights": {
+    "NDCG@5": 0.25,
+    "NDCG@10": 0.35,
+    "NDCG@20": 0.15,
+    "MAP": 0.15,
+    "MRR": 0.1
+  },
+  "by_category": {
+    "宏观经济": {
+      "raw_scores": {
+        "baidu": 0.409891,
+        "tavily": 0.524639,
+        "zhipu": 0.487034,
+        "zhipu_pro": 0.432101,
+        "zhipu_quark": 0.432472,
+        "zhipu_std": 0.399412
+      },
+      "weights": {
+        "baidu": 0.152628,
+        "tavily": 0.195356,
+        "zhipu": 0.181354,
+        "zhipu_pro": 0.160899,
+        "zhipu_quark": 0.161037,
+        "zhipu_std": 0.148726
+      },
+      "ranked_engines": [
+        "tavily",
+        "zhipu",
+        "zhipu_quark",
+        "zhipu_pro",
+        "baidu",
+        "zhipu_std"
+      ]
+    },
+    "知识问答": {
+      "raw_scores": {
+        "baidu": 0.59246,
+        "tavily": 0.680645,
+        "zhipu": 0.671098,
+        "zhipu_pro": 0.647816,
+        "zhipu_quark": 0.64903,
+        "zhipu_std": 0.655169
+      },
+      "weights": {
+        "baidu": 0.15206,
+        "tavily": 0.174694,
+        "zhipu": 0.172243,
+        "zhipu_pro": 0.166268,
+        "zhipu_quark": 0.16658,
+        "zhipu_std": 0.168155
+      },
+      "ranked_engines": [
+        "tavily",
+        "zhipu",
+        "zhipu_std",
+        "zhipu_quark",
+        "zhipu_pro",
+        "baidu"
+      ]
+    },
+    "自然地理与防灾": {
+      "raw_scores": {
+        "baidu": 0.46538,
+        "tavily": 0.497137,
+        "zhipu": 0.507704,
+        "zhipu_pro": 0.569589,
+        "zhipu_quark": 0.514889,
+        "zhipu_std": 0.567134
+      },
+      "weights": {
+        "baidu": 0.149073,
+        "tavily": 0.159245,
+        "zhipu": 0.16263,
+        "zhipu_pro": 0.182453,
+        "zhipu_quark": 0.164932,
+        "zhipu_std": 0.181667
+      },
+      "ranked_engines": [
+        "zhipu_pro",
+        "zhipu_std",
+        "zhipu_quark",
+        "zhipu",
+        "tavily",
+        "baidu"
+      ]
+    },
+    "政策法规": {
+      "raw_scores": {
+        "baidu": 0.486466,
+        "tavily": 0.573742,
+        "zhipu": 0.647992,
+        "zhipu_pro": 0.59069,
+        "zhipu_quark": 0.517948,
+        "zhipu_std": 0.596085
+      },
+      "weights": {
+        "baidu": 0.142536,
+        "tavily": 0.168109,
+        "zhipu": 0.189864,
+        "zhipu_pro": 0.173075,
+        "zhipu_quark": 0.151761,
+        "zhipu_std": 0.174655
+      },
+      "ranked_engines": [
+        "zhipu",
+        "zhipu_std",
+        "zhipu_pro",
+        "tavily",
+        "zhipu_quark",
+        "baidu"
+      ]
+    },
+    "体育娱乐": {
+      "raw_scores": {
+        "baidu": 0.383225,
+        "tavily": 0.463102,
+        "zhipu": 0.403193,
+        "zhipu_pro": 0.381807,
+        "zhipu_quark": 0.436938,
+        "zhipu_std": 0.32815
+      },
+      "weights": {
+        "baidu": 0.159916,
+        "tavily": 0.193248,
+        "zhipu": 0.168248,
+        "zhipu_pro": 0.159324,
+        "zhipu_quark": 0.18233,
+        "zhipu_std": 0.136934
+      },
+      "ranked_engines": [
+        "tavily",
+        "zhipu_quark",
+        "zhipu",
+        "baidu",
+        "zhipu_pro",
+        "zhipu_std"
+      ]
+    },
+    "医疗医药": {
+      "raw_scores": {
+        "baidu": 0.449972,
+        "tavily": 0.437287,
+        "zhipu": 0.482712,
+        "zhipu_pro": 0.515361,
+        "zhipu_quark": 0.433677,
+        "zhipu_std": 0.484532
+      },
+      "weights": {
+        "baidu": 0.160501,
+        "tavily": 0.155977,
+        "zhipu": 0.172179,
+        "zhipu_pro": 0.183825,
+        "zhipu_quark": 0.154689,
+        "zhipu_std": 0.172829
+      },
+      "ranked_engines": [
+        "zhipu_pro",
+        "zhipu_std",
+        "zhipu",
+        "baidu",
+        "tavily",
+        "zhipu_quark"
+      ]
+    },
+    "技术标准": {
+      "raw_scores": {
+        "baidu": 0.383541,
+        "tavily": 0.414217,
+        "zhipu": 0.403504,
+        "zhipu_pro": 0.486523,
+        "zhipu_quark": 0.433117,
+        "zhipu_std": 0.518052
+      },
+      "weights": {
+        "baidu": 0.145338,
+        "tavily": 0.156963,
+        "zhipu": 0.152903,
+        "zhipu_pro": 0.184362,
+        "zhipu_quark": 0.164124,
+        "zhipu_std": 0.19631
+      },
+      "ranked_engines": [
+        "zhipu_std",
+        "zhipu_pro",
+        "zhipu_quark",
+        "tavily",
+        "zhipu",
+        "baidu"
+      ]
+    },
+    "生活消费": {
+      "raw_scores": {
+        "baidu": 0.297442,
+        "tavily": 0.352308,
+        "zhipu": 0.38167,
+        "zhipu_pro": 0.335279,
+        "zhipu_quark": 0.377586,
+        "zhipu_std": 0.355047
+      },
+      "weights": {
+        "baidu": 0.141684,
+        "tavily": 0.167819,
+        "zhipu": 0.181805,
+        "zhipu_pro": 0.159707,
+        "zhipu_quark": 0.17986,
+        "zhipu_std": 0.169124
+      },
+      "ranked_engines": [
+        "zhipu",
+        "zhipu_quark",
+        "zhipu_std",
+        "tavily",
+        "zhipu_pro",
+        "baidu"
+      ]
+    },
+    "新闻资讯": {
+      "raw_scores": {
+        "baidu": 0.288871,
+        "tavily": 0.366533,
+        "zhipu": 0.294332,
+        "zhipu_pro": 0.332848,
+        "zhipu_quark": 0.33666,
+        "zhipu_std": 0.321212
+      },
+      "weights": {
+        "baidu": 0.148868,
+        "tavily": 0.18889,
+        "zhipu": 0.151682,
+        "zhipu_pro": 0.171531,
+        "zhipu_quark": 0.173495,
+        "zhipu_std": 0.165534
+      },
+      "ranked_engines": [
+        "tavily",
+        "zhipu_quark",
+        "zhipu_pro",
+        "zhipu_std",
+        "zhipu",
+        "baidu"
+      ]
+    },
+    "证券投资": {
+      "raw_scores": {
+        "baidu": 0.53336,
+        "tavily": 0.533566,
+        "zhipu": 0.503936,
+        "zhipu_pro": 0.633759,
+        "zhipu_quark": 0.572392,
+        "zhipu_std": 0.624018
+      },
+      "weights": {
+        "baidu": 0.156823,
+        "tavily": 0.156884,
+        "zhipu": 0.148171,
+        "zhipu_pro": 0.186343,
+        "zhipu_quark": 0.1683,
+        "zhipu_std": 0.183479
+      },
+      "ranked_engines": [
+        "zhipu_pro",
+        "zhipu_std",
+        "zhipu_quark",
+        "tavily",
+        "baidu",
+        "zhipu"
+      ]
+    },
+    "企业工商": {
+      "raw_scores": {
+        "baidu": 0.308027,
+        "tavily": 0.435649,
+        "zhipu": 0.330047,
+        "zhipu_pro": 0.231527,
+        "zhipu_quark": 0.370095,
+        "zhipu_std": 0.236062
+      },
+      "weights": {
+        "baidu": 0.161152,
+        "tavily": 0.227921,
+        "zhipu": 0.172672,
+        "zhipu_pro": 0.121129,
+        "zhipu_quark": 0.193624,
+        "zhipu_std": 0.123502
+      },
+      "ranked_engines": [
+        "tavily",
+        "zhipu_quark",
+        "zhipu",
+        "baidu",
+        "zhipu_std",
+        "zhipu_pro"
+      ]
+    },
+    "学术论文": {
+      "raw_scores": {
+        "baidu": 0.474576,
+        "tavily": 0.51606,
+        "zhipu": 0.542369,
+        "zhipu_pro": 0.551241,
+        "zhipu_quark": 0.460754,
+        "zhipu_std": 0.581172
+      },
+      "weights": {
+        "baidu": 0.151807,
+        "tavily": 0.165077,
+        "zhipu": 0.173493,
+        "zhipu_pro": 0.176331,
+        "zhipu_quark": 0.147386,
+        "zhipu_std": 0.185905
+      },
+      "ranked_engines": [
+        "zhipu_std",
+        "zhipu_pro",
+        "zhipu",
+        "tavily",
+        "baidu",
+        "zhipu_quark"
+      ]
+    },
+    "软件开发与IT": {
+      "raw_scores": {
+        "baidu": 0.453605,
+        "tavily": 0.494799,
+        "zhipu": 0.534652,
+        "zhipu_pro": 0.598827,
+        "zhipu_quark": 0.521245,
+        "zhipu_std": 0.553398
+      },
+      "weights": {
+        "baidu": 0.143704,
+        "tavily": 0.156754,
+        "zhipu": 0.16938,
+        "zhipu_pro": 0.189711,
+        "zhipu_quark": 0.165132,
+        "zhipu_std": 0.175319
+      },
+      "ranked_engines": [
+        "zhipu_pro",
+        "zhipu_std",
+        "zhipu",
+        "zhipu_quark",
+        "tavily",
+        "baidu"
+      ]
+    },
+    "数码与科技资讯": {
+      "raw_scores": {
+        "baidu": 0.26821,
+        "tavily": 0.339823,
+        "zhipu": 0.310829,
+        "zhipu_pro": 0.293253,
+        "zhipu_quark": 0.323066,
+        "zhipu_std": 0.312783
+      },
+      "weights": {
+        "baidu": 0.145138,
+        "tavily": 0.18389,
+        "zhipu": 0.168201,
+        "zhipu_pro": 0.15869,
+        "zhipu_quark": 0.174823,
+        "zhipu_std": 0.169258
+      },
+      "ranked_engines": [
+        "tavily",
+        "zhipu_quark",
+        "zhipu_std",
+        "zhipu",
+        "zhipu_pro",
+        "baidu"
+      ]
+    },
+    "教育考试": {
+      "raw_scores": {
+        "baidu": 0.433245,
+        "tavily": 0.460804,
+        "zhipu": 0.52826,
+        "zhipu_pro": 0.534719,
+        "zhipu_quark": 0.493303,
+        "zhipu_std": 0.544553
+      },
+      "weights": {
+        "baidu": 0.144662,
+        "tavily": 0.153864,
+        "zhipu": 0.176387,
+        "zhipu_pro": 0.178544,
+        "zhipu_quark": 0.164715,
+        "zhipu_std": 0.181828
+      },
+      "ranked_engines": [
+        "zhipu_std",
+        "zhipu_pro",
+        "zhipu",
+        "zhipu_quark",
+        "tavily",
+        "baidu"
+      ]
+    },
+    "知识产权与专利": {
+      "raw_scores": {
+        "baidu": 0.463206,
+        "tavily": 0.476881,
+        "zhipu": 0.608203,
+        "zhipu_pro": 0.598083,
+        "zhipu_quark": 0.551769,
+        "zhipu_std": 0.596493
+      },
+      "weights": {
+        "baidu": 0.140594,
+        "tavily": 0.144745,
+        "zhipu": 0.184604,
+        "zhipu_pro": 0.181532,
+        "zhipu_quark": 0.167475,
+        "zhipu_std": 0.18105
+      },
+      "ranked_engines": [
+        "zhipu",
+        "zhipu_pro",
+        "zhipu_std",
+        "zhipu_quark",
+        "tavily",
+        "baidu"
+      ]
+    }
+  },
+  "aliases": {
+    "general": "知识问答",
+    "code": "软件开发与IT",
+    "news": "新闻资讯"
+  }
+}

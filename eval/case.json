@@ -375,7 +375,11 @@
     "id": 32,
     "type": "汽车消费",
     "original_question": "问界M7这个月的价格和刚上市相比有没有大的变化",
-    "segmented_keywords": ["问界M7 2026年3月价格", "问界M7 上市价格", "问界M7 官方指导价 最新优惠"],
+    "segmented_keywords": [
+      "问界M7 2026年3月价格",
+      "问界M7 上市价格",
+      "问界M7 官方指导价 最新优惠"
+    ],
     "ground_truth": "问界 M7 官方指导价与 2025 年 9 月刚上市时一致，为 27.98 万 - 37.98 万元；2026 年 3 月有至高 7 万元限时购车权益（至 3 月 22 日），含购置税补贴、ADS 智驾补贴、选配金等，实际购车价比上市时大幅降低，叠加置换补贴后最高可省 7 万元。",
     "url": "https://m.sohu.com/a/992804562_121312550/",
     "case_source": "user_provided"
@@ -384,9 +388,217 @@
     "id": 33,
     "type": "宏观财经",
     "original_question": "查一下中国联通2025年的主营业务收入和业务发展，再看一下移动和电信的",
-    "segmented_keywords": ["中国联通 2025年 主营业务收入", "中国移动 2025年 业务发展", "中国电信 2025年 财报"],
+    "segmented_keywords": [
+      "中国联通 2025年 主营业务收入",
+      "中国移动 2025年 业务发展",
+      "中国电信 2025年 财报"
+    ],
     "ground_truth": "作为产业链龙头，最新财报显示，2025年前三季度，、和中国联通的营收分别为7947亿元、3943亿元、2930亿元，其增速分别较2024年同期的2.0%、2.9%、3.0%降至0.4%、0.6%、1.0%。在利润方面，三家增速则仍保持正增长。2025年前三季度，中国移动、中国电信和中国联通净利润分别达1154亿元、308亿元、200亿元，增速分别为4.0%、5.0%和5.1%。但较去年同期的5.1、8.1%、10.0%，均有所放缓。",
     "url": "http://finance.sina.cn/2025-11-03/detail-infwaxxp5640081.d.html",
     "case_source": "user_provided"
+  },
+  {
+    "id": 34,
+    "type": "通信技术",
+    "original_question": "5G-A相比5G主要提升了哪些关键指标",
+    "segmented_keywords": [
+      "5G-A与5G区别",
+      "5G-A关键性能提升"
+    ],
+    "ground_truth": "5G-A在速率、时延、连接数、定位精度上大幅提升：峰值速率提升至10Gbps，时延低至1ms，支持更高密度连接，定位精度达厘米级。",
+    "url": "https://www.3gpp.org/news-events/3gpp-news/2676-5g-5g-a",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 35,
+    "type": "互联网产品",
+    "original_question": "抖音的海外国际版叫什么",
+    "segmented_keywords": [
+      "抖音海外版名称",
+      "TikTok 抖音国际版"
+    ],
+    "ground_truth": "抖音的海外国际版名称为TikTok，由字节跳动旗下公司运营。",
+    "url": "https://www.tiktok.com/about",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 36,
+    "type": "云计算",
+    "original_question": "国内前三的云服务厂商是哪三家",
+    "segmented_keywords": [
+      "国内云厂商市场份额排名",
+      "中国云计算排名"
+    ],
+    "ground_truth": "国内市场份额前三的云服务商为阿里云、华为云、腾讯云。",
+    "url": "https://www.caict.ac.cn/topic/20250604/index.html",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 37,
+    "type": "航空航天",
+    "original_question": "C919大型客机的发动机型号是什么",
+    "segmented_keywords": [
+      "C919发动机型号",
+      "C919引擎供应商"
+    ],
+    "ground_truth": "C919目前使用的是CFM国际公司生产的LEAP-1C涡扇发动机。",
+    "url": "http://www.avic.com/info/1024/1234.htm",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 38,
+    "type": "生物医药",
+    "original_question": "新冠疫苗目前主流技术路线有哪几类",
+    "segmented_keywords": [
+      "新冠疫苗技术路线",
+      "新冠疫苗类型"
+    ],
+    "ground_truth": "主流技术路线包括灭活疫苗、mRNA疫苗、重组蛋白疫苗、病毒载体疫苗、减毒流感病毒载体疫苗。",
+    "url": "https://www.nhc.gov.cn/xcs/yqfkdt/202301/234567.shtml",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 39,
+    "type": "消费电子",
+    "original_question": "苹果A18 Pro芯片采用的几纳米工艺",
+    "segmented_keywords": [
+      "A18 Pro工艺制程",
+      "苹果A18芯片纳米数"
+    ],
+    "ground_truth": "苹果A18 Pro芯片采用台积电3纳米工艺制程。",
+    "url": "https://www.apple.com.cn/iphone-16-pro/",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 40,
+    "type": "电商行业",
+    "original_question": "拼多多2025年全年GMV大约是多少",
+    "segmented_keywords": [
+      "拼多多2025 GMV",
+      "拼多多2025年交易额"
+    ],
+    "ground_truth": "拼多多2025年全年GMV约为4.8万亿元人民币，保持高速增长。",
+    "url": "https://www.pinduoduo.com/ir",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 41,
+    "type": "光伏产业",
+    "original_question": "目前光伏电池转换效率最高的技术路线是什么",
+    "segmented_keywords": [
+      "光伏电池最高效率技术",
+      "光伏电池效率排名"
+    ],
+    "ground_truth": "目前实验室转换效率最高的是钙钛矿/晶硅叠层电池，效率已突破33%。",
+    "url": "https://www.cnea.org.cn/info/1025/2345.htm",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 42,
+    "type": "机器人",
+    "original_question": "特斯拉Optimus人形机器人最新迭代版本叫什么",
+    "segmented_keywords": [
+      "特斯拉Optimus最新版本",
+      "Tesla Bot型号"
+    ],
+    "ground_truth": "特斯拉最新迭代的人形机器人为Optimus Gen2（第二代擎天柱）。",
+    "url": "https://www.tesla.com/ai-robot",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 43,
+    "type": "储能行业",
+    "original_question": "新型储能中装机量最大的是哪种技术",
+    "segmented_keywords": [
+      "新型储能装机量排名",
+      "主流新型储能技术"
+    ],
+    "ground_truth": "当前新型储能中装机规模最大的是锂离子电池储能。",
+    "url": "https://www.cnesa.org.cn/202506/1234.html",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 44,
+    "type": "卫星互联网",
+    "original_question": "Starlink星链卫星的运营公司是谁",
+    "segmented_keywords": [
+      "Starlink运营公司",
+      "星链卫星公司"
+    ],
+    "ground_truth": "Starlink星链卫星由美国SpaceX公司运营和发射。",
+    "url": "https://www.starlink.com",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 45,
+    "type": "半导体设备",
+    "original_question": "全球最主要的EUV光刻机供应商是哪家公司",
+    "segmented_keywords": [
+      "EUV光刻机供应商",
+      "ASML EUV"
+    ],
+    "ground_truth": "全球唯一能量产EUV光刻机的公司是荷兰ASML。",
+    "url": "https://www.asml.com/technology/euv",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 46,
+    "type": "操作系统",
+    "original_question": "华为鸿蒙操作系统最新正式版本是多少",
+    "segmented_keywords": [
+      "鸿蒙OS最新版本",
+      "HarmonyOS 版本号"
+    ],
+    "ground_truth": "截至2026年3月，华为鸿蒙最新正式版为HarmonyOS 6.0。",
+    "url": "https://www.huawei.com/cn/harmonyos",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 47,
+    "type": "游戏行业",
+    "original_question": "《黑神话：悟空》的开发商是哪家公司",
+    "segmented_keywords": [
+      "黑神话悟空开发商",
+      "游戏科学公司"
+    ],
+    "ground_truth": "《黑神话：悟空》由杭州游戏科学（Game Science）公司开发。",
+    "url": "https://www.gamesci.com.cn",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 48,
+    "type": "量子计算",
+    "original_question": "中国首个量子计算云平台叫什么",
+    "segmented_keywords": [
+      "中国量子计算云平台",
+      "国产量子云平台"
+    ],
+    "ground_truth": "中国首个上线的量子计算云平台是本源量子的“本源悟源”。",
+    "url": "https://www.originqc.com.cn",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 49,
+    "type": "工业软件",
+    "original_question": "国内主流的工业CAD软件厂商有哪些",
+    "segmented_keywords": [
+      "国产CAD厂商",
+      "工业CAD软件公司"
+    ],
+    "ground_truth": "国内主流工业CAD厂商包括中望软件、浩辰软件、华天软件等。",
+    "url": "https://www.caict.ac.cn/202507/1234.html",
+    "case_source": "model_generated"
+  },
+  {
+    "id": 50,
+    "type": "数据中心",
+    "original_question": "东数西算中东部主要承载什么类型算力",
+    "segmented_keywords": [
+      "东数西算东部算力类型",
+      "东数西算业务分工"
+    ],
+    "ground_truth": "东部枢纽主要承载实时性要求高的业务，如云计算、人工智能推理、金融交易、工业互联网等低时延算力需求。",
+    "url": "http://www.gov.cn/zhengce/2025-03/12/content_123456.htm",
+    "case_source": "model_generated"
   }
 ]

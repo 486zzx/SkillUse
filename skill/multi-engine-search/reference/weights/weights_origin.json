@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-03-13T06:30:58.802362+00:00",
+  "source": "SearchEvalEngine metrics/out/weights",
+  "input_metrics": "engine_metrics.json, category_metrics.json, domain_metrics.json",
+  "synced_files": [
+    "engine_weights_by_category.json",
+    "domain_weights_by_category.json",
+    "rerank_policy.json"
+  ],
+  "grid_search_best_at": "2026-03-13T07:20:03.516588+00:00",
+  "grid_search_best_metric": "NDCG@10",
+  "grid_search_best_value": 0.5934463191543438
+}

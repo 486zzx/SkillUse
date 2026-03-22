@@ -1,0 +1,77 @@
+{
+  "success": true,
+  "result": {
+    "location": {
+      "name": "北京",
+      "id": "WX4FBXXFKE4F"
+    },
+    "daily": [
+      {
+        "date": "2026-03-10",
+        "text_day": "多云",
+        "code_day": "4",
+        "text_night": "晴",
+        "code_night": "1",
+        "high": "11",
+        "low": "2",
+        "rainfall": "0.00",
+        "precip": "0.00",
+        "wind_direction": "南",
+        "wind_direction_degree": "180",
+        "wind_speed": "8.4",
+        "wind_scale": "2",
+        "humidity": "68"
+      },
+      {
+        "date": "2026-03-11",
+        "text_day": "晴",
+        "code_day": "0",
+        "text_night": "晴",
+        "code_night": "1",
+        "high": "15",
+        "low": "0",
+        "rainfall": "0.00",
+        "precip": "0.00",
+        "wind_direction": "北",
+        "wind_direction_degree": "0",
+        "wind_speed": "8.4",
+        "wind_scale": "2",
+        "humidity": "47"
+      },
+      {
+        "date": "2026-03-12",
+        "text_day": "晴",
+        "code_day": "0",
+        "text_night": "多云",
+        "code_night": "4",
+        "high": "12",
+        "low": "1",
+        "rainfall": "0.00",
+        "precip": "0.00",
+        "wind_direction": "南",
+        "wind_direction_degree": "180",
+        "wind_speed": "3.0",
+        "wind_scale": "1",
+        "humidity": "78"
+      }
+    ],
+    "air": {
+      "city": {
+        "aqi": "111",
+        "pm25": "72",
+        "pm10": "104",
+        "so2": "6",
+        "no2": "32",
+        "co": "0.7",
+        "o3": "86",
+        "primary_pollutant": "PM25",
+        "last_update": "2026-03-10T15:00:00+08:00",
+        "quality": "轻度污染"
+      }
+    },
+    "time_range": [
+      "2026-03-10",
+      "2026-03-12"
+    ]
+  }
+}

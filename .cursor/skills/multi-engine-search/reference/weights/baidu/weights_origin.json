@@ -1,0 +1,6 @@
+{
+  "source": "metrics/out/optimization_runs.jsonl",
+  "fusion_sources": "baidu",
+  "primary_metric": "NDCG@10",
+  "grid_search_best_value": 0.6029668446479443
+}

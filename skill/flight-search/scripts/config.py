@@ -9,7 +9,7 @@ from pathlib import Path
 # ---------- API ----------
 API_URL = "https://apis.juhe.cn/flight/query"
 # API Key：在此直接填写，或留空后由环境变量 API_KEY_ENV 提供
-API_KEY = "your-key"
+API_KEY = "6067b93001e47645ff3a51a51c005cc7"
 API_KEY_ENV = "JUHE_FLIGHT_API_KEY"
 API_TIMEOUT_SECONDS = 15
 

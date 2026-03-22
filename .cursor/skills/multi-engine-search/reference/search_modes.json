@@ -1,0 +1,14 @@
+{
+  "Fast": {
+    "engines": ["baidu"],
+    "fetch_timeout_s": 0.5
+  },
+  "Balanced": {
+    "engines": ["baidu", "bocha"],
+    "fetch_timeout_s": 0.8
+  },
+  "Precision": {
+    "engines": ["baidu", "bocha"],
+    "fetch_timeout_s": 1.5
+  }
+}

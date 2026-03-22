@@ -67,7 +67,6 @@
 | `location`        | string（位置参数 1） | 查询城市                           | **必选**  | 如：北京、上海                   | -                  |
 | `date`            | string（位置参数 2） | 预报起始日期                       | 可选      | 如：2025-12-21；不传表示从今天起 | 不传则从「今天」起 |
 | `days`            | int                  | 逐日预报天数                       | 可选      | 1～15                            | 3                  |
-| `with-suggestion` | bool                 | 是否拉取生活指数（仅中国城市有效） | 可选      | True/False                       | False              |
 | `with-air`        | flag                 | 是否拉取空气质量                   | 可选      | True/False                       | False              |
 | `unit`            | string               | 温度单位                           | 可选      | c / f 等                         | c                  |
 

@@ -1,0 +1,438 @@
+{
+  "total": 43,
+  "passed": 14,
+  "failed": 29,
+  "source": "JioNLP test_time_parser 模糊时间用例",
+  "results": [
+    {
+      "id": "JIO-01",
+      "desc": "今天",
+      "date_raw": "今天",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-04",
+      "actual_first_date": "2026-03-04",
+      "detail": "首日=2026-03-04"
+    },
+    {
+      "id": "JIO-02",
+      "desc": "明天",
+      "date_raw": "明天",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-05",
+      "actual_first_date": "2026-03-05",
+      "detail": "首日=2026-03-05"
+    },
+    {
+      "id": "JIO-03",
+      "desc": "后天",
+      "date_raw": "后天",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-06",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-04",
+      "desc": "昨天",
+      "date_raw": "昨天",
+      "status": "FAIL",
+      "exit_code": 1,
+      "expected_first_date": "2026-03-03",
+      "actual_first_date": "",
+      "detail": "无法获取地点或实况: 北京"
+    },
+    {
+      "id": "JIO-05",
+      "desc": "前天",
+      "date_raw": "前天",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-02",
+      "actual_first_date": "2026-03-03",
+      "detail": "首日期望=2026-03-02 实际=2026-03-03"
+    },
+    {
+      "id": "JIO-06",
+      "desc": "大后天上午10点",
+      "date_raw": "大后天上午10点",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-07",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-07",
+      "desc": "大大后天",
+      "date_raw": "大大后天",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-08",
+      "actual_first_date": "2026-03-08",
+      "detail": "首日=2026-03-08"
+    },
+    {
+      "id": "JIO-08",
+      "desc": "本日",
+      "date_raw": "本日",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-04",
+      "actual_first_date": "2026-03-04",
+      "detail": "首日=2026-03-04"
+    },
+    {
+      "id": "JIO-09",
+      "desc": "today",
+      "date_raw": "today",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-04",
+      "actual_first_date": "2026-03-04",
+      "detail": "首日=2026-03-04"
+    },
+    {
+      "id": "JIO-10",
+      "desc": "tomorrow",
+      "date_raw": "tomorrow",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-05",
+      "actual_first_date": "2026-03-05",
+      "detail": "首日=2026-03-05"
+    },
+    {
+      "id": "JIO-11",
+      "desc": "yesterday",
+      "date_raw": "yesterday",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-03",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-12",
+      "desc": "下周六",
+      "date_raw": "下周六",
+      "status": "FAIL",
+      "exit_code": 1,
+      "expected_first_date": "2026-03-14",
+      "actual_first_date": "",
+      "detail": "无法获取地点或实况: 北京"
+    },
+    {
+      "id": "JIO-13",
+      "desc": "下周周六",
+      "date_raw": "下周周六",
+      "status": "FAIL",
+      "exit_code": 1,
+      "expected_first_date": "2026-03-14",
+      "actual_first_date": "",
+      "detail": "无法获取地点或实况: 北京"
+    },
+    {
+      "id": "JIO-14",
+      "desc": "下个星期一",
+      "date_raw": "下个星期一",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-09",
+      "actual_first_date": "2026-03-09",
+      "detail": "首日=2026-03-09"
+    },
+    {
+      "id": "JIO-15",
+      "desc": "星期天",
+      "date_raw": "星期天",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-08",
+      "actual_first_date": "2026-03-08",
+      "detail": "首日=2026-03-08"
+    },
+    {
+      "id": "JIO-16",
+      "desc": "上周六中午12点",
+      "date_raw": "上周六中午12点",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2026-02-28",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-17",
+      "desc": "上个礼拜天",
+      "date_raw": "上个礼拜天",
+      "status": "FAIL",
+      "exit_code": 1,
+      "expected_first_date": "2026-03-01",
+      "actual_first_date": "",
+      "detail": "无法获取地点或实况: 北京"
+    },
+    {
+      "id": "JIO-18",
+      "desc": "9月30日",
+      "date_raw": "9月30日",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2026-09-30",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-19",
+      "desc": "本月9日",
+      "date_raw": "本月9日",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-09",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-20",
+      "desc": "下月九号",
+      "date_raw": "下月九号",
+      "status": "FAIL",
+      "exit_code": 1,
+      "expected_first_date": "2026-04-09",
+      "actual_first_date": "",
+      "detail": "无法获取地点或实况: 北京"
+    },
+    {
+      "id": "JIO-21",
+      "desc": "上个月15号",
+      "date_raw": "上个月15号",
+      "status": "FAIL",
+      "exit_code": 1,
+      "expected_first_date": "2026-02-15",
+      "actual_first_date": "",
+      "detail": "无法获取地点或实况: 北京"
+    },
+    {
+      "id": "JIO-22",
+      "desc": "3月8号",
+      "date_raw": "3月8号",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-08",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-23",
+      "desc": "6·30",
+      "date_raw": "6·30",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2026-06-30",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-24",
+      "desc": "09-01",
+      "date_raw": "09-01",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2026-09-01",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-25",
+      "desc": "1月3",
+      "date_raw": "1月3",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2026-01-03",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-26",
+      "desc": "十月31",
+      "date_raw": "十月31",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2026-10-31",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-27",
+      "desc": "十二月20号",
+      "date_raw": "十二月20号",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2026-12-20",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-28",
+      "desc": "2019/04/19",
+      "date_raw": "2019/04/19",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2019-04-19",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-29",
+      "desc": "2019.9.6",
+      "date_raw": "2019.9.6",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2019-09-06",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-30",
+      "desc": "20240307",
+      "date_raw": "20240307",
+      "status": "FAIL",
+      "exit_code": 1,
+      "expected_first_date": "2024-03-07",
+      "actual_first_date": "",
+      "detail": "无法获取地点或实况: 北京"
+    },
+    {
+      "id": "JIO-31",
+      "desc": "2022 11 23",
+      "date_raw": "2022 11 23",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2022-11-23",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-32",
+      "desc": "2015年8月12日",
+      "date_raw": "2015年8月12日",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2015-08-12",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-33",
+      "desc": "15年3月2日",
+      "date_raw": "15年3月2日",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2015-03-02",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-34",
+      "desc": "2026-03-10",
+      "date_raw": "2026-03-10",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-10",
+      "actual_first_date": "2026-03-10",
+      "detail": "首日=2026-03-10"
+    },
+    {
+      "id": "JIO-35",
+      "desc": "明天下午3点",
+      "date_raw": "明天下午3点",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-05",
+      "actual_first_date": "2026-03-05",
+      "detail": "首日=2026-03-05"
+    },
+    {
+      "id": "JIO-36",
+      "desc": "明天下午3点至下午8点",
+      "date_raw": "明天下午3点至下午8点",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-05",
+      "actual_first_date": "2026-03-05",
+      "detail": "首日=2026-03-05"
+    },
+    {
+      "id": "JIO-37",
+      "desc": "昨晚8时35分",
+      "date_raw": "昨晚8时35分",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-03",
+      "actual_first_date": "2026-03-03",
+      "detail": "首日=2026-03-03"
+    },
+    {
+      "id": "JIO-38",
+      "desc": "今天十一点半",
+      "date_raw": "今天十一点半",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-04",
+      "actual_first_date": "2026-03-04",
+      "detail": "首日=2026-03-04"
+    },
+    {
+      "id": "JIO-39",
+      "desc": "翌日",
+      "date_raw": "翌日",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-04",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-40",
+      "desc": "前天中午到明天晚上",
+      "date_raw": "前天中午到明天晚上",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-02",
+      "actual_first_date": "2026-03-03",
+      "detail": "首日期望=2026-03-02 实际=2026-03-03"
+    },
+    {
+      "id": "JIO-41",
+      "desc": "今天下午1点到3点十分",
+      "date_raw": "今天下午1点到3点十分",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_first_date": "2026-03-04",
+      "actual_first_date": "2026-03-04",
+      "detail": "首日=2026-03-04"
+    },
+    {
+      "id": "JIO-42",
+      "desc": "明年3月份",
+      "date_raw": "明年3月份",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2027-03-01",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    },
+    {
+      "id": "JIO-43",
+      "desc": "去年3月3号",
+      "date_raw": "去年3月3号",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_first_date": "2025-03-03",
+      "actual_first_date": "",
+      "detail": "result.daily 为空"
+    }
+  ]
+}

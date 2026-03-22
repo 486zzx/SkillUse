@@ -1,0 +1,7 @@
+# 航班查询 Skill 脚本可选依赖
+# 不安装也可运行：地点/日期用 JSON + 简单规则，机场数据从 airport_list.json 读取
+
+# HTTP 请求（通过 http_client 注册的 ExtHttpClient 调用航班 API）
+requests>=2.28.0
+# 更准确的中文自然语言日期解析（明天、下周一等）
+jionlp>=1.4.0

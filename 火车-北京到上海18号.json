@@ -1,0 +1,1769 @@
+{
+  "success": true,
+  "trains": [
+    {
+      "train_no": "G547",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "06:18",
+      "arrival_time": "12:11",
+      "duration": "5h53m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 1873,
+          "available": "12"
+        },
+        {
+          "name": "一等座",
+          "price": 930,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 553,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 553,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G1",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "06:30",
+      "arrival_time": "11:24",
+      "duration": "4h54m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2318,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1060,
+          "available": "无"
+        },
+        {
+          "name": "二等座",
+          "price": 662,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 662,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G3",
+      "from_station": "北京南",
+      "to_station": "上海",
+      "departure_time": "06:52",
+      "arrival_time": "11:33",
+      "duration": "4h41m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2341,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1070,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 669,
+          "available": "有"
+        },
+        {
+          "name": "优选一等座",
+          "price": 1471,
+          "available": "4"
+        },
+        {
+          "name": "无座",
+          "price": 669,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G565",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "07:07",
+      "arrival_time": "13:12",
+      "duration": "6h05m",
+      "seat_types": [
+        {
+          "name": "商务 座",
+          "price": 1998,
+          "available": "有"
+        },
+        {
+          "name": "一等座",
+          "price": 969,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 576,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 576,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G549",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "07:13",
+      "arrival_time": "13:03",
+      "duration": "5h50m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 1998,
+          "available": "1"
+        },
+        {
+          "name": "一等座",
+          "price": 969,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 598,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 598,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G5",
+      "from_station": "北京",
+      "to_station": "上海",
+      "departure_time": "07:42",
+      "arrival_time": "12:32",
+      "duration": "4h50m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2354,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1076,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 673,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 673,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G597",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "07:42",
+      "arrival_time": "13:49",
+      "duration": "6h07m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 1998,
+          "available": "3"
+        },
+        {
+          "name": "一等座",
+          "price": 969,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 576,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 576,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G37",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "07:52",
+      "arrival_time": "12:35",
+      "duration": "4h43m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2318,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1035,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 626,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 626,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G5",
+      "from_station": "北京南",
+      "to_station": "上海",
+      "departure_time": "07:59",
+      "arrival_time": "12:32",
+      "duration": "4h33m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2341,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1070,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 669,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 669,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G599",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "08:15",
+      "arrival_time": "14:14",
+      "duration": "5h59m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 1998,
+          "available": "11"
+        },
+        {
+          "name": "一等座",
+          "price": 969,
+          "available": "19"
+        },
+        {
+          "name": "二等座",
+          "price": 576,
+          "available": "有"
+        },
+        {
+          "name": " 无座",
+          "price": 576,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G633",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "08:37",
+      "arrival_time": "15:01",
+      "duration": "6h24m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2185,
+          "available": "2"
+        },
+        {
+          "name": "一等座",
+          "price": 1068,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 644,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 644,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G7",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "09:00",
+      "arrival_time": "13:37",
+      "duration": "4h37m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2318,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1060,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 662,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 662,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G669",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "09:07",
+      "arrival_time": "14:59",
+      "duration": "5h52m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2318,
+          "available": "12"
+        },
+        {
+          "name": "一等座",
+          "price": 1035,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 626,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 626,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴 号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G643",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "09:18",
+      "arrival_time": "15:20",
+      "duration": "6h02m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2158,
+          "available": "1"
+        },
+        {
+          "name": "一等座",
+          "price": 1006,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 598,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 598,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G693",
+      "from_station": "北 京南",
+      "to_station": "上海虹桥",
+      "departure_time": "09:49",
+      "arrival_time": "15:56",
+      "duration": "6h07m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2158,
+          "available": "2"
+        },
+        {
+          "name": "一等座",
+          "price": 1006,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 598,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 598,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G9",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "10:00",
+      "arrival_time": "14:35",
+      "duration": "4h35m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2318,
+          "available": "无"
+        },
+        {
+          "name": "一等 座",
+          "price": 1060,
+          "available": "无"
+        },
+        {
+          "name": "二等座",
+          "price": 662,
+          "available": "有"
+        },
+        {
+          "name": "优选一等座",
+          "price": 1457,
+          "available": "无"
+        },
+        {
+          "name": "无座",
+          "price": 662,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴 号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G11",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "10:03",
+      "arrival_time": "14:39",
+      "duration": "4h36m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2318,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1035,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 626,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 626,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G657",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "10:47",
+      "arrival_time": "16:52",
+      "duration": "6h05m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2158,
+          "available": "6"
+        },
+        {
+          "name": "一等座",
+          "price": 1006,
+          "available": " 有"
+        },
+        {
+          "name": "二等座",
+          "price": 598,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 598,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G23",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "11:00",
+      "arrival_time": "15:37",
+      "duration": "4h37m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2318,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1060,
+          "available": "无"
+        },
+        {
+          "name": "二等座",
+          "price": 662,
+          "available": "有"
+        },
+        {
+          "name": "优 选一等座",
+          "price": 1457,
+          "available": "无"
+        },
+        {
+          "name": "无座",
+          "price": 662,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G735",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "11:13",
+      "arrival_time": "17:38",
+      "duration": "6h25m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 1998,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1006,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 598,
+          "available": "有"
+        },
+        {
+          "name": "优选一等座",
+          "price": 1383,
+          "available": "7"
+        },
+        {
+          "name": "无座",
+          "price": 598,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G737",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "11:17",
+      "arrival_time": "17:22",
+      "duration": "6h05m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2158,
+          "available": "3"
+        },
+        {
+          "name": "一等座",
+          "price": 1006,
+          "available": "2"
+        },
+        {
+          "name": "二等座",
+          "price": 598,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 598,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G733",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "11:25",
+      "arrival_time": "16:59",
+      "duration": "5h34m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2158,
+          "available": "1"
+        },
+        {
+          "name": "一等座",
+          "price": 1006,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 598,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 598,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G741",
+      "from_station": "北京南",
+      "to_station": "上海",
+      "departure_time": "11:50",
+      "arrival_time": "18:02",
+      "duration": "6h12m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2023,
+          "available": "1"
+        },
+        {
+          "name": "一等座",
+          "price": 1016,
+          "available": "无"
+        },
+        {
+          "name": "二等座",
+          "price": 606,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 606,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "1461",
+      "from_station": "北京",
+      "to_station": "上海",
+      "departure_time": "11:59",
+      "arrival_time": "06:45",
+      "duration": "18h46m",
+      "seat_types": [
+        {
+          "name": "硬卧",
+          "price": 283,
+          "available": "有"
+        },
+        {
+          "name": "软卧",
+          "price": 455,
+          "available": "7"
+        },
+        {
+          "name": "硬座",
+          "price": 156,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 156,
+          "available": "有"
+        }
+      ],
+      "train_flags": [
+        "支持选铺"
+      ]
+    },
+    {
+      "train_no": "G15",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "12:00",
+      "arrival_time": "16:38",
+      "duration": "4h38m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2318,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1060,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 662,
+          "available": "有"
+        },
+        {
+          "name": "优选一等座",
+          "price": 1457,
+          "available": "1"
+        },
+        {
+          "name": "无座",
+          "price": 662,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        "静音 车厢"
+      ]
+    },
+    {
+      "train_no": "G2573",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "12:11",
+      "arrival_time": "19:58",
+      "duration": "7h47m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2005,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 989,
+          "available": "无"
+        },
+        {
+          "name": "二等座",
+          "price": 609,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 609,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G745",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "12:21",
+      "arrival_time": "18:21",
+      "duration": "6h00m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 1998,
+          "available": "1"
+        },
+        {
+          "name": "一等座",
+          "price": 1006,
+          "available": "无"
+        },
+        {
+          "name": "二等座",
+          "price": 598,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 598,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G747",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "12:47",
+      "arrival_time": "18:58",
+      "duration": "6h11m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 1998,
+          "available": "4"
+        },
+        {
+          "name": "一等座",
+          "price": 1006,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 598,
+          "available": "有"
+        },
+        {
+          "name": "无 座",
+          "price": 598,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G17",
+      "from_station": "北京南",
+      "to_station": "上海",
+      "departure_time": "13:00",
+      "arrival_time": "17:35",
+      "duration": "4h35m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2341,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1070,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 669,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 669,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G749",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "13:19",
+      "arrival_time": "19:04",
+      "duration": "5h45m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 1998,
+          "available": "2"
+        },
+        {
+          "name": "一等座",
+          "price": 1006,
+          "available": "无"
+        },
+        {
+          "name": "二等座",
+          "price": 598,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 598,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G19",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "14:00",
+      "arrival_time": "18:32",
+      "duration": "4h32m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2318,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1060,
+          "available": "无"
+        },
+        {
+          "name": "二等座",
+          "price": 662,
+          "available": "有"
+        },
+        {
+          "name": "优选一等座",
+          "price": 1457,
+          "available": "无"
+        },
+        {
+          "name": "无座",
+          "price": 662,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G795",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "14:13",
+      "arrival_time": "20:05",
+      "duration": "5h52m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 1998,
+          "available": "2"
+        },
+        {
+          "name": "一等座",
+          "price": 1006,
+          "available": "无"
+        },
+        {
+          "name": "二等座",
+          "price": 598,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 598,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G799",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "14:26",
+      "arrival_time": "20:50",
+      "duration": "6h24m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 1998,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1006,
+          "available": "无"
+        },
+        {
+          "name": "二等座",
+          "price": 598,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 598,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G751",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "14:56",
+      "arrival_time": "20:33",
+      "duration": "5h37m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2120,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1048,
+          "available": " 有"
+        },
+        {
+          "name": "二等座",
+          "price": 632,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 632,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G21",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "15:00",
+      "arrival_time": "19:34",
+      "duration": "4h34m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2318,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1060,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 662,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 662,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G801",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "15:07",
+      "arrival_time": "21:10",
+      "duration": "6h03m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 1998,
+          "available": "有"
+        },
+        {
+          "name": "一等座",
+          "price": 1006,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 598,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 598,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G803",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "15:42",
+      "arrival_time": "22:19",
+      "duration": "6h37m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 1873,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 969,
+          "available": "无"
+        },
+        {
+          "name": "二等座",
+          "price": 576,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 576,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G13",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "16:00",
+      "arrival_time": "20:28",
+      "duration": "4h28m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2318,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1060,
+          "available": " 有"
+        },
+        {
+          "name": "二等座",
+          "price": 662,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 662,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G805",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "16:30",
+      "arrival_time": "23:11",
+      "duration": "6h41m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 1748,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 930,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 553,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 553,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G25",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "17:00",
+      "arrival_time": "21:18",
+      "duration": "4h18m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2318,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1060,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 662,
+          "available": "有"
+        },
+        {
+          "name": "优选一等座",
+          "price": 1457,
+          "available": "2"
+        },
+        {
+          "name": "无座",
+          "price": 662,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G27",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "17:04",
+      "arrival_time": "21:36",
+      "duration": "4h32m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2318,
+          "available": "2"
+        },
+        {
+          "name": "一等座",
+          "price": 1060,
+          "available": "无"
+        },
+        {
+          "name": "二等座",
+          "price": 662,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 662,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G807",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "17:19",
+      "arrival_time": "23:25",
+      "duration": "6h06m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 1873,
+          "available": "2"
+        },
+        {
+          "name": "一等座",
+          "price": 969,
+          "available": "无"
+        },
+        {
+          "name": "二等座",
+          "price": 576,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 576,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G809",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "17:31",
+      "arrival_time": "23:46",
+      "duration": "6h15m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 1748,
+          "available": "1"
+        },
+        {
+          "name": "一等座",
+          "price": 930,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 553,
+          "available": "有"
+        },
+        {
+          "name": "优选一等座",
+          "price": 1278,
+          "available": "6"
+        },
+        {
+          "name": "无座",
+          "price": 553,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        " 静音车厢"
+      ]
+    },
+    {
+      "train_no": "G29",
+      "from_station": "北京南",
+      "to_station": "上海",
+      "departure_time": "18:00",
+      "arrival_time": "22:43",
+      "duration": "4h43m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2182,
+          "available": "无"
+        },
+        {
+          "name": "一等座",
+          "price": 1045,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 633,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 633,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G31",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "18:04",
+      "arrival_time": "22:58",
+      "duration": "4h54m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2158,
+          "available": "3"
+        },
+        {
+          "name": "一等座",
+          "price": 1035,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 626,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 626,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "G33",
+      "from_station": "北京南",
+      "to_station": "上海",
+      "departure_time": "19:00",
+      "arrival_time": "23:35",
+      "duration": "4h35m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2182,
+          "available": "2"
+        },
+        {
+          "name": "一等座",
+          "price": 1016,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 606,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 606,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "D17",
+      "from_station": "北京",
+      "to_station": "上海松江",
+      "departure_time": "19:10",
+      "arrival_time": "07:31",
+      "duration": "12h21m",
+      "seat_types": [
+        {
+          "name": "二等卧",
+          "price": 447,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 298,
+          "available": "有"
+        },
+        {
+          "name": "一等卧",
+          "price": 566,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 298,
+          "available": "6"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "支持选铺"
+      ]
+    },
+    {
+      "train_no": "Z281",
+      "from_station": "北京丰台",
+      "to_station": "上海松江",
+      "departure_time": "19:21",
+      "arrival_time": "08:44",
+      "duration": "13h23m",
+      "seat_types": [
+        {
+          "name": "硬座",
+          "price": 177,
+          "available": "有"
+        },
+        {
+          "name": "软卧",
+          "price": 476,
+          "available": "无"
+        },
+        {
+          "name": "硬卧",
+          "price": 304,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 177,
+          "available": "有"
+        }
+      ],
+      "train_flags": [
+        "支持选铺"
+      ]
+    },
+    {
+      "train_no": "G35",
+      "from_station": "北京南",
+      "to_station": "上海虹桥",
+      "departure_time": "19:24",
+      "arrival_time": "23:51",
+      "duration": "4h27m",
+      "seat_types": [
+        {
+          "name": "商务座",
+          "price": 2158,
+          "available": "8"
+        },
+        {
+          "name": "一等座",
+          "price": 1006,
+          "available": "5"
+        },
+        {
+          "name": "二等座",
+          "price": 598,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 598,
+          "available": "无"
+        }
+      ],
+      "train_flags": [
+        "智能动车组",
+        "复兴号",
+        "静音车厢"
+      ]
+    },
+    {
+      "train_no": "D7",
+      "from_station": "北京丰台",
+      "to_station": "上海",
+      "departure_time": "19:32",
+      "arrival_time": "07:25",
+      "duration": "11h53m",
+      "seat_types": [
+        {
+          "name": "二等卧",
+          "price": 436,
+          "available": "有"
+        },
+        {
+          "name": "二等座",
+          "price": 291,
+          "available": "有"
+        },
+        {
+          "name": "一等卧",
+          "price": 551,
+          "available": "有"
+        },
+        {
+          "name": "无座",
+          "price": 291,
+          "available": "有"
+        }
+      ],
+      "train_flags": [
+        "复兴号",
+        "支持选铺"
+      ]
+    }
+  ],
+  "total_count": 50,
+  "query_summary": {
+    "from_station": "北京",
+    "to_station": " 上海",
+    "departure_date": "2026-03-18",
+    "departure_time": "[\"2026-03-18 00:00\", \"2026-03-18 23:59\"]",
+    "departure_time_min": "00:00",
+    "departure_time_max": "23:59",
+    "arrival_time": null,
+    "arrival_time_min": null,
+    "arrival_time_max": null,
+    "train_type": null,
+    "sort_by": null
+  },
+  "error": ""
+}
